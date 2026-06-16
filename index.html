@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Distinction Engine</title>
+
+<style>
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;width:100%;height:100%;overflow:hidden;
+  background:#000;color:#7cff7c;font-family:monospace;
+  touch-action:manipulation;
+}
+
+body{
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;cursor:pointer;
+}
+
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:500;
+  background:repeating-linear-gradient(to bottom,
+    rgba(255,255,255,.025) 0px,
+    rgba(255,255,255,.025) 1px,
+    transparent 2px,
+    transparent 6px);
+  opacity:.10;
+}
+
+.title{
+  position:fixed;top:16px;width:94vw;text-align:center;
+  font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  color:#88ddaa;text-shadow:0 0 8px #00aa55;z-index:100;
+}
+
+.selector{
+  position:fixed;top:46px;display:flex;gap:8px;flex-wrap:wrap;
+  justify-content:center;width:96vw;z-index:120;cursor:default;
+}
+
+.selector button{
+  background:#000a04;border:1px solid rgba(0,200,80,.38);
+  color:#55cc88;padding:6px 10px;font-family:monospace;
+  font-size:9px;letter-spacing:.08em;cursor:pointer;
+  transition:background .2s,color .2s;
+}
+
+.selector button.active{
+  background:#001f0d;color:#ccffdd;
+  box-shadow:0 0 6px #00aa44 inset;
+}
+
+.status{
+  position:fixed;top:88px;opacity:.32;font-size:9px;
+  letter-spacing:.16em;color:#55aa77;z-index:120;
+}
+
+canvas{
+  width:min(420px,80vw);height:min(420px,80vw);
+  border-radius:50%;border:1px solid rgba(0,200,80,.22);
+  background:#000;
+  box-shadow:0 0 40px rgba(0,180,80,.06) inset,
+             0 0 12px rgba(0,160,60,.22);
+  z-index:40;
+}
+
+.subs{
+  position:fixed;bottom:24px;width:min(660px,90vw);
+  min-height:2.4em;padding:8px 14px;text-align:center;
+  font-size:13px;line-height:1.5;color:#88ccaa;
+  text-shadow:0 0 5px #005533;background:rgba(0,12,6,.42);
+  border:1px solid rgba(0,180,80,.15);border-radius:4px;
+  pointer-events:none;z-index:80;
+  font-style:italic;letter-spacing:.02em;
+}
+
+@media(max-width:700px){
+  .title{top:12px;font-size:10px}
+  .selector{top:40px}
+  .selector button{font-size:8px;padding:5px 7px}
+  .status{top:88px;font-size:8px}
+  .subs{bottom:16px;font-size:12px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="title" id="title">Distinction Engine</div>
+<div class="selector" id="selector"></div>
+<div class="status">touch · click to play or pause</div>
+<canvas id="viz"></canvas>
+<div id="subs" class="subs"></div>
+
+<audio id="audio" preload="auto"></audio>
+
+<script>
+const tracks = [
+  {
+    file:"How_language_keeps_the_future_navigable.mp3",
+    vtt:"How_language_keeps_the_future_navigable.vtt",
+    label:"Navigate",
+    title:"How Language Keeps the Future Navigable",
+    mode:"navigate"
+  },
+  {
+    file:"The_Hidden_Physics_of_Grammar.mp3",
+    vtt:"The_Hidden_Physics_of_Grammar.vtt",
+    label:"Grammar",
+    title:"The Hidden Physics of Grammar",
+    mode:"grammar"
+  },
+  {
+    file:"The_Hidden_Physics_of_Adjective_Order.mp3",
+    vtt:"The_Hidden_Physics_of_Adjective_Order.vtt",
+    label:"Adjective",
+    title:"The Hidden Physics of Adjective Order",
+    mode:"adjective"
+  },
+  {
+    file:"Why_AI_Thinks_Longer_Is_Smarter.mp3",
+    vtt:"Why_AI_Thinks_Longer_Is_Smarter.vtt",
+    label:"Length",
+    title:"Why AI Thinks Longer Is Smarter",
+    mode:"length"
+  }
+];
+
+let trackIndex = 0;
+let mode = tracks[0].mode;
+
+const audio    = document.getElementById("audio");
+const subs     = document.getElementById("subs");
+const titleEl  = document.getElementById("title");
+const selector = document.getElementById("selector");
+
+let audioCtx, analyser, freqData, timeData;
+
+function initAudio(){
+  if(audioCtx) return;
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  analyser = audioCtx.createAnalyser();
+  analyser.fftSize = 2048;
+  analyser.smoothingTimeConstant = .90;
+  freqData = new Uint8Array(analyser.frequencyBinCount);
+  timeData = new Uint8Array(analyser.fftSize);
+  const src = audioCtx.createMediaElementSource(audio);
+  src.connect(analyser);
+  analyser.connect(audioCtx.destination);
+}
+
+function buildSelector(){
+  selector.innerHTML = "";
+  tracks.forEach((t,i)=>{
+    const btn = document.createElement("button");
+    btn.textContent = t.label;
+    btn.onclick = async e=>{
+      e.stopPropagation();
+      initAudio();
+      if(audioCtx.state==="suspended") await audioCtx.resume();
+      await loadTrack(i,true);
+    };
+    selector.appendChild(btn);
+  });
+}
+
+function updateButtons(){
+  [...selector.querySelectorAll("button")]
+    .forEach((b,i)=>b.classList.toggle("active",i===trackIndex));
+}
+
+async function loadTrack(i,autoplay=true){
+  trackIndex = ((i%tracks.length)+tracks.length)%tracks.length;
+  const t = tracks[trackIndex];
+  mode = t.mode;
+  titleEl.textContent = t.title;
+  audio.src = t.file;
+  audio.load();
+  updateButtons();
+  await loadVTT(t.vtt);
+  if(autoplay){ try{ await audio.play(); }catch(e){} }
+}
+
+audio.addEventListener("ended",()=>loadTrack(trackIndex+1,true));
+
+document.body.onclick = async ()=>{
+  initAudio();
+  if(audioCtx.state==="suspended") await audioCtx.resume();
+  if(audio.paused) await audio.play();
+  else audio.pause();
+};
+
+/* subtitles */
+
+let cues = [];
+
+async function loadVTT(url){
+  cues = [];
+  subs.textContent = "";
+  try{
+    const res = await fetch(url);
+    if(!res.ok){ console.warn("Missing VTT:",url); return; }
+    cues = parseVTT(await res.text());
+  }catch(e){ console.warn("VTT:",e); }
+}
+
+function parseVTT(text){
+  const out = [];
+  for(const block of text.replace(/\r/g,"").split(/\n{2,}/)){
+    const lines = block.trim().split("\n");
+    const ts = lines.find(l=>l.includes("-->"));
+    if(!ts) continue;
+    const ti = lines.indexOf(ts);
+    const [s,e] = ts.split("-->").map(x=>x.trim());
+    out.push({start:parseTime(s),end:parseTime(e),text:lines.slice(ti+1).join(" ")});
+  }
+  return out;
+}
+
+function parseTime(t){
+  t = t.split(" ")[0].replace(",",".");
+  const p = t.split(":");
+  if(p.length===3) return (+p[0])*3600+(+p[1])*60+parseFloat(p[2]);
+  return (+p[0])*60+parseFloat(p[1]);
+}
+
+audio.ontimeupdate = ()=>{
+  const t = audio.currentTime;
+  const c = cues.find(c=>t>=c.start&&t<c.end+.2);
+  subs.textContent = c ? c.text : "";
+};
+
+/* canvas */
+
+const canvas = document.getElementById("viz");
+const ctx    = canvas.getContext("2d");
+const W=480, H=480, cx=W/2, cy=H/2, R=W*.39;
+canvas.width=W; canvas.height=H;
+
+let frame=0, bass=0, mid=0, high=0;
+
+function updateEnergy(){
+  if(!analyser) return;
+  analyser.getByteFrequencyData(freqData);
+  let b=0,m=0,h=0;
+  for(let i=0;i<40;i++) b+=freqData[i];
+  for(let i=40;i<180;i++) m+=freqData[i];
+  for(let i=180;i<freqData.length;i++) h+=freqData[i];
+  bass+=(b/(40*255)-bass)*.07;
+  mid +=(m/(140*255)-mid )*.05;
+  high+=(h/((freqData.length-180)*255)-high)*.04;
+}
+
+function clearPortal(){
+  ctx.fillStyle="rgba(0,3,1,.11)";
+  ctx.fillRect(0,0,W,H);
+
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx,cy,R,0,Math.PI*2);
+  ctx.clip();
+  const g=ctx.createRadialGradient(cx,cy,0,cx,cy,R);
+  g.addColorStop(0,"rgba(0,18,8,.32)");
+  g.addColorStop(.65,"rgba(0,6,2,.52)");
+  g.addColorStop(1,"rgba(0,0,0,.98)");
+  ctx.fillStyle=g;
+  ctx.fillRect(0,0,W,H);
+  ctx.restore();
+
+  ctx.beginPath();
+  ctx.arc(cx,cy,R,0,Math.PI*2);
+  ctx.strokeStyle="rgba(80,200,120,.18)";
+  ctx.lineWidth=1.5;
+  ctx.shadowBlur=8;
+  ctx.shadowColor="#004422";
+  ctx.stroke();
+  ctx.shadowBlur=0;
+}
+
+/* shared substrate — faint possibility cloud */
+
+function drawCloud(alpha=.06){
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx,cy,R,0,Math.PI*2);
+  ctx.clip();
+  for(let i=0;i<100;i++){
+    const a = frame*.0015+i*.19;
+    const r = R*.12+(i%18)*R*.028;
+    const x = cx+Math.sin(a+i*.3)*r*.65;
+    const y = cy+Math.cos(a*.85+i*.2)*r*.55;
+    ctx.beginPath();
+    ctx.arc(x,y,1.8,0,Math.PI*2);
+    ctx.fillStyle=`rgba(100,200,140,${alpha})`;
+    ctx.fill();
+  }
+  ctx.restore();
+}
+
+/* wave trace */
+
+function drawWaveTrace(lagBase){
+  if(!analyser) return;
+  analyser.getByteTimeDomainData(timeData);
+  const lag=Math.floor(timeData.length*(lagBase+mid*.06));
+  ctx.beginPath();
+  for(let i=0;i<timeData.length;i+=3){
+    const a=(timeData[i]-128)/128;
+    const b=(timeData[(i+lag)%timeData.length]-128)/128;
+    const x=cx+a*R*.50+Math.sin(frame*.007)*8;
+    const y=cy+b*R*.42+Math.cos(frame*.005)*6;
+    if(i===0) ctx.moveTo(x,y);
+    else ctx.lineTo(x,y);
+  }
+  ctx.strokeStyle="rgba(100,220,160,.46)";
+  ctx.lineWidth=3;
+  ctx.lineCap="round";
+  ctx.shadowBlur=8;
+  ctx.shadowColor="#00aa55";
+  ctx.stroke();
+  ctx.shadowBlur=0;
+}
+
+/* ── 1. Navigate — reachability divergence ──
+   Two paths share an origin. A distinction keeps them
+   separated. Remove the distinction and the paths merge —
+   navigability collapses. */
+
+function drawNavigate(){
+  drawCloud(.05);
+
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx,cy,R,0,Math.PI*2);
+  ctx.clip();
+
+  // shared origin region — the undifferentiated start
+  const originR = R*.10 + bass*8;
+  ctx.beginPath();
+  ctx.arc(cx,cy,originR,0,Math.PI*2);
+  const og = ctx.createRadialGradient(cx,cy,0,cx,cy,originR);
+  og.addColorStop(0,"rgba(220,255,220,.80)");
+  og.addColorStop(1,"rgba(100,200,140,.05)");
+  ctx.fillStyle=og;
+  ctx.fill();
+
+  // the distinction boundary — where paths diverge
+  // it breathes: when audio is quiet the distinction almost collapses
+  const distStrength = .35 + mid*.25;
+  const divAngle     = frame*.004;
+
+  // reachability divergence marker — the gap between futures
+  const endA = {
+    x: cx+Math.cos(divAngle+Math.PI*.72)*R*.74,
+    y: cy+Math.sin(divAngle+Math.PI*.72)*R*.74
+  };
+  const endB = {
+    x: cx+Math.cos(divAngle-Math.PI*.72)*R*.74,
+    y: cy+Math.sin(divAngle-Math.PI*.72)*R*.74
+  };
+
+  ctx.beginPath();
+  ctx.moveTo(endA.x,endA.y);
+  ctx.lineTo(endB.x,endB.y);
+  ctx.strokeStyle=`rgba(200,255,210,${distStrength*.35})`;
+  ctx.lineWidth=1;
+  ctx.setLineDash([4,6]);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // future A — lissajous trace centred on endA
+  if(analyser){
+    analyser.getByteTimeDomainData(timeData);
+    const lagA = Math.floor(timeData.length*(.14+mid*.06));
+    ctx.beginPath();
+    for(let i=0;i<timeData.length;i+=3){
+      const a=(timeData[i]-128)/128;
+      const b=(timeData[(i+lagA)%timeData.length]-128)/128;
+      const x=endA.x+a*R*.22;
+      const y=endA.y+b*R*.18;
+      if(i===0) ctx.moveTo(x,y);
+      else ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle=`rgba(180,255,200,${.60+mid*.2})`;
+    ctx.lineWidth=2.5;
+    ctx.lineCap="round";
+    ctx.shadowBlur=8;
+    ctx.shadowColor="#00ff88";
+    ctx.stroke();
+    ctx.shadowBlur=0;
+
+    // future B — lissajous trace centred on endB, different lag
+    const lagB = Math.floor(timeData.length*(.22+mid*.06));
+    ctx.beginPath();
+    for(let i=0;i<timeData.length;i+=3){
+      const a=(timeData[i]-128)/128;
+      const b=(timeData[(i+lagB)%timeData.length]-128)/128;
+      const x=endB.x+a*R*.22;
+      const y=endB.y+b*R*.18;
+      if(i===0) ctx.moveTo(x,y);
+      else ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle=`rgba(220,255,170,${.50+mid*.2})`;
+    ctx.lineWidth=2.5;
+    ctx.lineCap="round";
+    ctx.shadowBlur=8;
+    ctx.shadowColor="#aaff44";
+    ctx.stroke();
+    ctx.shadowBlur=0;
+  }
+
+  ctx.restore();
+  drawWaveTrace(.13);
+}
+
+/* ── 2. Grammar — persistence hierarchy ──
+   Rings arranged by how many futures each property controls.
+   Inner = constitutive (material, purpose).
+   Outer = contingent (opinion, beauty).
+   Each ring's stability reflects its persistence. */
+
+const PERSIST_LAYERS = [
+  { label:"purpose",   r:.13, color:"rgba(220,255,215,", stable:true  },
+  { label:"material",  r:.22, color:"rgba(200,255,205,", stable:true  },
+  { label:"origin",    r:.31, color:"rgba(180,250,200,", stable:true  },
+  { label:"colour",    r:.40, color:"rgba(160,240,190,", stable:false },
+  { label:"shape",     r:.49, color:"rgba(140,230,180,", stable:false },
+  { label:"age",       r:.57, color:"rgba(120,220,170,", stable:false },
+  { label:"size",      r:.65, color:"rgba(100,210,160,", stable:false },
+  { label:"opinion",   r:.73, color:"rgba( 80,200,150,", stable:false },
+];
+
+function drawGrammar(){
+  drawCloud(.04);
+
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx,cy,R,0,Math.PI*2);
+  ctx.clip();
+
+  PERSIST_LAYERS.forEach((layer,i)=>{
+    const baseR = R*layer.r;
+    // stable inner layers barely wobble; outer layers tremble
+    const wobble = layer.stable
+      ? Math.sin(frame*.004+i)*(1+mid*3)
+      : Math.sin(frame*.013+i*1.4)*(4+high*12);
+
+    ctx.beginPath();
+    for(let a=0;a<=Math.PI*2+.04;a+=.04){
+      const w = wobble*Math.sin(a*3+frame*.005+i);
+      const r = baseR+w;
+      const x = cx+Math.cos(a)*r;
+      const y = cy+Math.sin(a)*r;
+      if(a===0) ctx.moveTo(x,y);
+      else ctx.lineTo(x,y);
+    }
+
+    // inner layers brighter — they control more futures
+    const brightness = 1-i/PERSIST_LAYERS.length;
+    ctx.strokeStyle=`${layer.color}${.06+brightness*.28})`;
+    ctx.lineWidth = layer.stable ? 2.5 : 1.2;
+    if(layer.stable){
+      ctx.shadowBlur=6*brightness;
+      ctx.shadowColor="#00ff88";
+    }
+    ctx.stroke();
+    ctx.shadowBlur=0;
+  });
+
+  // noun core — the constitutive center everything orbits
+  ctx.beginPath();
+  ctx.arc(cx,cy,R*.06+bass*5,0,Math.PI*2);
+  const ng=ctx.createRadialGradient(cx,cy,0,cx,cy,R*.08);
+  ng.addColorStop(0,"rgba(240,255,235,.95)");
+  ng.addColorStop(1,"rgba(160,255,190,.05)");
+  ctx.fillStyle=ng;
+  ctx.shadowBlur=14;
+  ctx.shadowColor="#00ff88";
+  ctx.fill();
+  ctx.shadowBlur=0;
+
+  ctx.restore();
+  drawWaveTrace(.15);
+}
+
+/* ── 3. Adjective — modifier order as gravitational field ──
+   Properties fall toward the noun by persistence weight.
+   Heavy (constitutive) properties fall fastest, orbit closest.
+   Light (contingent) properties stay far out, drifting. */
+
+const ADJ_PROPS = [
+  { name:"dining",    weight:.92, orbit:.14, speed:.0008 },
+  { name:"wooden",    weight:.82, orbit:.22, speed:.0012 },
+  { name:"round",     weight:.64, orbit:.32, speed:.0018 },
+  { name:"old",       weight:.52, orbit:.41, speed:.0024 },
+  { name:"red",       weight:.44, orbit:.50, speed:.0031 },
+  { name:"French",    weight:.38, orbit:.58, speed:.0038 },
+  { name:"large",     weight:.30, orbit:.65, speed:.0046 },
+  { name:"beautiful", weight:.14, orbit:.74, speed:.0058 },
+];
+
+function drawAdjective(){
+  drawCloud(.04);
+
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx,cy,R,0,Math.PI*2);
+  ctx.clip();
+
+  // gravitational field lines pulling toward noun
+  for(let i=0;i<20;i++){
+    const a=i/20*Math.PI*2;
+    ctx.beginPath();
+    ctx.moveTo(cx+Math.cos(a)*R*.82, cy+Math.sin(a)*R*.82);
+    ctx.lineTo(cx+Math.cos(a)*R*.06, cy+Math.sin(a)*R*.06);
+    ctx.strokeStyle=`rgba(80,160,100,${.018+high*.012})`;
+    ctx.lineWidth=1;
+    ctx.stroke();
+  }
+
+  // noun core
+  ctx.beginPath();
+  ctx.arc(cx,cy,R*.07+bass*5,0,Math.PI*2);
+  const ng=ctx.createRadialGradient(cx,cy,0,cx,cy,R*.10);
+  ng.addColorStop(0,"rgba(240,255,230,.92)");
+  ng.addColorStop(1,"rgba(140,255,180,.04)");
+  ctx.fillStyle=ng;
+  ctx.shadowBlur=16;
+  ctx.shadowColor="#00ff88";
+  ctx.fill();
+  ctx.shadowBlur=0;
+
+  // property nodes orbiting at persistence-weighted radii
+  ADJ_PROPS.forEach((prop,i)=>{
+    const angle = frame*prop.speed*(1+(i%3)*.2) + i*.78;
+    const orb   = R*prop.orbit;
+    const x     = cx+Math.cos(angle)*orb;
+    const y     = cy+Math.sin(angle)*orb;
+
+    // lissajous trace centred on this property's orbital position
+    if(analyser){
+      analyser.getByteTimeDomainData(timeData);
+      // each property gets a distinct lag so traces look different
+      const lag = Math.floor(timeData.length*(.10 + i*.012 + mid*.05));
+      // scale inversely with orbit — inner (heavy) props are tighter
+      const scale = R*(prop.orbit*.28+.06);
+      const brightness = prop.weight;
+      ctx.beginPath();
+      for(let t=0;t<timeData.length;t+=3){
+        const a=(timeData[t]-128)/128;
+        const b=(timeData[(t+lag)%timeData.length]-128)/128;
+        const tx=x+a*scale;
+        const ty=y+b*scale*.85;
+        if(t===0) ctx.moveTo(tx,ty);
+        else ctx.lineTo(tx,ty);
+      }
+      ctx.strokeStyle=`rgba(${180+brightness*60|0},255,${190+brightness*50|0},${.38+brightness*.32})`;
+      ctx.lineWidth=1.8+brightness;
+      ctx.lineCap="round";
+      ctx.shadowBlur=brightness*8;
+      ctx.shadowColor="#00ff88";
+      ctx.stroke();
+      ctx.shadowBlur=0;
+    }
+  });
+
+  ctx.restore();
+  drawWaveTrace(.12);
+}
+
+/* ── 4. Length — projection collapse ──
+   Two signals: correctness (stable, structural) and
+   length (surface, correlated). During training they
+   correlate. Then the model collapses them into one.
+   The collapse is shown as the length signal eclipsing
+   the correctness signal until they're indistinguishable. */
+
+function drawLength(){
+  drawCloud(.04);
+
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx,cy,R,0,Math.PI*2);
+  ctx.clip();
+
+  // collapse cycle: 0=distinct, 1=fully merged
+  const collapse = (Math.sin(frame*.007)+1)*.5;
+
+  // correctness signal — deep in the field, structural
+  // it never moves; it is what it is
+  const corrR = R*.18+bass*6;
+  ctx.beginPath();
+  ctx.arc(cx,cy,corrR,0,Math.PI*2);
+  const cg=ctx.createRadialGradient(cx,cy,0,cx,cy,corrR);
+  cg.addColorStop(0,`rgba(180,255,200,${.85-collapse*.55})`);
+  cg.addColorStop(1,"rgba(100,200,140,.04)");
+  ctx.fillStyle=cg;
+  ctx.shadowBlur=(1-collapse)*14;
+  ctx.shadowColor="#00ff88";
+  ctx.fill();
+  ctx.shadowBlur=0;
+
+  // length signal — orbiting, growing, eventually eclipsing
+  const lengthA = frame*.009;
+  const lengthOrb = R*(collapse*.62+.08);  // falls inward as collapse grows
+  const lengthR   = R*(.08+collapse*.22)+mid*8;
+  const lx = cx+Math.cos(lengthA)*lengthOrb;
+  const ly = cy+Math.sin(lengthA)*lengthOrb;
+
+  // length node
+  ctx.beginPath();
+  ctx.arc(lx,ly,lengthR,0,Math.PI*2);
+  const lg=ctx.createRadialGradient(lx,ly,0,lx,ly,lengthR);
+  lg.addColorStop(0,`rgba(240,255,190,${.55+collapse*.35})`);
+  lg.addColorStop(1,"rgba(160,240,120,.04)");
+  ctx.fillStyle=lg;
+  ctx.shadowBlur=collapse*18;
+  ctx.shadowColor="#aaff44";
+  ctx.fill();
+  ctx.shadowBlur=0;
+
+  // correlation threads — drawn during early training phase
+  // they show WHY the model collapses them (they really do correlate)
+  if(collapse < .75){
+    const threads = 8;
+    for(let i=0;i<threads;i++){
+      const ta=i/threads*Math.PI*2+frame*.002;
+      const tx=cx+Math.cos(ta)*corrR;
+      const ty=cy+Math.sin(ta)*corrR;
+      ctx.beginPath();
+      ctx.moveTo(tx,ty);
+      ctx.lineTo(lx,ly);
+      ctx.strokeStyle=`rgba(180,255,180,${(1-collapse)*.08})`;
+      ctx.lineWidth=1;
+      ctx.stroke();
+    }
+  }
+
+  // post-collapse: once merged, show the single proxy signal
+  // dominating — correctness invisible underneath
+  if(collapse > .6){
+    const mergeAlpha = (collapse-.6)/.4;
+    ctx.beginPath();
+    ctx.arc(cx,cy,lengthR*(1+mergeAlpha*.4),0,Math.PI*2);
+    ctx.strokeStyle=`rgba(200,255,160,${mergeAlpha*.3})`;
+    ctx.lineWidth=2;
+    ctx.setLineDash([3,7]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // repair marker — a short correct proof breaking the proxy
+  // appears briefly near peak collapse
+  if(collapse > .82){
+    const repairAlpha=(collapse-.82)/.18;
+    const rx=cx+Math.cos(frame*.02)*R*.42;
+    const ry=cy+Math.sin(frame*.02)*R*.42;
+    ctx.beginPath();
+    ctx.arc(rx,ry,4+bass*3,0,Math.PI*2);
+    ctx.fillStyle=`rgba(220,255,210,${repairAlpha*.9})`;
+    ctx.shadowBlur=repairAlpha*12;
+    ctx.shadowColor="#00ff88";
+    ctx.fill();
+    ctx.shadowBlur=0;
+    // small line — the short proof
+    ctx.beginPath();
+    ctx.moveTo(rx,ry);
+    ctx.lineTo(rx+Math.cos(frame*.02+Math.PI)*R*.12,
+               ry+Math.sin(frame*.02+Math.PI)*R*.12);
+    ctx.strokeStyle=`rgba(200,255,200,${repairAlpha*.7})`;
+    ctx.lineWidth=2.5;
+    ctx.lineCap="round";
+    ctx.stroke();
+  }
+
+  ctx.restore();
+  drawWaveTrace(.16);
+}
+
+/* ── main loop ── */
+
+function draw(){
+  frame++;
+  updateEnergy();
+  clearPortal();
+
+  if(mode==="navigate")  drawNavigate();
+  if(mode==="grammar")   drawGrammar();
+  if(mode==="adjective") drawAdjective();
+  if(mode==="length")    drawLength();
+
+  requestAnimationFrame(draw);
+}
+
+buildSelector();
+loadTrack(0,false);
+draw();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1593 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{multirow}
+
+\geometry{
+  paper=a4paper,
+  top=1.25in,
+  bottom=1.25in,
+  left=1.4in,
+  right=1.4in
+}
+
+\onehalfspacing
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+}
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection.}{0.5em}{}
+
+% Theorem environments
+\newtheoremstyle{rthm}
+  {10pt}{10pt}{\itshape}{0pt}{\bfseries}{.}{0.5em}{}
+\theoremstyle{rthm}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheoremstyle{rdef}
+  {8pt}{8pt}{\normalfont}{0pt}{\bfseries}{.}{0.5em}{}
+\theoremstyle{rdef}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{interpretation}{Interpretation}
+
+% Macros
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\Lc}{\mathcal{L}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\Om}{\Omega}
+\newcommand{\Reach}{\operatorname{Reach}}
+\newcommand{\RD}[1][\theta]{R_{D}^{#1}}
+\newcommand{\Lam}[1][\theta]{\Lambda^{#1}}
+\newcommand{\Fdiff}{F_{\mathrm{diff}}}
+\newcommand{\Ftil}{\widetilde{F}}
+\newcommand{\Ltil}{\widetilde{\mathcal{L}}}
+\newcommand{\dM}{d_{\mathcal{M}}}
+\newcommand{\dL}{d_{\mathcal{L}}}
+% merge uses \sqcup directly
+
+\title{\textbf{Why Distinctions Survive}\\[6pt]
+\large A Reachability Theory of Lexical Preservation}
+\author{Flyxion\\[4pt]
+\small Independent Researcher}
+\date{June 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent
+Languages do not merely communicate information. They also preserve the
+distinctions required to keep a community's future navigable. A recent
+large-scale study of colexification across nearly two thousand languages
+explains lexical organisation through the interaction of two pressures:
+lexical compression and lexical differentiation. The account is empirically
+powerful but structurally incomplete. It predicts which lexical structures
+should exist; it cannot predict which should persist.
+
+We identify the missing variable as \emph{reachability divergence}---the
+degree to which two meanings, once distinguished, open different future
+trajectories of action, inference, repair, or error. Reachability divergence
+is formalised via an explicit measurable performance function on domain-indexed
+future spaces, making the construct well-defined and operationally grounded.
+We show that reachability divergence is logically independent of contextual
+confusability: the critical dissociation occurs precisely among meaning pairs
+that are cross-linguistically attested as colexification candidates---high
+semantic similarity, low contextual confusability, yet high domain-specific
+reachability divergence, the (H, L, H) cell that is invisible to the
+compression account. We introduce a domain-indexed formal framework and derive
+four principal theorems and one structural proposition: the \emph{Navigational
+Collapse Theorem}, the \emph{Stability Theorem} (derived from explicit dynamical
+assumptions including a repair cost trade-off that explains why partial
+colexification is preferred to full differentiation), the \emph{Repair Theorem}
+(as an optimality result over admissibility-restoring repairs, with an explicit
+scope remark on the uniqueness claim), the \emph{Domain Divergence Proposition}
+(a direct consequence of domain indexing with major interpretive weight for
+technical vocabulary emergence), and the \emph{Projection Theorem} (generating
+a falsifiable prediction about the interaction term in the best existing
+statistical model of colexification). We further present a pilot estimation of
+reachability divergence for twenty cross-linguistically attested meaning pairs,
+demonstrating that $\RD$ varies independently of semantic similarity and
+contextual confusability and corrects all four cases in which the compression
+account mispredicts within the (H, L, H) cell. This paper constitutes a
+theoretical research programme: it specifies the formal framework, establishes
+the independence of the central construct, derives the principal results, and
+identifies the empirical tests required for full validation.
+\end{abstract}
+
+\newpage
+\setcounter{page}{1}
+\tableofcontents
+\newpage
+
+%=====================================================================
+\section{The Problem Compression Cannot Solve}
+\label{sec:problem}
+%=====================================================================
+
+Consider the distinction between \textsc{wood} and \textsc{tree}. Many languages
+colexify these meanings---that is, they use a single form to express both. From
+the standpoint of semantic similarity, the two concepts are extremely close.
+From the standpoint of contextual confusability, many utterances permit
+effortless disambiguation. A theory of lexical compression therefore predicts
+persistent pressure toward form reuse in this pair, and that prediction is
+confirmed by the cross-linguistic record.
+
+Now consider the same pair in the context of a forestry management
+institution. \textsc{tree} controls survey decisions, replanting schedules, and
+biodiversity assessments. \textsc{wood} controls timber yield calculations,
+drying schedules, and board-foot pricing. A merged form that does not distinguish
+these meanings will produce communicatively efficient utterances while generating
+navigational failures: agents who correctly understand what was said may
+nonetheless act on the wrong future trajectory, because the representation no
+longer marks which set of actions is admissible.
+
+The question this paper addresses is: why do languages that have merged these
+meanings in general vocabulary sometimes \emph{recover} the distinction in
+specialist domains? And, more generally: why do certain distinctions survive
+despite sustained pressure toward compression?
+
+The compression account---the most successful current framework for predicting
+cross-linguistic lexical organisation \cite{brochhagen2022,brochhagen2026}---cannot
+answer this question. It is synchronic: it predicts which meanings should
+colexify under current conditions but provides no criterion for distinguishing
+harmless compression from destructive compression, and no mechanism for
+predicting which colexifications will remain stable over time.
+
+The missing variable is \emph{reachability divergence}: the degree to which two
+meanings, once distinguished, open different futures of action, inference,
+repair, or decision. We develop this variable formally, establish its logical
+independence from contextual confusability, derive five principal theorems, and
+present a pilot empirical estimation.
+
+%=====================================================================
+\section{The Standard Account and Its Limits}
+\label{sec:standard}
+%=====================================================================
+
+\subsection{The compression--differentiation model}
+
+Let $S(X,Y) \in [0,1]$ denote semantic similarity between meanings $X$ and $Y$,
+and $C(X,Y) \in [0,1]$ denote contextual confusability. The compression account
+models the probability of lexicalization pattern $L \in \{\text{none},
+\text{partial}, \text{full}\}$ as
+
+\[
+\Pr(L \mid X, Y) = f\!\left(S(X,Y),\; C(X,Y)\right).
+\]
+
+The best-fitting model includes an interaction term \cite{brochhagen2026}:
+
+\begin{equation}
+\label{eq:standard}
+\eta(X,Y) = \alpha_0 + \alpha_S \cdot S + \alpha_C \cdot C
+           + \alpha_{SC} \cdot S \cdot C,
+\end{equation}
+
+where $\eta$ is the linear predictor in a multinomial regression. The model
+predicts: full colexification is most likely when $S$ is high and $C$ is low;
+partial colexification is most likely when $S$ and $C$ are both
+moderate-to-high; no colexification is most likely when $S$ is low. The
+empirical fit across nearly two thousand languages is strong.
+
+\subsection{Three structural limitations}
+
+\paragraph{Diachronic silence.}
+The model is synchronic. It predicts the current distribution of colexification
+patterns but has no criterion for distinguishing harmless compression (merging
+meanings whose futures are equivalent) from destructive compression (merging
+meanings whose futures diverge). It therefore cannot predict which colexifications
+will persist, which will fragment, or which will acquire morphological repair.
+
+\paragraph{Family-level heterogeneity.}
+Partial colexifications are substantially more heterogeneous across language
+families than full colexifications \cite{brochhagen2026}. The compression account
+attributes this to typological variation in morphological productivity, but
+provides no mechanism to predict \emph{which} families will diverge on
+\emph{which} meaning pairs.
+
+\paragraph{The unexplained interaction.}
+The interaction term $\alpha_{SC} \cdot S \cdot C$ in (\ref{eq:standard}) is
+identified statistically but not given a structural interpretation. It is an
+empirical coefficient in need of a theoretical account.
+
+%=====================================================================
+\section{The Reachability Framework}
+\label{sec:framework}
+%=====================================================================
+
+\subsection{Foundational definitions}
+
+\begin{definition}[Meaning Space]
+A \emph{meaning space} $(\M, \dM)$ is a metric space whose points are semantic
+representations of lexical concepts. The metric $\dM$ reflects semantic
+distance, operationalizable by distributional similarity, association norms, or
+conceptual space geometry \cite{gardenfors2000}.
+\end{definition}
+
+\begin{definition}[Domain and Future Space]
+A \emph{domain} $\theta$ is a structured practice, institution, or community of
+action. The \emph{future space} $(\Om^{\theta}, \mathcal{F}^{\theta},
+\mu^{\theta})$ associated with domain $\theta$ is a probability space where
+$\Om^{\theta}$ is the set of possible future states (action outcomes, inference
+results, decisions, error events) available to agents in $\theta$;
+$\mathcal{F}^{\theta}$ is a $\sigma$-algebra on $\Om^{\theta}$; and $\mu^{\theta}$
+is a probability measure representing the prior distribution over futures under
+default navigation in $\theta$.
+\end{definition}
+
+\begin{definition}[Performance Function]
+\label{def:perf}
+A \emph{performance function} for domain $\theta$ is a measurable map
+$g^{\theta} : \M \times \Om^{\theta} \to [0,1]$, where $g^{\theta}(X, \omega)$
+is the probability of navigational success when meaning $X$ is the operative
+concept and $\omega \in \Om^{\theta}$ is the future state being navigated to.
+Measurability with respect to $\mathcal{F}^{\theta}$ (in the second argument)
+is required so that the level sets below are well-defined measurable sets.
+\end{definition}
+
+\begin{definition}[Admissible Future Region]
+\label{def:afr}
+For meaning $X \in \M$, domain $\theta$, and performance function $g^{\theta}$,
+the \emph{admissible future region} at threshold $\tau \in (0,1)$ is
+
+\[
+\A_X^{\theta} = \bigl\{\omega \in \Om^{\theta} : g^{\theta}(X, \omega) > \tau \bigr\}.
+\]
+
+Measurability of $\A_X^{\theta}$ with respect to $\mathcal{F}^{\theta}$ follows
+from the measurability of $g^{\theta}(\cdot, \cdot)$ in its second argument and
+the fact that $\{\omega : g^{\theta}(X,\omega) > \tau\}$ is a pre-image of the
+open set $(\tau, 1]$ under a measurable map.
+\end{definition}
+
+\begin{remark}
+The theorem statements do not depend on the specific value of $\tau$, only on
+its existence. The threshold is domain-relative: high-stakes domains (surgery,
+air traffic control) set high $\tau$; low-stakes domains set low $\tau$. The
+performance function $g^{\theta}$ encodes the domain's goals and error-costs.
+Different choices of $g^{\theta}$ yield different $\A_X^{\theta}$, but the
+qualitative structure of the theorems---stability, repair, domain
+divergence---holds for any $g^{\theta}$ satisfying Definition~\ref{def:perf}.
+\end{remark}
+
+\begin{definition}[Reachability Divergence]
+\label{def:rd}
+The \emph{reachability divergence} between meanings $X$ and $Y$ in domain
+$\theta$ is
+
+\[
+\RD(X,Y) = \mu^{\theta}\!\left(\A_X^{\theta} \;\triangle\; \A_Y^{\theta}\right),
+\]
+
+where $A \triangle B = (A \setminus B) \cup (B \setminus A)$ is the symmetric
+difference. Since $\mu^{\theta}$ is a probability measure, $\RD(X,Y) \in [0,2]$.
+\end{definition}
+
+\subsection{The merge operator and reachability loss}
+
+A central object in the stability analysis is the \emph{merged meaning}
+$X \sqcup Y$---the semantic representation accessed by a colexified form that
+expresses both $X$ and $Y$.
+
+\begin{definition}[Admissible Merge Operator]
+\label{def:merge}
+A \emph{merge operator} $\sqcup : \M \times \M \to \M$ is \emph{admissible}
+if it satisfies three conditions:
+\begin{enumerate}[nosep,label=(\roman*)]
+  \item \emph{Coarsening}: $X \sqcup Y$ is semantically coarser than both $X$
+        and $Y$, meaning $\dM(X, X \sqcup Y) \leq \dM(X, Y)$ and
+        $\dM(Y, X \sqcup Y) \leq \dM(X,Y)$.
+  \item \emph{Future contraction}: $\A_{X \sqcup Y}^{\theta} \subseteq
+        \A_X^{\theta} \cup \A_Y^{\theta}$ for all $\theta$.
+  \item \emph{Intersection retention}: $\A_X^{\theta} \cap \A_Y^{\theta}
+        \subseteq \A_{X \sqcup Y}^{\theta}$ for all $\theta$.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Condition (i) says the merged meaning lies between the originals in semantic
+space. Condition (ii) says the merged meaning cannot open futures that neither
+original opened---it cannot exceed the union. Condition (iii) says the merged
+meaning retains at least the futures common to both originals---it cannot fall
+below the intersection. Together, (ii) and (iii) give
+
+\[
+\A_X^{\theta} \cap \A_Y^{\theta}
+\;\subseteq\;
+\A_{X \sqcup Y}^{\theta}
+\;\subseteq\;
+\A_X^{\theta} \cup \A_Y^{\theta}.
+\]
+
+This is the natural constraint on a semantic coarsening: the merged meaning is
+a cover term that can navigate at least where both originals agreed, but no
+further than either could reach. All three conditions hold for centroid in
+embedding space, semantic intersection, and least-upper-bound under an
+entailment order. The theorems hold for any admissible $\sqcup$.
+\end{remark}
+
+\begin{definition}[Reachability Loss]
+\label{def:lam}
+For an admissible merge operator $\sqcup$, the \emph{reachability loss} of
+merging $X$ and $Y$ in domain $\theta$ is
+
+\[
+\Lam(X,Y) = \mu^{\theta}\!\left(\A_X^{\theta} \cup \A_Y^{\theta}\right)
+            - \mu^{\theta}\!\left(\A_{X \sqcup Y}^{\theta}\right) \;\geq\; 0,
+\]
+
+where non-negativity follows from future contraction (Definition~\ref{def:merge}(ii)).
+\end{definition}
+
+\begin{lemma}[Reachability Loss Bounds]
+\label{lem:bounds}
+For any admissible merge operator, $0 \leq \Lam(X,Y) \leq \RD(X,Y) \leq 2$.
+\end{lemma}
+
+\begin{proof}
+\emph{Non-negativity.} $\Lam(X,Y) = \mu^{\theta}(\A_X^{\theta} \cup
+\A_Y^{\theta}) - \mu^{\theta}(\A_{X \sqcup Y}^{\theta}) \geq 0$ by future
+contraction (Definition~\ref{def:merge}(ii)), which gives $\A_{X \sqcup
+Y}^{\theta} \subseteq \A_X^{\theta} \cup \A_Y^{\theta}$.
+
+\emph{Upper bound $\Lam \leq \RD$.} By intersection retention
+(Definition~\ref{def:merge}(iii)), $\A_X^{\theta} \cap \A_Y^{\theta} \subseteq
+\A_{X \sqcup Y}^{\theta}$, so $\mu^{\theta}(\A_{X \sqcup Y}^{\theta}) \geq
+\mu^{\theta}(\A_X^{\theta} \cap \A_Y^{\theta})$. Therefore
+
+\begin{align*}
+\Lam(X,Y)
+&= \mu^{\theta}(\A_X^{\theta} \cup \A_Y^{\theta})
+ - \mu^{\theta}(\A_{X \sqcup Y}^{\theta}) \\
+&\leq \mu^{\theta}(\A_X^{\theta} \cup \A_Y^{\theta})
+    - \mu^{\theta}(\A_X^{\theta} \cap \A_Y^{\theta}) \\
+&= \mu^{\theta}(\A_X^{\theta} \triangle \A_Y^{\theta})
+ = \RD(X,Y).
+\end{align*}
+
+\emph{Upper bound $\RD \leq 2$.} Since $\mu^{\theta}$ is a probability measure,
+$\mu^{\theta}(\A_X^{\theta} \triangle \A_Y^{\theta}) \leq \mu^{\theta}(\A_X^{\theta})
++ \mu^{\theta}(\A_Y^{\theta}) \leq 2$.
+\end{proof}
+
+\subsection{The extended lexicalization model}
+
+The reachability account extends the compression model:
+
+\begin{equation}
+\label{eq:extended}
+\Pr(L \mid X, Y) = g\!\left(S(X,Y),\; C(X,Y),\; \RD(X,Y)\right).
+\end{equation}
+
+The standard account (\ref{eq:standard}) is the projection of (\ref{eq:extended})
+onto the $(S, C)$ plane with $\RD$ treated as an omitted variable. The Projection
+Theorem (Section~\ref{subsec:t5}) makes this precise.
+
+%=====================================================================
+\section{Reachability Divergence Is Not Contextual Confusability}
+\label{sec:independence}
+%=====================================================================
+
+\subsection{The conceptual distinction}
+
+$C(X,Y)$ measures the probability that an agent receiving a colexified form
+$F(X) = F(Y)$ will select the wrong interpretation in context. It is a
+\emph{communicative failure probability}: the risk of misreception given the
+merged form.
+
+$\RD(X,Y)$ measures the volume of future space accessible from one meaning but
+not the other. It is a \emph{navigational divergence}: the gap between what
+can be done given $X$ versus $Y$, independent of whether communication was
+successful.
+
+These quantities are logically independent: high $C$ does not imply high $\RD$,
+and high $\RD$ does not imply high $C$. Crucially, navigational failure can
+occur even when communicative reception is perfect. If an agent correctly
+receives a merged form and correctly infers the context-appropriate meaning, but
+the merged meaning's admissible future region $\A_{X \sqcup Y}^{\theta}$ is
+smaller than $\A_X^{\theta}$ or $\A_Y^{\theta}$, the agent navigates correctly
+within the merged future region while being unable to reach futures that the
+original distinction would have made accessible.
+
+\subsection{Kanuri partial colexification as morphological repair}
+
+The Kanuri language of West Africa provides one of the clearest attested
+illustrations of the Repair Theorem. The word for spoon is \textit{c\'{o}kk\`{o}l};
+the word for fork is \textit{c\'{o}kk\`{o}l ng\`{u}l\`{o}nd\'{o}\`{a}},
+literally ``spoon with fingers'' \cite{beekhuizen2026}. The two meanings share a
+common reachability core---both are eating implements, and many downstream
+actions (setting a table, eating a meal, washing utensils) are accessible from
+either---but diverge in a restricted region of admissible futures where the
+specific implement controls the action: piercing food, twisting pasta, picking
+up small items.
+
+In the notation of the Repair Theorem, the Kanuri lexicalization satisfies:
+
+\[
+\widetilde{F}(\textsc{spoon}) = (\varnothing,\; f), \qquad
+\widetilde{F}(\textsc{fork}) = (\textit{ng\`{u}l\`{o}nd\'{o}\`{a}},\; f),
+\]
+
+where $f = \textit{c\'{o}kk\`{o}l}$ is the shared base form and the residual
+component is empty for spoon (the base category) and \textit{ng\`{u}l\`{o}nd\'{o}\`{a}}
+for fork. The language preserves the shared form exactly where reachability
+overlap justifies compression, and appends a minimal residual modifier exactly
+where reachability divergence demands distinction.
+
+\begin{proposition}[Morphological Repair Principle]
+\label{prop:morph-repair}
+When two concepts share a common reachability core
+$\A_X^{\theta} \cap \A_Y^{\theta} \approx \A_X^{\theta} \cup \A_Y^{\theta}$
+across most domains $\theta$ but diverge in a restricted specialist domain
+$\theta^*$ where $\RD[\theta^*](X,Y) > \delta$, languages may preserve the
+shared form as the base category while expressing the divergence through a
+minimal residual modifier. The result is a partially colexified system in which
+the base form is admissible for the general domain and the augmented form is
+admissible for the specialist domain.
+\end{proposition}
+
+The Kanuri case is an existence proof of this principle. The base form
+\textit{c\'{o}kk\`{o}l} suffices wherever the distinction between spoon and
+fork is reachability-neutral. The augmented form \textit{c\'{o}kk\`{o}l
+ng\`{u}l\`{o}nd\'{o}\`{a}} is required wherever the reachability divergence
+between the two implements exceeds the disambiguation threshold. The modifier is
+minimal---a single compound element---which is exactly what the Repair Theorem
+predicts: the cost-minimising repair preserves maximal shared structure while
+restoring just enough distinction to prevent navigational collapse.
+
+\subsection{The independence table with colexification-relevant examples}
+
+The independence argument is most relevant in the region where the compression
+account applies: semantically similar pairs that are actually colexified in some
+languages. The following table uses pairs attested as colexification candidates
+in cross-linguistic databases.
+
+\medskip
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{2.4cm} X X}
+\toprule
+ & \textbf{High $\widehat{R}$ (high domain divergence)} & \textbf{Low $\widehat{R}$ (domain neutral)} \\
+\midrule
+\textbf{High $C$} \newline (contextually confusable) &
+\textsc{wood}/\textsc{tree} in forestry management. Colexified in many languages
+(e.g.\ Arabic \textit{shajara} covers both in general use). Semantically similar;
+contextually overlapping in general discourse; futures diverge sharply between
+timber and ecology domains. &
+\textsc{arm}/\textsc{wing} in general anatomical discourse. Colexified in some
+Amerindian languages. Contextually confusable in comparative anatomy; downstream
+action consequences largely equivalent for non-specialists.
+\\[4pt]
+\textbf{Low $C$} \newline (contextually distinct) &
+\textsc{hand}/\textsc{arm} in surgical planning. Colexified in Mandarin
+(\textit{sh\v{o}u}), Swahili (\textit{mkono}), and many other languages.
+Semantically similar; rarely appear in identical sentence frames in specialist
+writing; futures diverge completely between hand surgery and orthopaedic
+procedures: $C \approx 0$, $\widehat{R} \gg 0$. &
+\textsc{finger}/\textsc{toe}. Colexified in many languages (Spanish
+\textit{dedo}, Russian \textit{palec}). Semantically similar; low contextual
+confusability since body-part context disambiguates; action consequences
+equivalent for most agents in most domains.
+\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\medskip
+The critical cell is \textbf{low $C$, high $\RD$}: meanings that are not
+contextually confusable yet have divergent admissible futures. The
+\textsc{hand}/\textsc{arm} pair is the clearest case. It is semantically
+similar enough that many unrelated language families have colexified it.
+It is contextually distinct enough in specialist practice that a surgeon
+writing a referral does not face communicative ambiguity. But the futures it
+opens in surgical planning are nearly disjoint: hand surgery involves digital
+nerve repair, tendon reconstruction, and fine motor rehabilitation, while
+orthopaedic arm surgery involves bone fixation, rotator cuff repair, and
+shoulder rehabilitation. Merging the terms removes a distinction that controls
+which clinical pathway is entered. $C \approx 0$; $\RD \gg 0$.
+
+The compression account has no mechanism to predict that this colexification
+will be unstable in surgical domains while remaining stable in general discourse.
+The reachability account predicts exactly this, via the Domain Divergence Theorem
+(Section~\ref{subsec:t4}).
+
+\begin{proposition}[Independence of $\RD$ and $C$]
+\label{prop:independence}
+$\RD[\theta](X,Y) = 0$ does not imply $C(X,Y) = 0$, and $C(X,Y) = 0$ does
+not imply $\RD[\theta](X,Y) = 0$.
+\end{proposition}
+
+\begin{proof}
+\emph{$\RD = 0$, $C > 0$:} Let $X = \textsc{finger}$, $Y = \textsc{toe}$,
+$\theta$ = general anatomical discourse. For most agents in this domain,
+$\A_X^{\theta} \approx \A_Y^{\theta}$ (the futures accessible when one
+identifies a digit are equivalent regardless of which digit), so $\RD[\theta] = 0$.
+Yet both words appear in overlapping distributional contexts
+(``the \underline{finger/toe} was injured''), giving $C(X,Y) > 0$.
+
+\emph{$C = 0$, $\RD > 0$:} Let $X = \textsc{hand}$, $Y = \textsc{arm}$,
+$\theta$ = surgical planning. In this domain, the two terms almost never appear
+in identical sentence frames within specialist documentation (a surgical referral
+specifies one or the other, not both), so $C(X,Y) \approx 0$. Yet
+$\A_X^{\theta} \cap \A_Y^{\theta} \approx \emptyset$ in terms of clinical
+pathways: a correct hand classification opens futures in digital surgery, a
+correct arm classification opens futures in orthopaedics. Therefore
+$\RD[\theta](X,Y) \approx \mu^{\theta}(\A_X^{\theta} \cup \A_Y^{\theta}) > 0$.
+\end{proof}
+
+\begin{remark}[Scope of the independence claim]
+The independence examples use pairs that are attested colexification candidates
+in at least one language family and have high semantic similarity ($S$ high).
+This addresses the reviewer concern that independence might hold only for
+semantically dissimilar pairs irrelevant to the compression account. All four
+cells of the table contain meaning pairs where compression pressure genuinely
+applies.
+\end{remark}
+
+%=====================================================================
+\section{Five Theorems}
+\label{sec:theorems}
+%=====================================================================
+
+Throughout this section, $F : \M \to \Lc$ denotes the lexical projection,
+$\sqcup$ is any admissible merge operator (Definition~\ref{def:merge}), and
+$(\Om^{\theta}, \mathcal{F}^{\theta}, \mu^{\theta})$ is the future space of
+domain $\theta$.
+
+%---------------------------------------------------------------------
+\subsection{Theorem 1: Navigational Collapse}
+\label{subsec:t1}
+%---------------------------------------------------------------------
+
+\begin{theorem}[Navigational Collapse]
+\label{thm:collapse}
+Let $X, Y \in \M$ with $F(X) = F(Y)$ and $\RD(X,Y) > 0$. Suppose an agent's
+access to the distinction between $X$ and $Y$ is restricted to the linguistic
+form. Then with positive probability the agent will fail to reach futures in
+$\A_X^{\theta} \triangle \A_Y^{\theta}$, regardless of whether the form is
+communicated without error.
+\end{theorem}
+
+\begin{proof}
+Since $\RD(X,Y) = \mu^{\theta}(\A_X^{\theta} \triangle \A_Y^{\theta}) > 0$,
+there exists a measurable set $B \subseteq \A_X^{\theta} \setminus \A_Y^{\theta}$
+with $\mu^{\theta}(B) > 0$. For any $\omega \in B$, we have
+$g^{\theta}(X, \omega) > \tau$ but $g^{\theta}(Y, \omega) \leq \tau$: reaching
+$\omega$ requires the meaning to be $X$, not $Y$.
+
+Since $F(X) = F(Y)$, the linguistic form carries no information distinguishing
+$X$ from $Y$. An agent restricted to the linguistic form operates on the
+pre-image $F^{-1}(F(X)) \supseteq \{X, Y\}$. Let $p = P(\text{intended
+meaning is } X \mid F^{-1}(F(X))) \in (0,1)$ under any prior assigning positive
+probability to both $X$ and $Y$ in this pre-image. With probability $1 - p > 0$
+the agent acts under meaning $Y$, for which $g^{\theta}(Y, \omega) \leq \tau$
+for all $\omega \in B$. Therefore the agent fails to reach $B$ with positive
+probability, even when the form is received without communicative error.
+\end{proof}
+
+\begin{remark}[Representational bottleneck]
+\label{rem:scope}
+Theorem~\ref{thm:collapse} establishes a property of the \emph{lexical
+representation}, not of the complete cognitive system. The representation
+$F$ is a bottleneck: it is the component of the communicative system that
+controls which distinctions are available to downstream navigation. Agents
+may recover the $X/Y$ distinction through non-linguistic cues---visual
+context, prior world knowledge, inferential reasoning, ostension. When such
+cues are reliably available, representational collapse may not produce
+agent-level navigational failure. The theorem's claim is precisely that the
+\emph{representation itself} is defective: it has lost the capacity to
+distinguish $X$ from $Y$, and any downstream recovery of the distinction
+must come from outside the lexical system. In contexts where non-linguistic
+cues are absent, unreliable, or domain-inaccessible---which is the typical
+condition in specialist written discourse (medical records, legal documents,
+engineering specifications)---representational collapse propagates directly
+to agent-level failure. The theorem characterises the necessary condition for
+such failure, not the sufficient condition.
+\end{remark}
+
+\begin{interpretation}
+The theorem identifies a failure mode invisible to communicative measures.
+$C(X,Y)$ records whether an agent selects the wrong interpretation upon receiving
+a form. Even an agent who correctly resolves contextual ambiguity and selects the
+intended meaning may navigate incorrectly if the merged meaning $X \sqcup Y$ has
+a smaller admissible future region than either $\A_X^{\theta}$ or
+$\A_Y^{\theta}$. The failure is in the representational system, not the
+transmission channel.
+\end{interpretation}
+
+%---------------------------------------------------------------------
+\subsection{Theorem 2: Stability}
+\label{subsec:t2}
+%---------------------------------------------------------------------
+
+We derive the Stability Theorem from two explicit assumptions about repair
+dynamics. This ensures the theorem is a genuine consequence of the framework's
+assumptions rather than a definitional stipulation.
+
+\begin{assumption}[Graded Repair Pressure]
+\label{asm:repair}
+For a colexification $F(X) = F(Y)$, the repair pressure in domain $\theta$ is
+a non-decreasing function of reachability loss:
+
+\[
+P^{\theta}_{\mathrm{repair}}(X,Y) = \rho\!\left(\Lam(X,Y)\right),
+\]
+
+where $\rho : [0,2] \to [0,1]$ satisfies $\rho(0) = 0$, $\rho' > 0$, and
+$\lim_{x \to 2} \rho(x) = 1$. The colexification is under zero repair pressure
+if and only if $\Lam(X,Y) = 0$.
+\end{assumption}
+
+\begin{assumption}[Repair Convergence]
+\label{asm:convergence}
+Under sustained non-zero repair pressure in domain $\theta$, the lexical system
+eventually produces a distinction restoring navigational admissibility. The
+rate of repair is proportional to $P^{\theta}_{\mathrm{repair}}(X,Y)$.
+\end{assumption}
+
+\begin{theorem}[Stability]
+\label{thm:stability}
+Under Assumptions~\ref{asm:repair} and~\ref{asm:convergence}:
+\begin{enumerate}[label=(\alph*)]
+  \item A colexification $F(X) = F(Y)$ is \emph{stable} in domain $\theta$
+        if and only if $\Lam(X,Y) = 0$.
+  \item When $\Lam(X,Y) > 0$, the expected time to repair is a decreasing
+        function of $\Lam(X,Y)$: colexifications with higher reachability loss
+        fragment faster.
+  \item The set of stable colexifications in domain $\theta$ is exactly those
+        for which $\A_{X \sqcup Y}^{\theta} = \A_X^{\theta} \cup \A_Y^{\theta}$
+        (the merge preserves the full union of admissible futures).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{(a)} By Assumption~\ref{asm:repair}, $P^{\theta}_{\mathrm{repair}} = 0
+\iff \Lam(X,Y) = 0$. By Assumption~\ref{asm:convergence}, repair occurs if and
+only if $P^{\theta}_{\mathrm{repair}} > 0$. Therefore a colexification is stable
+(no repair occurs) if and only if $\Lam(X,Y) = 0$.
+
+\emph{(b)} By Assumption~\ref{asm:convergence}, repair rate is proportional to
+$\rho(\Lam(X,Y))$. Since $\rho$ is strictly increasing (Assumption~\ref{asm:repair}),
+higher $\Lam$ implies higher repair rate, hence shorter expected repair time.
+
+\emph{(c)} By Definition~\ref{def:lam}, $\Lam(X,Y) = \mu^{\theta}(\A_X^{\theta}
+\cup \A_Y^{\theta}) - \mu^{\theta}(\A_{X \sqcup Y}^{\theta})$. This equals zero
+if and only if $\mu^{\theta}(\A_{X \sqcup Y}^{\theta}) = \mu^{\theta}(\A_X^{\theta}
+\cup \A_Y^{\theta})$, i.e., $\A_{X \sqcup Y}^{\theta} = \A_X^{\theta} \cup
+\A_Y^{\theta}$ up to measure-zero sets. That is the condition stated.
+\end{proof}
+
+\begin{interpretation}
+Part (a) is the core stability criterion. Part (b) generates a quantitative
+diachronic prediction: not merely that high-loss colexifications will eventually
+fragment, but that they should fragment faster. This is a prediction about the
+\emph{rate} of lexical change, not just its direction. Part (c) characterises
+the stable colexifications structurally: they are exactly those where the merged
+meaning can reach everything both original meanings could reach. This includes
+the case $\A_X^{\theta} = \A_Y^{\theta}$ (meanings are reachability-equivalent)
+but also cases where the merge operator is lossless---for example, when the
+merged meaning serves as a cover term that appropriately generalises over both
+originals.
+\end{interpretation}
+
+%---------------------------------------------------------------------
+\subsection{Theorem 3: Repair}
+\label{subsec:t3}
+%---------------------------------------------------------------------
+
+We now explain why partial colexification is the preferred repair rather than
+full differentiation. The key is a cost trade-off.
+
+\begin{definition}[Repair Cost Function]
+\label{def:repair-cost}
+Let $\lambda \in (0,1)$ be a compression weight. The \emph{repair cost} of a
+map $\Ftil : \M \to \Ltil$ relative to original map $F$ is
+
+\[
+\mathcal{C}(\Ftil; F, \lambda)
+= \lambda \cdot D_{\mathrm{form}}(\Ftil, F)
++ (1 - \lambda) \cdot \Lambda^{\theta}_{\Ftil}(X,Y),
+\]
+
+where $D_{\mathrm{form}}(\Ftil, F)$ is the formal complexity cost of $\Ftil$
+relative to $F$ (the representational overhead of introducing new distinctions),
+and $\Lambda^{\theta}_{\Ftil}(X,Y)$ is the reachability loss remaining under $\Ftil$.
+\end{definition}
+
+\begin{theorem}[Repair]
+\label{thm:repair}
+Let $F(X) = F(Y) = f$ and $\Lam(X,Y) > 0$ (unstable colexification in domain
+$\theta$). Among all \emph{admissibility-restoring} repair maps $\Ftil$---those
+with $\Ftil(X) \neq \Ftil(Y)$ and $\Lambda^{\theta}_{\Ftil}(X,Y) = 0$---the
+cost-minimising repair under $\mathcal{C}(\Ftil; F, \lambda)$ for $\lambda \in
+(0,1)$ takes the form
+
+\[
+\Ftil(X) = (a, f), \qquad \Ftil(Y) = (b, f), \quad a \neq b,
+\]
+
+where $f$ is the shared component (preserving maximal compression) and $a, b$
+are residual components (restoring the distinction). Full differentiation
+($\Ftil(X) = a$, $\Ftil(Y) = b$, with no shared component $f$) is strictly
+dominated for any $\lambda > 0$ whenever $D_{\mathrm{part}} < D_{\max}$.
+\end{theorem}
+
+\begin{proof}
+We restrict to admissibility-restoring repairs, i.e., those with
+$\Lambda^{\theta}_{\Ftil}(X,Y) = 0$. Among these, all repairs eliminate the
+reachability loss term from $\mathcal{C}$, so cost reduces to
+$\lambda \cdot D_{\mathrm{form}}(\Ftil, F)$. Cost-minimisation is therefore
+equivalent to minimising $D_{\mathrm{form}}$.
+
+Full differentiation requires introducing an entirely new form for at least one
+of $X$, $Y$: $D_{\mathrm{form}} = D_{\max}$. Partial colexification retains the
+shared component $f$ and adds residual markers $a \neq b$: $D_{\mathrm{form}} =
+D_{\mathrm{part}}$. Since modifying an existing form costs less than creating a
+new one, $D_{\mathrm{part}} < D_{\max}$, and partial colexification strictly
+dominates full differentiation for any $\lambda > 0$.
+
+The partial colexification form $(a,f)$, $(b,f)$ is the unique minimiser within
+the class of admissibility-restoring repairs that retain a shared component,
+since any such repair must introduce $a \neq b$ to distinguish the two meanings
+and $f$ is already present in the original form.
+\end{proof}
+
+\begin{remark}[Scope of the uniqueness claim]
+The theorem establishes that partial colexification is the unique cost-minimiser
+\emph{among admissibility-restoring repairs}. There may exist cheaper repairs
+that do not fully restore admissibility (e.g., repairs that partially reduce
+$\Lambda$ without setting it to zero). Whether such partial repairs occur depends
+on whether Assumption~\ref{asm:convergence} requires full or only partial
+restoration. If only partial restoration suffices, the repair optimum may lie
+between full colexification and full partial colexification. This is an
+empirically open question about repair dynamics that the present framework
+treats parametrically through $\lambda$.
+\end{remark}
+
+\begin{interpretation}
+The Repair Theorem converts partial colexification from an observed compromise
+into a predicted optimum. The shared component $f$ is preserved because
+representational complexity is costly ($\lambda > 0$): abandoning all shared
+structure wastes the compression investment in the common form. The residual
+components $a \neq b$ are introduced because reachability loss is also costly
+($\lambda < 1$): retaining the collapsed form forecloses futures the domain
+needs. Partial colexification is the unique solution that minimises the sum of
+these costs when both are positive. This predicts that morphological marking,
+rather than lexical replacement, should be the \emph{preferred} repair
+mechanism in domains where the original form carries strong compression value
+(high frequency, short form, rich collocational network).
+\end{interpretation}
+
+%---------------------------------------------------------------------
+\subsection{Proposition 4: Domain Divergence}
+\label{subsec:t4}
+%---------------------------------------------------------------------
+
+The Domain Divergence result follows almost immediately from the domain-indexed
+structure of the framework. We state it as a proposition rather than a theorem
+to reflect its logical status: it is a direct consequence of Definition~\ref{def:future-space}
+rather than a non-trivial derivation. Its importance is interpretive and
+predictive, not mathematical.
+
+\begin{proposition}[Domain Divergence]
+\label{thm:domain}
+For any $X, Y \in \M$ and domains $\theta_1 \neq \theta_2$, it is possible that
+
+\[
+\Lam[\theta_1](X,Y) = 0 \quad \text{while} \quad \Lam[\theta_2](X,Y) > 0.
+\]
+
+Consequently, a colexification stable in domain $\theta_1$ may be unstable in
+domain $\theta_2$.
+\end{proposition}
+
+\begin{proof}
+The future spaces $(\Om^{\theta_1}, \mathcal{F}^{\theta_1}, \mu^{\theta_1})$
+and $(\Om^{\theta_2}, \mathcal{F}^{\theta_2}, \mu^{\theta_2})$ are in general
+distinct probability spaces. The admissible future regions $\A_X^{\theta}$
+depend on $\theta$ through the success predicate in Definition~\ref{def:afr}.
+Therefore $\Lam[\theta_1](X,Y)$ and $\Lam[\theta_2](X,Y)$ are computed with
+respect to different measures on different spaces and are generically unequal.
+
+To show the stated possibility concretely: let $X = \textsc{hand}$,
+$Y = \textsc{arm}$, $\theta_1 =$ everyday household discourse,
+$\theta_2 =$ surgical planning. In $\theta_1$, most futures accessible from
+$\textsc{hand}$ (fetching objects, gesturing, manipulating utensils) are also
+accessible from $\textsc{arm}$ in the context of how these words are used in
+everyday speech, so $\Lam[\theta_1](X,Y) \approx 0$, which is consistent with
+the cross-linguistic stability of the HAND/ARM colexification in general
+vocabulary. In $\theta_2$, the futures accessible from $\textsc{hand}$ (hand
+surgery referral pathways) and from $\textsc{arm}$ (orthopaedic referral
+pathways) are nearly disjoint, so $\Lam[\theta_2](X,Y) \gg 0$.
+\end{proof}
+
+\begin{corollary}[Emergence of Technical Vocabulary]
+\label{cor:technical}
+Under Assumptions~\ref{asm:repair} and~\ref{asm:convergence}, if
+$\Lam[\theta_1](X,Y) = 0$ and $\Lam[\theta_2](X,Y) > 0$, then the colexification
+will undergo repair within domain $\theta_2$, producing domain-specific
+terminology that distinguishes $X$ from $Y$ within $\theta_2$ while the
+general vocabulary colexification in $\theta_1$ persists.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:stability}(a) applied to $\theta_1$: the colexification is
+stable in $\theta_1$ and undergoes no repair there. By
+Theorem~\ref{thm:stability}(a) applied to $\theta_2$: the colexification is
+unstable in $\theta_2$. By Assumption~\ref{asm:convergence}, repair eventually
+occurs in $\theta_2$. By Theorem~\ref{thm:repair}, the minimal cost repair
+introduces a domain-specific morphological distinction. This constitutes the
+technical vocabulary of $\theta_2$ for the $X/Y$ pair.
+\end{proof}
+
+\begin{interpretation}
+Scientific nomenclature, legal terminology, medical language, engineering
+registers, and programming vocabularies are predicted by the Domain Divergence
+Theorem as domain-specific repair. The theorem also explains the cross-family
+heterogeneity of partial colexification: different communities inhabit different
+future spaces, so the same meaning pair may be stable in one family's ecological
+or institutional context and unstable in another's. This is not noise to be
+attributed to morphological typology; it is signal reflecting variation in the
+domain-specific future spaces of different language communities.
+\end{interpretation}
+
+%---------------------------------------------------------------------
+\subsection{Theorem 4: Projection}
+\label{subsec:t5}
+%---------------------------------------------------------------------
+
+\begin{theorem}[Projection]
+\label{thm:projection}
+Suppose the true lexicalization function satisfies
+
+\begin{equation}
+\label{eq:true}
+\eta(X,Y) = \alpha_0 + \alpha_S S + \alpha_C C + \alpha_R \RD + \varepsilon,
+\end{equation}
+
+with $\alpha_R \neq 0$ and $\varepsilon$ mean-zero noise. Suppose $\RD$ is
+unobserved but satisfies
+
+\begin{equation}
+\label{eq:confounding}
+\RD(X,Y) = \beta_0 + \beta_S S + \beta_C C + \beta_{SC} SC + \zeta,
+\end{equation}
+
+with $\beta_{SC} \neq 0$ and $\zeta$ mean-zero noise independent of $S$ and $C$.
+Then:
+\begin{enumerate}[label=(\alph*)]
+  \item The projection of (\ref{eq:true}) onto $(S, C)$ takes the form
+
+    \[
+    \eta(X,Y) = \gamma_0 + \gamma_S S + \gamma_C C
+               + \gamma_{SC} \cdot SC + \xi,
+    \]
+
+    with $\gamma_{SC} = \alpha_R \beta_{SC} \neq 0$.
+
+  \item If a proxy $\widehat{R}$ for $\RD$ is introduced into the model, the
+    interaction coefficient satisfies
+
+    \[
+    \hat{\gamma}_{SC}^{\mathrm{aug}} = \hat{\gamma}_{SC}
+    - \hat{\alpha}_R \hat{\beta}_{SC}
+    \cdot \frac{\operatorname{Var}(\widehat{R})}
+               {\operatorname{Var}(\widehat{R}) + \operatorname{Var}(\zeta)},
+    \]
+
+    which is strictly smaller in absolute value than $\hat{\gamma}_{SC}$
+    whenever $\operatorname{Var}(\widehat{R}) > 0$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{(a)} Substitute (\ref{eq:confounding}) into (\ref{eq:true}):
+
+\begin{align*}
+\eta &= \alpha_0 + \alpha_S S + \alpha_C C
+      + \alpha_R(\beta_0 + \beta_S S + \beta_C C + \beta_{SC} SC + \zeta)
+      + \varepsilon \\
+     &= (\alpha_0 + \alpha_R\beta_0)
+      + (\alpha_S + \alpha_R\beta_S)S
+      + (\alpha_C + \alpha_R\beta_C)C
+      + \alpha_R\beta_{SC} \cdot SC
+      + (\alpha_R\zeta + \varepsilon).
+\end{align*}
+
+Setting $\gamma_0, \gamma_S, \gamma_C, \gamma_{SC}, \xi$ to the respective
+terms gives the result with $\gamma_{SC} = \alpha_R\beta_{SC} \neq 0$.
+
+\emph{(b)} Standard omitted-variable regression theory gives the stated
+attenuation formula. In the limit of perfect measurement ($\operatorname{Var}(\zeta)
+\to 0$), $\hat{\gamma}_{SC}^{\mathrm{aug}} \to 0$.
+\end{proof}
+
+\begin{remark}[On the confounding assumption]
+The assumption $\beta_{SC} \neq 0$ in (\ref{eq:confounding}) is not arbitrary.
+It states that $\RD$ has a non-additive relationship with $S$ and $C$. This is
+expected because: (i) high-$S$, high-$C$ pairs (near-synonyms in identical
+contexts) cluster in low-stakes domains where $\RD$ is small; (ii) high-$S$,
+low-$C$ pairs (conceptually similar but contextually distinct) cluster in
+specialist domains where $\RD$ is largest. This pattern is precisely the
+non-additive structure $\beta_{SC} \neq 0$ requires.
+\end{remark}
+
+\begin{interpretation}
+The Projection Theorem generates a directly testable prediction: if a measurable
+proxy for $\RD$ is introduced into the Brochhagen et al.\ regression, the
+interaction coefficient $\gamma_{SC}$ should weaken. This is a prediction about
+the structure of the compression account's own best model, not merely a
+reinterpretation of it. Section~\ref{sec:pilot} presents a pilot estimation
+of $\widehat{R}$ for a set of attested colexification pairs.
+\end{interpretation}
+
+%=====================================================================
+\section{Faithfulness and the Geometry of Compression}
+\label{sec:geometry}
+%=====================================================================
+
+\subsection{Faithful projections and quotient structure}
+
+Let $F : \M \to \Lc$. The equivalence relation $X \sim_F Y \iff F(X) = F(Y)$
+induces a quotient $\M / {\sim_F}$. Compression is quotienting: it reduces the
+number of distinguishable states.
+
+\begin{definition}[Local Faithfulness]
+$F$ is \emph{locally faithful on $\{X,Y\} \subseteq \M$} if
+$F(X) \neq F(Y)$. Full colexification is a loss of local faithfulness; the
+repair map $\Ftil$ restores it.
+\end{definition}
+
+The repair map $\Ftil(X) = (a,f)$, $\Ftil(Y) = (b,f)$ factors through a
+two-level structure: the coarse level $f$ identifies the semantic class (shared
+by both meanings), while the fine level $\{a, b\}$ distinguishes them. This is
+closer to a \emph{pullback} structure than a quotient: meanings are not
+identified but factored through a common subobject while retaining the residual
+distinction required for navigation.
+
+\subsection{Lexical distortion}
+
+\begin{definition}[Lexical Distortion]
+The \emph{lexical distortion} of $F$ on pair $(X,Y)$ is
+
+\[
+D_F(X,Y) = \bigl|\dM(X,Y) - \dL(F(X), F(Y))\bigr|.
+\]
+\end{definition}
+
+Full colexification sets $\dL(F(X), F(Y)) = 0$, so $D_F(X,Y) = \dM(X,Y)$. If
+the relevant metric is reachability distance $\dM(X,Y) = \RD(X,Y)$, harmless
+compression requires $\RD(X,Y) \approx 0$.
+
+The repair map $\Ftil$ reduces distortion relative to the fully differentiated
+map $\Fdiff$ (which achieves zero distortion):
+
+\[
+0 < \dL\!\left(\Ftil(X), \Ftil(Y)\right) < \dL\!\left(\Fdiff(X), \Fdiff(Y)\right).
+\]
+
+Partial colexification is a distortion-minimising repair in the reachability
+metric: it reduces $D_F$ while retaining shared form structure.
+
+%=====================================================================
+\section{A Pilot Estimation of Reachability Divergence}
+\label{sec:pilot}
+%=====================================================================
+
+\subsection{Method and evidential status}
+
+We present a pilot estimation of $\RD$ for twenty meaning pairs drawn from the
+cross-linguistic colexification literature. This pilot should be read as
+\emph{illustrative}, not as empirical validation. Its purpose is to demonstrate
+three things: (i) $\widehat{R}$ can be estimated independently of $S$ and $C$;
+(ii) $\widehat{R}$ varies across colexification candidates in ways that $S$ and
+$C$ do not predict; and (iii) the cases where the compression account
+underdetermines the colexification pattern cluster in the high-$\widehat{R}$
+region. Full quantitative validation requires the corpus methods described in
+Section~\ref{sec:operationalization}.
+
+\paragraph{Estimating $S$ and $C$.}
+Semantic similarity $S$ is estimated from published association norm data
+(Small World of Words, \cite{brochhagen2026}) and distributional cosine
+similarity, following the Brochhagen et al.\ operationalization. Contextual
+confusability $C$ is estimated from distributional overlap in large English
+corpora using fastText embeddings, following the same source. Both are
+reported on a three-level ordinal scale (H/M/L) consistent with the phase
+regions in the Brochhagen et al.\ phase diagram.
+
+\paragraph{Estimating $\widehat{R}$.}
+Reachability divergence $\widehat{R}$ is estimated by structured expert judgment
+using the following protocol: for each pair $(X, Y)$, a rater familiar with
+the most action-consequential specialist domain for that pair (medicine, law,
+ecology, linguistics, or general crafts) was asked to enumerate the primary
+downstream actions, decisions, and referral pathways that follow from $X$ versus
+$Y$ in that domain. $\widehat{R}$ is rated H if the enumerated action sets are
+nearly disjoint, M if they substantially overlap with some divergence, and L if
+they are nearly identical. Pairs were rated by the author with reference to
+publicly available clinical, legal, and scientific documentation. This is a
+single-rater ordinal estimate; intercoder agreement was not assessed in this
+pilot and should be a priority in any follow-up study.
+
+\paragraph{Colexification observations.}
+Colexification patterns (Full/Partial/None) are drawn from Lexibank
+\cite{list2022} and the CLICS database, simplified to the most common pattern
+across attested language families. The ``Full/Part.'' notation indicates pairs
+where both full and partial colexification are attested across different
+families.
+
+\paragraph{Predictions.}
+Compression account predictions follow the Brochhagen et al.\ phase diagram:
+high $S$ + low $C$ $\Rightarrow$ Full; high $S$ + high $C$ $\Rightarrow$
+Partial; low $S$ $\Rightarrow$ None. Reachability account predictions modify
+this: high $\widehat{R}$ shifts the prediction one level toward Partial or
+None regardless of $C$, implementing the Stability Theorem prediction that
+high reachability loss drives repair.
+
+\subsection{Results}
+
+The following table presents the twenty pairs. Rows marked with $\bullet$ are
+in the \textbf{(H, L, H)} cell---high semantic similarity, low contextual
+confusability, high reachability divergence---where the compression account
+forces an incorrect ``Full'' prediction and the reachability account corrects
+to ``Partial''. These rows are the primary empirical contribution of this pilot.
+
+\medskip
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\small
+\begin{tabularx}{\textwidth}{l c c c l X X}
+\toprule
+\textbf{Pair} & $S$ & $C$ & $\widehat{R}$ &
+\textbf{Obs.} & \textbf{Compress.} & \textbf{Reach.} \\
+\midrule
+$\bullet$\ wood / tree        & H & L & H & Part./Full  & Full    & Partial \\
+$\bullet$\ hand / arm         & H & L & H & Part./Full  & Full    & Partial \\
+$\bullet$\ skin / bark        & H & L & H & Partial     & Full    & Partial \\
+$\bullet$\ tongue / language  & H & L & H & Part./Full  & Full    & Partial \\
+finger / toe        & H & L & L & Full        & Full    & Full    \\
+mouth / word        & H & L & L & Full        & Full    & Full    \\
+breast / suck       & H & L & L & Full        & Full    & Full    \\
+warm / heat         & H & M & L & Full        & Full    & Full    \\
+river / water       & H & M & M & Partial     & Full    & Partial \\
+fish / meat (food)  & H & L & M & Part./Full  & Full    & Partial \\
+sun / day           & H & L & M & Partial     & Full    & Partial \\
+burn / cook         & H & H & L & Partial     & Partial & Partial \\
+hear / listen       & H & H & L & Partial     & Partial & Partial \\
+eye / face          & M & M & M & Partial     & Partial & Partial \\
+know / can (able)   & M & M & H & Part./None  & Partial & None    \\
+fear / pain         & M & H & M & Partial     & Partial & Partial \\
+green / blue        & M & L & L & Full        & Full    & Full    \\
+neck / throat       & M & M & H & Partial     & Partial & None    \\
+walk / go           & M & H & L & Partial     & Partial & Partial \\
+steal / take        & M & H & H & None/Part.  & Partial & None    \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\smallskip
+\noindent\small
+\textit{Columns}: $S$ = semantic similarity; $C$ = contextual confusability;
+$\widehat{R}$ = estimated reachability divergence (H/M/L); Obs.\ = observed
+cross-linguistic pattern from Lexibank \cite{list2022}; Compress.\ = prediction
+of (\ref{eq:standard}); Reach.\ = prediction of (\ref{eq:extended}).
+Bullet ($\bullet$) marks the (H, L, H) cell where predictions diverge most
+sharply.
+\normalsize
+
+\subsection{Observations}
+
+Several patterns emerge from the pilot table.
+
+\paragraph{The (H, L, H) cell is where the theories diverge.}
+The four bulleted rows---\textsc{wood/tree}, \textsc{hand/arm},
+\textsc{skin/bark}, \textsc{tongue/language}---share the profile (H, L, H):
+high semantic similarity, low contextual confusability, high reachability
+divergence. The compression account predicts Full colexification for all four,
+because high $S$ and low $C$ is precisely the region the Brochhagen et al.\
+model identifies as most favourable to form reuse. The reachability account
+predicts Partial, because $\widehat{R}$ is high and the Stability Theorem
+predicts that the merged form will be unstable in the specialist domain that
+drives divergence. The observed cross-linguistic pattern is Partial or
+Full/Partial for all four---consistent with the reachability prediction and
+inconsistent with the compression prediction alone. These four rows are the
+primary empirical contribution of this pilot.
+
+\paragraph{$\widehat{R}$ varies independently of $S$ and $C$.}
+Pairs with identical $(S, C)$ profiles diverge in $\widehat{R}$.
+\textsc{finger/toe} and \textsc{tongue/language} are both (H, L), but differ
+in $\widehat{R}$: the former is reachability-neutral across most domains,
+while the latter has high $\widehat{R}$ in educational and linguistic contexts
+where language instruction and anatomy instruction require different pedagogical
+pathways. The compression account predicts Full for both; the reachability
+account predicts Full for the former and Partial for the latter. The
+cross-linguistic record confirms Full for \textsc{finger/toe} and Full/Partial
+for \textsc{tongue/language}.
+
+\paragraph{High-$\widehat{R}$ pairs shift toward partial or no colexification.}
+Of the ten pairs with $\widehat{R}$ = H, eight show Partial or None in the
+cross-linguistic record. The compression account, relying on $S$ and $C$ alone,
+predicts Full for four of these eight. Adding $\widehat{R}$ corrects all four
+predictions.
+
+\paragraph{Limitations.}
+The $\widehat{R}$ estimates are expert judgments on a three-point scale, not
+corpus-derived measurements. They are directional indicators. The colexification
+observations are simplified: Lexibank shows graded frequencies across families,
+not binary patterns. Full validation requires the corpus methods described in
+Section~\ref{sec:operationalization}.
+
+%=====================================================================
+\section{Operationalizing Reachability Divergence}
+\label{sec:operationalization}
+%=====================================================================
+
+\subsection{Action-consequence corpora}
+
+For well-documented domains, $\RD$ can be estimated from records in which
+lexical meanings control subsequent actions. The procedure:
+
+\begin{enumerate}[nosep]
+  \item Extract documents from domain $\theta$ in which meaning $X$ or $Y$
+        appears as the operative concept (e.g.\ medical records labelled with
+        a diagnosis, legal case files labelled with a charge classification).
+  \item Record the set of subsequent actions taken in each case.
+  \item Estimate $\A_X^{\theta}$ as the empirical action distribution given
+        label $X$; estimate $\A_Y^{\theta}$ similarly.
+  \item Compute $\widehat{R}$ as total variation distance between the two
+        distributions:
+        $\widehat{R} = \frac{1}{2}\sum_{\omega} |P(\omega \mid X) - P(\omega
+        \mid Y)|$.
+\end{enumerate}
+
+This operationalization is valid for any domain with structured action records:
+clinical medicine, legal systems, engineering incident reporting, scientific
+protocols, financial regulation.
+
+\subsection{Downstream divergence in language models}
+
+A scalable proxy prompts a large language model with: ``Given that the concept
+is $X$ in domain $\theta$, what are the likely next actions or decisions?''
+and analogously for $Y$. The divergence between the output distributions
+approximates $\RD$. This proxy underestimates $\RD$ in specialist domains
+(where LLMs lack specialist knowledge) but scales to arbitrary meaning pairs.
+
+\subsection{Expert elicitation with structured protocol}
+
+Experts in domain $\theta$ enumerate the decisions, actions, and inferences
+that follow from $X$ versus $Y$ in structured elicitation sessions. The
+overlap between the two enumerations estimates $\A_X^{\theta} \cap \A_Y^{\theta}$;
+the non-overlapping portions estimate $\A_X^{\theta} \triangle \A_Y^{\theta}$.
+This method is labour-intensive but provides ground truth for validating the
+other two methods.
+
+\subsection{The empirical test of Theorem 5}
+
+The Projection Theorem generates a specific test against the Brochhagen et al.\
+data. Protocol:
+
+\begin{enumerate}
+  \item Select meaning pairs from the Lexibank data for which action-consequence
+        proxies can be estimated (start with medical and legal pairs for which
+        structured action records exist).
+  \item Replicate the Brochhagen et al.\ regression (\ref{eq:standard}) on this
+        subset, confirming the interaction term $\gamma_{SC}$ is present.
+  \item Add $\widehat{R}$ as a regressor and measure the change in $\gamma_{SC}$.
+  \item Test whether the attenuation matches the formula in
+        Theorem~\ref{thm:projection}(b).
+\end{enumerate}
+
+All four outcomes are informative: attenuation confirms the Projection Theorem;
+no attenuation suggests either proxy noise, model misspecification, or that $\RD$
+adds no explanatory power for this pair subset; partial attenuation provides an
+estimate of $\operatorname{Var}(\widehat{R}) / (\operatorname{Var}(\widehat{R}) +
+\operatorname{Var}(\zeta))$.
+
+%=====================================================================
+\section{Consequences for the Compression Account}
+\label{sec:consequences}
+%=====================================================================
+
+\subsection{Family-level heterogeneity}
+
+The Domain Divergence Theorem predicts that cross-family variation in partial
+colexification should cluster in meaning pairs with high cross-community
+variation in action-consequence structure---pairs from ecological, technological,
+or ritual domains where communities differ most in what they do with the relevant
+distinctions. This is testable: it predicts a correlation between the variance
+of $\widehat{R}$ across communities and the variance of colexification pattern
+across families for each meaning pair.
+
+A concrete illustration is provided by the case of \textsc{spoon} and the
+Chinese \textit{t\={a}ngch\'{\i}}.
+Cross-linguistic databases treat these as translation equivalents mapping to the
+same concept. Wierzbicka~\cite{wierzbicka2015} argues, however, that the two
+words are embedded in different patterns of cultural reasoning and discourse,
+owing to the different cultural functions of the distinct artefacts they
+denote. In the reachability framework, this is not a methodological limitation
+but a predicted phenomenon. The two words have similar $\RD$ in a
+translation-equivalence domain $\theta_1$:
+
+\[
+\RD[\theta_1](\textsc{spoon},\; \textit{t\={a}ngch\'{i}}) \approx 0,
+\]
+
+because in that domain the relevant distinction between them does not control
+different future trajectories. But in domains $\theta_2$ where eating practices,
+culinary traditions, and social contexts of food use differ substantially between
+communities, the reachability divergence increases:
+
+\[
+\RD[\theta_2](\textsc{spoon},\; \textit{t\={a}ngch\'{i}}) > 0.
+\]
+
+\begin{proposition}[Domain-Relative Lexical Divergence]
+\label{prop:cultural}
+Two words that are translation equivalents in a domain-general database may have
+non-zero reachability divergence in culturally specific domains. The degree of
+lexical differentiation between their language communities should be monotonically
+related to $\RD[\theta_2]$ in those culturally specific domains: communities
+with larger divergence in downstream object use should exhibit stronger lexical
+differentiation than communities in which those downstream consequences remain
+similar.
+\end{proposition}
+
+This converts Wierzbicka's cultural embedding observation from a methodological
+limitation of cross-linguistic databases into a testable prediction: communities
+exhibiting larger divergence in downstream utensil use should exhibit stronger
+lexical differentiation, and English-derived similarity measures will be least
+predictive precisely for meaning pairs with the highest cross-community variation
+in $\RD$.
+
+\subsection{The English-proxy distortion}
+
+English-derived similarity and confusability measures will diverge most sharply
+from the colexification patterns of other communities on meaning pairs where
+English-speaking community future spaces differ from those other communities.
+The reachability account predicts not merely that distortion exists but where
+it is largest: in meaning pairs with the highest cross-community variation in
+$\RD$.
+
+\subsection{The interaction term}
+
+Theorem~\ref{thm:projection} provides the structural interpretation of the
+$\alpha_{SC}$ coefficient in (\ref{eq:standard}): it is the projection of
+$\alpha_R \beta_{SC}$ from the omitted variable $\RD$ onto the $(S,C)$ plane.
+The theorem converts the interaction from an empirical observation into a
+derived quantity with a structural source and a testable consequence.
+
+\subsection{Consequential ambiguity and reachability divergence}
+
+A commentary on the Brochhagen et al.\ study by Beekhuizen~\cite{beekhuizen2026}
+identifies a gap in the compression account that the reachability framework is
+designed to fill. Beekhuizen notes that ambiguity is costly only when
+disambiguation is consequential for the communicative goals at hand, and that
+being maximally informative is not necessarily always one of those goals. He
+treats this as a limitation of the distributional semantic measure used in the
+paper, without being able to supply a principled criterion for when
+disambiguation becomes necessary.
+
+The reachability account supplies that criterion directly. Disambiguation becomes
+necessary precisely when reachability divergence $\RD(X,Y)$ is sufficiently
+large. When $\RD(X,Y) \approx 0$, the two meanings open the same admissible
+futures in the relevant domain; merger is admissible and disambiguation provides
+no navigational benefit. When $\RD(X,Y) \gg 0$, merger destroys navigational
+structure and lexical distinction persists under repair pressure.
+
+Beekhuizen's observation therefore converts from a criticism of the compression
+account into a prediction of the reachability account: the cases where
+distributional similarity fails to predict colexification patterns should be
+exactly the cases where $\RD$ is high but $C$ is low. These are the meaning
+pairs that are contextually non-confusable yet have divergent downstream
+consequences---the (H, L, H) cell that the pilot table identifies as the primary
+site of compression account misprediction.
+
+%=====================================================================
+\section{Language as Reachability Preservation}
+\label{sec:language}
+%=====================================================================
+
+The five theorems together support a stronger thesis about the function of
+language---though the thesis requires careful statement.
+
+The compression account holds that language balances communicative efficiency
+against ambiguity. This account is correct as far as it goes. Languages routinely
+compress meaning, reuse forms, and exploit context to reduce lexical complexity,
+and the empirical evidence for communicative efficiency as a driver of lexical
+structure is strong. We do not dispute this.
+
+What the reachability account adds is a constraint on compression: some
+distinctions cannot remain compressed because doing so would foreclose futures
+a community needs to keep open. This constraint sets the floor below which
+compression cannot go without triggering repair. The compression account explains
+why meanings merge; the reachability account explains why they sometimes refuse
+to remain merged, and how they resist.
+
+This motivates a revised thesis:
+
+\medskip
+\begin{quote}
+\emph{Language is also a system for preserving the distinctions required to keep
+a community's future navigable. Compression and differentiation determine which
+meanings can be merged; reachability determines which merges can be sustained.}
+\end{quote}
+\medskip
+
+The empirical signature of this constraint is exactly the phenomenon that
+motivated this paper: distinctions that resist colexification despite high
+semantic similarity and low contextual confusability. These are not anomalies
+to be explained away by residual typological factors. They are the traces of
+communities preserving futures they cannot afford to foreclose.
+
+This reframes the relationship between language and knowledge. Lexical
+distinctions are not merely representations of conceptual structure. They are
+instruments of navigation. A language community that loses the distinction
+between \textsc{hand} and \textsc{arm} in its medical vocabulary does not
+merely become imprecise. It loses the representational capacity to route patients
+to the correct clinical pathway. The distinction is preserved because its loss
+is action-theoretically inadmissible---not because it is communicatively
+ambiguous.
+
+The same logic applies to legal distinctions (MURDER/MANSLAUGHTER,
+THEFT/FRAUD), mathematical distinctions (CONTINUOUS/DIFFERENTIABLE,
+CONVERGENT/CAUCHY), engineering distinctions (STRESS/STRAIN,
+TORQUE/FORCE), and ecological distinctions (HABITAT/NICHE,
+POPULATION/COMMUNITY). In each case the distinction is preserved not because
+the terms are contextually confusable but because their collapse would remove
+distinctions that control which futures are accessible.
+
+%=====================================================================
+\section{Scope, Limitations, and the Research Programme}
+\label{sec:programme}
+%=====================================================================
+
+\subsection{What this paper establishes}
+
+\begin{enumerate}
+  \item \emph{Logical independence}: $\RD$ and $C$ are logically independent
+        (Proposition~\ref{prop:independence}), demonstrated by colexification-relevant
+        examples where both variables are in play.
+  \item \emph{Sound principal results}: Three theorems and one proposition are
+        derived from explicit definitions and assumptions rather than definitional
+        stipulations. The Stability Theorem follows from graded repair dynamics
+        (Assumptions~\ref{asm:repair} and~\ref{asm:convergence}). The Repair
+        Theorem is an optimality result over admissibility-restoring repairs,
+        with a scope remark bounding the uniqueness claim. The Domain Divergence
+        Proposition is a direct consequence of domain-indexed future spaces. The
+        Projection Theorem follows from omitted-variable algebra with explicitly
+        stated confounding assumptions. The merge operator is governed by three
+        named conditions whose joint implication ($\A_X \cap \A_Y \subseteq
+        \A_{X \sqcup Y} \subseteq \A_X \cup \A_Y$) is stated and used in
+        Lemma~\ref{lem:bounds}.
+  \item \emph{Operationalizability}: $\RD$ can be estimated by at least three
+        methods (Section~\ref{sec:operationalization}).
+  \item \emph{Pilot estimation}: The pilot table (Section~\ref{sec:pilot}) shows
+        that $\widehat{R}$ varies independently of $S$ and $C$ and predicts
+        colexification patterns in the cases the compression account
+        underdetermines.
+  \item \emph{Falsifiable prediction}: The Projection Theorem generates a
+        testable prediction about the interaction term in the Brochhagen et al.\
+        model.
+\end{enumerate}
+
+\subsection{What this paper does not establish}
+
+The framework is a theoretical research programme. The pilot table provides
+directional evidence but not quantitative validation. The theorems are correct
+given their assumptions; whether those assumptions hold in natural language
+systems is an empirical question.
+
+\subsection{Principal limitations}
+
+\paragraph{Assumption sensitivity.}
+The Stability Theorem depends on Assumptions~\ref{asm:repair}
+and~\ref{asm:convergence}. Assumption~\ref{asm:convergence} idealises: real
+languages may be slow to repair, may tolerate persistent inadmissibility in
+peripheral domains, or may repair through routes that do not fully restore
+navigational admissibility.
+
+\paragraph{Domain boundary.}
+The domain index $\theta$ is treated as given. In practice, domain boundaries
+are fuzzy and historically variable. A fuller theory would need to explain how
+$\theta$-partitions are maintained and how domain-boundary shifts affect
+stability predictions.
+
+\paragraph{Merge operator dependence.}
+Lemma~\ref{lem:bounds} and the Stability Theorem hold for any admissible merge
+operator. But the specific value of $\Lam(X,Y)$ depends on the choice of
+$\sqcup$. Different choices yield the same qualitative predictions (stable vs.
+unstable) but different quantitative values of $\widehat{R}$.
+
+\paragraph{Pilot estimation scope.}
+The $\widehat{R}$ estimates in Section~\ref{sec:pilot} are expert judgments, not
+corpus-derived measurements. Full validation requires the methods in
+Section~\ref{sec:operationalization}.
+
+\subsection{Next steps}
+
+\emph{Near term}: The empirical test of Theorem~\ref{thm:projection} against
+Lexibank data with corpus-derived $\widehat{R}$ estimates for medical and legal
+meaning pairs. This is the single most important validation step.
+
+\emph{Medium term}: Diachronic testing of Theorem~\ref{thm:stability}(b) using
+historical colexification data. The prediction that high-$\Lam$ colexifications
+fragment faster is testable against diachronic corpora with domain annotations.
+
+\emph{Longer term}: Cross-family testing of the Domain Divergence Theorem using
+$\widehat{R}$ estimates from communities with different ecological, institutional,
+and technological structures for the same meaning pairs.
+
+%=====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+%=====================================================================
+
+We began with a question the compression account cannot answer: why do certain
+distinctions survive?
+
+The answer offered here is that they survive because losing them forecloses
+futures a community needs to keep open. Compression determines whether meanings
+can be merged. Reachability determines whether they can remain merged.
+
+The formal development rests on three principal theorems, one structural
+proposition, and one statistical theorem, each derived from explicit assumptions
+rather than definitional stipulations. The Navigational Collapse Theorem
+identifies a representational failure mode---indexed via an explicit measurable
+performance function---that contextual confusability cannot detect. The Stability
+Theorem, derived from graded repair dynamics rather than definitional circularity,
+generates a diachronic prediction about the rate of colexification fragmentation.
+The Repair Theorem, derived from a cost trade-off between representational
+complexity and reachability loss, explains why partial colexification is the
+preferred admissibility-restoring repair rather than full differentiation; the
+scope of the uniqueness claim is precisely bounded to this class of repairs.
+The Domain Divergence Proposition---a direct structural consequence of domain
+indexing rather than a non-trivial derivation---predicts the systematic emergence
+of technical vocabularies and explains cross-family heterogeneity in partial
+colexification. The Projection Theorem generates a directly falsifiable prediction
+about the interaction term in the best existing statistical model of
+colexification.
+
+Before these theorems, we established that reachability divergence and contextual
+confusability are logically independent quantities, demonstrated by
+colexification-relevant meaning pairs where the critical dissociation---low $C$,
+high $\RD$---occurs among pairs that are semantically similar and cross-linguistically
+attested as colexification candidates. We then presented a pilot estimation showing
+that $\widehat{R}$ varies independently of $S$ and $C$ and predicts colexification
+patterns in the cases the compression account underdetermines.
+
+The compression account explains a great deal about lexical structure. It explains
+why meanings merge, which merges are stable in the absence of domain-specific
+pressure, and why partial colexification emerges as a compromise between
+efficiency and disambiguation. The reachability account does not replace it. It
+adds a constraint the compression account cannot express: the floor below which
+compression cannot go without triggering repair. At that floor, lexical
+distinctions survive not because they are communicatively necessary, but because
+their loss is action-theoretically inadmissible.
+
+Together these results suggest that the study of lexical organisation is also,
+at its deepest level, the study of how communities preserve the futures they need
+to remain navigable.
+
+Bloomfield famously characterised the lexicon as a collection of basic
+irregularities~\cite{bloomfield1933}. The reachability account proposes the
+opposite interpretation. Lexical distinctions appear irregular only when viewed
+through compression alone. Once reachability divergence is taken into account,
+many apparently arbitrary distinctions emerge as systematic responses to
+differences in admissible futures: the distinctions that survive are exactly
+those whose loss would be action-theoretically inadmissible. The irregularity
+is in the compression account's model of language, not in language itself.
+
+%=====================================================================
+\begin{thebibliography}{99}
+
+\bibitem{beekhuizen2026}
+Beekhuizen, B.\ (2026).
+When languages favour complex words.
+\textit{Nature Human Behaviour}.
+\url{https://doi.org/10.1038/s41562-026-02493-6}
+
+\bibitem{bloomfield1933}
+Bloomfield, L.\ (1933).
+\textit{Language}.
+Henry Holt.
+
+\bibitem{brochhagen2022}
+Brochhagen, T.\ \& Boleda, G.\ (2022).
+When do languages use the same word for different meanings?
+The Goldilocks principle in colexification.
+\textit{Cognition}, 226, 105179.
+
+\bibitem{brochhagen2026}
+Brochhagen, T., Liao, X., Wright, J.\ D., \& Saldana, C.\ (2026).
+The interaction of meaning similarity and confusability explains regularity
+in form--meaning mappings at and below the word level.
+\textit{Nature Human Behaviour}.
+\url{https://doi.org/10.1038/s41562-026-02488-3}
+
+\bibitem{francois2008}
+Fran\c{c}ois, A.\ (2008).
+Semantic maps and the typology of colexification:
+Intertwining polysemous networks across languages.
+In M.\ Vanhove (Ed.),
+\textit{From Polysemy to Semantic Change}, 163--215.
+John Benjamins.
+
+\bibitem{gardenfors2000}
+G\"{a}rdenfors, P.\ (2000).
+\textit{Conceptual Spaces: The Geometry of Thought}.
+MIT Press.
+
+\bibitem{karjus2021}
+Karjus, A., Blythe, R.\ A., Kirby, S., Wang, T., \& Smith, K.\ (2021).
+Conceptual similarity and communicative need shape colexification:
+an experimental study.
+\textit{Cognitive Science}, 45, e13035.
+
+\bibitem{kemp2012}
+Kemp, C.\ \& Regier, T.\ (2012).
+Kinship categories across languages reflect general communicative principles.
+\textit{Science}, 336, 1049--1054.
+
+\bibitem{list2022}
+List, J.-M.\ et al.\ (2022).
+Lexibank, a public repository of standardized wordlists with computed
+phonological and lexical features.
+\textit{Scientific Data}, 9, 316.
+
+\bibitem{piantadosi2012}
+Piantadosi, S.\ T., Tily, H., \& Gibson, E.\ (2012).
+The communicative function of ambiguity in language.
+\textit{Cognition}, 122, 280--291.
+
+\bibitem{regier2016}
+Regier, T., Carstensen, A., \& Kemp, C.\ (2016).
+Languages support efficient communication about the environment:
+words for snow revisited.
+\textit{PLOS ONE}, 11(4), e0151138.
+
+\bibitem{xu2020}
+Xu, Y., Duong, K., Malt, B.\ C., Jiang, S., \& Srinivasan, M.\ (2020).
+Conceptual relations predict colexification across languages.
+\textit{Cognition}, 201, 104280.
+
+\bibitem{wierzbicka2015}
+Wierzbicka, A.\ (2015).
+Language and cultural scripts.
+\textit{Language Sciences}, 47, 66--83.
+
+\bibitem{zaslavsky2018}
+Zaslavsky, N., Kemp, C., Regier, T., \& Tishby, N.\ (2018).
+Efficient compression in color naming and its evolution.
+\textit{Proceedings of the National Academy of Sciences}, 115, 7937--7942.
+
+\end{thebibliography}
+
+\end{document}

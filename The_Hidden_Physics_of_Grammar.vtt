@@ -1,0 +1,2231 @@
+WEBVTT
+
+00:00.000 --> 00:01.420
+I want you to try something for me.
+
+00:01.740 --> 00:03.720
+I want you to picture an object in your mind.
+
+00:04.220 --> 00:08.500
+I'm going to describe it, and you just need to visualize the image I'm painting.
+
+00:09.300 --> 00:09.560
+Ready?
+
+00:10.100 --> 00:12.140
+It's a small, red, wooden box.
+
+00:12.380 --> 00:13.500
+Yeah, very easy to picture.
+
+00:13.640 --> 00:15.580
+I mean, the image just snaps right into focus.
+
+00:15.680 --> 00:15.920
+Right.
+
+00:16.500 --> 00:17.580
+Now, clear that image.
+
+00:18.180 --> 00:19.800
+Just shake the mental etch to sketch.
+
+00:19.880 --> 00:24.600
+I want you to try picturing this object instead, a wooden, red, small box.
+
+00:24.660 --> 00:25.240
+Oh, wow.
+
+00:25.400 --> 00:27.560
+Yeah, that immediately feels viscerally wrong.
+
+00:27.640 --> 00:29.480
+It's actually almost jarring to process.
+
+00:29.480 --> 00:30.800
+It really is, right?
+
+00:30.940 --> 00:35.700
+It feels like a wrong note played loudly in a very familiar song.
+
+00:36.580 --> 00:43.360
+If you're a native English speaker, hearing the phrase, a wooden, red, small box, probably just made your brain itch.
+
+00:43.420 --> 00:43.880
+Oh, absolutely.
+
+00:44.180 --> 00:47.780
+I know it's completely incorrect, but if I were to ask you to explain exactly why it's wrong,
+
+00:47.880 --> 00:51.560
+or, you know, ask you to recite the specific grammatical rule you just violated.
+
+00:51.800 --> 00:52.620
+You probably couldn't do it.
+
+00:52.960 --> 00:54.140
+Exactly, you couldn't.
+
+00:54.180 --> 00:57.560
+Which points to a really fascinating reality about human cognition.
+
+00:57.560 --> 01:06.540
+I mean, you obey that invisible rule flawlessly every single time you speak, thousands of times a day, without ever consciously accessing it.
+
+01:06.800 --> 01:12.540
+Yeah, and that weird unconscious grammar rule is actually the starting point for unlocking something massive.
+
+01:12.880 --> 01:14.700
+So welcome to this deep dive.
+
+01:15.060 --> 01:20.880
+Today, we are unpacking a stack of three incredible papers published in June 2026.
+
+01:20.980 --> 01:22.720
+Right, by an independent researcher named Flixion.
+
+01:22.720 --> 01:24.100
+Yes, Flixion.
+
+01:24.240 --> 01:30.160
+And what makes these papers so compelling is that on the surface, they seem, well, completely unrelated.
+
+01:30.420 --> 01:34.520
+I mean, one is about linguistics, one is about the architecture of artificial intelligence,
+
+01:34.520 --> 01:39.400
+and one is about the historical evolution of human written language.
+
+01:39.560 --> 01:41.420
+Yeah, they sound totally disconnected.
+
+01:41.900 --> 01:46.840
+Yet they're actually tackling the exact same profound question from three different angles.
+
+01:47.040 --> 01:48.480
+Which is crazy to think about.
+
+01:48.480 --> 01:49.220
+It really is.
+
+01:49.460 --> 01:55.980
+They're looking at how intelligent systems, and by that we mean human minds, entire cultural languages, and artificial intelligences,
+
+01:56.360 --> 02:04.440
+how they decide which details about the physical world to preserve, and which details to merge together, compress, or just, you know, ignore entirely.
+
+02:04.560 --> 02:05.680
+Okay, let's unpack this.
+
+02:06.040 --> 02:12.960
+Because the core concept, uniting all these sources, basically flips our standard assumption about communication right on its head.
+
+02:12.960 --> 02:18.660
+But the papers argue that we do not process information simply to accurately describe the world.
+
+02:19.200 --> 02:20.740
+Like, that's just a secondary function.
+
+02:21.080 --> 02:25.800
+We process information to navigate the world without crashing into things.
+
+02:25.960 --> 02:31.700
+Yeah, the distinction between describing and navigating, it completely changes how we measure intelligence.
+
+02:32.220 --> 02:33.000
+How so?
+
+02:33.180 --> 02:34.180
+Like, give me an example.
+
+02:34.180 --> 02:40.520
+Well, think about a highly detailed topographical map versus, say, a simple subway map.
+
+02:41.000 --> 02:44.640
+A topographical map perfectly describes the terrain, right?
+
+02:44.740 --> 02:46.880
+Every elevation change, every contour.
+
+02:46.940 --> 02:48.300
+Right, super accurate.
+
+02:48.400 --> 02:48.960
+Exactly.
+
+02:49.300 --> 02:54.180
+But if you're just trying to get from Times Square to Brooklyn, a topographical map is useless.
+
+02:54.580 --> 02:57.020
+You don't need a perfect description of the physical world.
+
+02:57.120 --> 02:58.940
+Right, you just need to know which train to get on.
+
+02:58.940 --> 03:04.940
+Yes, you need a navigational tool that preserves only the specific distinctions that get you to your destination.
+
+03:05.240 --> 03:11.300
+Okay, so to understand this grand theory of navigating reality, we have to start right back where we began a moment ago.
+
+03:11.620 --> 03:16.200
+With that weird, unconscious grammar rule inside your head about the wooden box.
+
+03:16.260 --> 03:17.120
+The adjective order.
+
+03:17.520 --> 03:20.380
+Right, let's look at the actual rule governing this.
+
+03:21.060 --> 03:23.540
+Linguists call it the English adjective order constraint.
+
+03:23.540 --> 03:31.760
+There is this highly rigid, fixed sequence that multiple adjectives modifying a noun must follow.
+
+03:31.880 --> 03:37.740
+Yeah, and the standard sequence, which has been documented by grammarians for decades, follows a very specific path.
+
+03:37.840 --> 03:39.240
+And it's long, too.
+
+03:39.340 --> 03:40.400
+Oh, it's very long.
+
+03:40.840 --> 03:50.540
+It begins with the determiner in quantity, then opinion, size, age, shape, color, origin, material, purpose, and finally the noun itself.
+
+03:50.540 --> 03:55.480
+Yeah, I'm looking at a chart from the first paper, and it gives this perfectly absurd sentence to illustrate it.
+
+03:55.580 --> 03:56.220
+Listen to this.
+
+03:57.040 --> 04:03.360
+Four beautiful, large, old, round, red, Italian, wooden dining tables.
+
+04:03.600 --> 04:04.300
+It's quite a mouthful.
+
+04:04.400 --> 04:06.440
+It is, but grammatically it is flawless.
+
+04:06.700 --> 04:13.700
+But if you swap literally any of, if you say four red, beautiful tables or old, large tables, it suddenly sounds like a glitch in the matrix.
+
+04:13.700 --> 04:21.520
+Yeah, and while native speakers just absorb this pattern through sheer exposure, anyone who has learned English as a second language knows this chart intimately.
+
+04:21.820 --> 04:23.340
+Oh, they probably have nightmares about it.
+
+04:23.600 --> 04:23.920
+They do.
+
+04:24.180 --> 04:28.120
+They have to sit in a classroom and rote-memorize this sequence.
+
+04:28.600 --> 04:36.480
+They have to actively calculate, like, wait, does age precede shape, or does shape precede age, before they can even finish the sentence.
+
+04:36.480 --> 04:44.420
+Which sounds completely exhausting, but the wild part to me is that traditional linguistics just sort of accepts this chart as a brute fact.
+
+04:44.720 --> 04:45.820
+Right, they just describe it.
+
+04:45.940 --> 04:56.040
+Yeah, the standard account simply describes the pattern, it tells us what the sequence is, but it offers absolutely no principled explanation for why it has to be this way.
+
+04:56.160 --> 04:59.340
+Like, why on earth should an opinion come before a size?
+
+04:59.480 --> 05:03.840
+Or why does the material sit way at the end, right next to the noun?
+
+05:03.840 --> 05:10.260
+Exactly. And the answer is usually just because that's just how English works, which is a terribly unsatisfying answer.
+
+05:10.360 --> 05:16.040
+It is entirely unsatisfying. And this is where Flixieman introduces a concept called a persistence hierarchy.
+
+05:16.400 --> 05:18.840
+The argument here completely reframes grammar.
+
+05:19.500 --> 05:20.380
+That would've laid on me.
+
+05:20.720 --> 05:27.800
+Flixieman proposes that this adjective order is not an arbitrary linguistic convention, it's actually a map of physical reality.
+
+05:28.120 --> 05:30.480
+A map of physical persistence specifically, right?
+
+05:30.980 --> 05:33.480
+I really want to dig into this mechanism.
+
+05:33.480 --> 05:41.320
+Yeah, the ordering reflects how deeply each property is coupled to the actual identity and continued existence of the object it modifies.
+
+05:41.500 --> 05:45.040
+So it's about how real the property is to the object itself.
+
+05:45.160 --> 05:49.820
+Exactly. The underlying rule your brain is following is actually quite elegant.
+
+05:50.520 --> 05:57.440
+The more a property is tied to the object's core physical existence, the closer it gets to sit to the noun in the sentence.
+
+05:57.440 --> 06:03.080
+So the brain is unconsciously measuring how much you can change an object before it stops being itself.
+
+06:03.440 --> 06:03.720
+Yes.
+
+06:04.420 --> 06:06.840
+Okay, let's test that logic against the chart.
+
+06:07.440 --> 06:12.780
+The very first adjective category, the one sitting furthest away from the noun in the sentence, is opinion.
+
+06:13.180 --> 06:16.360
+Words like beautiful, ugly, or valuable.
+
+06:16.700 --> 06:19.500
+Right. Think about the physical persistence of an opinion.
+
+06:19.860 --> 06:22.000
+It is maximally observer relative.
+
+06:22.220 --> 06:23.580
+Meaning it's just in my head.
+
+06:23.580 --> 06:26.880
+Exactly. You might look at that wooden box and think it is beautiful.
+
+06:27.140 --> 06:29.620
+I might look at the exact same box and think it's hideous.
+
+06:29.860 --> 06:35.740
+Or perhaps you think it's beautiful today, but tomorrow you see a different box and, well, you change your mind about the first one.
+
+06:35.860 --> 06:38.980
+And the box itself hasn't changed at all in that scenario.
+
+06:39.300 --> 06:41.320
+Not one atom of the box has shifted.
+
+06:41.980 --> 06:47.060
+The property of being beautiful is highly mutable because it doesn't actually belong to the object.
+
+06:47.420 --> 06:48.540
+It belongs to the observer.
+
+06:48.540 --> 06:49.760
+That makes total sense.
+
+06:49.880 --> 06:53.800
+Yeah, it has almost zero physical persistence with respect to the structure of the box.
+
+06:54.640 --> 07:01.320
+Therefore, grammatically, it gets pushed to the very outer edge of the sentence, as far away from the noun as possible.
+
+07:01.400 --> 07:06.240
+Okay, so moving inward, getting a bit closer to the noun, we hit size and age.
+
+07:06.960 --> 07:09.820
+Big, tiny, old, young.
+
+07:10.280 --> 07:13.060
+These feel more concrete than an opinion, right?
+
+07:13.060 --> 07:19.400
+They are more stable than subjective feelings, certainly, but they are still heavily reliant on context and time.
+
+07:19.660 --> 07:21.820
+Like a big mouse versus a big elephant kind of thing.
+
+07:21.860 --> 07:26.720
+Exactly. Big is a relative state. A big mouse is vastly smaller than a small elephant.
+
+07:27.320 --> 07:31.260
+Furthermore, old is simply a property. An object accumulates passively.
+
+07:31.440 --> 07:32.720
+Right. Time just passes.
+
+07:32.900 --> 07:37.500
+Yeah, an old table was once a young table. Age is a temporal state, not a structural definition.
+
+07:37.960 --> 07:42.240
+You haven't fundamentally altered the architecture of the table just by letting it sit in a room for 50 years.
+
+07:42.240 --> 07:47.360
+Okay, that tracks. They sit closer than an opinion, but they are still fairly loose properties.
+
+07:48.240 --> 07:51.160
+But then we cross the threshold. We get to shape and color.
+
+07:51.360 --> 07:51.600
+Yes.
+
+07:51.800 --> 07:54.860
+And here, the physics of the hierarchy really snaps into focus.
+
+07:55.660 --> 07:59.500
+If I have a round red table, which property is harder to change?
+
+07:59.820 --> 08:02.360
+This is a perfect physical test of the theory.
+
+08:02.800 --> 08:08.800
+Between shape and color, which requires a more drastic intervention in the object's physical structure to alter.
+
+08:08.800 --> 08:12.800
+Well, I mean, I can change the color with a can of spray paint in about 10 minutes.
+
+08:12.960 --> 08:14.780
+It's a totally surface-level intervention.
+
+08:15.140 --> 08:15.300
+Right.
+
+08:15.620 --> 08:19.900
+But if I want to change a round table into a square table, I have to get out a circular saw.
+
+08:20.080 --> 08:23.820
+I have to physically sever the wood. I have to reshape the foundational structure.
+
+08:24.180 --> 08:30.640
+Which demonstrates that reshaping is a significantly heavier, more drastic intervention than repainting.
+
+08:31.000 --> 08:32.080
+Shape is more persistent.
+
+08:32.080 --> 08:38.140
+But wait, in the chart, doesn't shape come before color, like round red table? So color is actually closer to the noun.
+
+08:38.320 --> 08:45.940
+Yes. Interestingly, the standard chart places shape at position 6 and color at position 7, closer to the noun.
+
+08:46.360 --> 08:49.300
+Doesn't that contradict the saw versus paint argument?
+
+08:49.300 --> 09:06.620
+The source paper specifically addresses this slight tension. It notes that while reshaping is a heavier mechanical intervention, color often operates as an inherent surface property tied closely to the material itself, whereas shape can sometimes just be a generic functional category.
+
+09:06.860 --> 09:11.000
+Oh, I see. Like wood naturally has a color, but you impose a shape on it.
+
+09:11.080 --> 09:18.320
+Exactly. But regardless of that micro-ordering between the two, both of them sit far closer to the core than age or opinion.
+
+09:18.320 --> 09:28.840
+Got it. And then we reach the final boss of the adjectives. Position 9, the closest property to the noun. Material. Wooden. Metal. Glass. Silk.
+
+09:28.960 --> 09:33.020
+Yes. Material is constitutive in the strongest possible sense.
+
+09:33.400 --> 09:34.820
+Constitutive. Meaning what, exactly?
+
+09:34.860 --> 09:41.920
+Meaning it's what the thing fundamentally is. A wooden table is made of wood throughout its entire existence as that specific table.
+
+09:42.180 --> 09:46.800
+You can paint it green. You can scratch it. You can leave it out in the sun to age. You can even break it in half.
+
+09:46.800 --> 09:48.400
+It's still wood. It's still wood.
+
+09:48.620 --> 09:55.540
+But if I somehow magically swap out the wood for solid steel, the original wooden table ceases to exist.
+
+09:56.140 --> 10:01.480
+I haven't just modified it. I've completely destroyed the original object and replaced it with a completely new one.
+
+10:01.620 --> 10:07.580
+Precisely. The material survives almost all physical perturbations short of total destruction.
+
+10:07.580 --> 10:16.920
+Because it is the most deeply persistent property, grammatically, wooden earns the right to sit immediately adjacent to box.
+
+10:17.240 --> 10:22.280
+Wow. I'm picturing this like the orbital mechanics of a solar system.
+
+10:22.300 --> 10:23.540
+Oh, that's a great way to look at it.
+
+10:23.540 --> 10:32.980
+Yeah. So the noun, the box, is the sun at the center. It has this massive, unbraidable, gravitational pull of physical reality. And the adjectives are the planets orbiting it.
+
+10:33.240 --> 10:33.660
+I like that.
+
+10:33.660 --> 10:46.380
+The outer planets, like opinion and age, are in these distant, slow, loose orbits. They are just thin, subjective states floating way out in space. But as you travel inward toward the sun through shape and color, the gravity gets heavier.
+
+10:46.480 --> 10:47.560
+The properties become denser.
+
+10:47.560 --> 10:55.140
+Exactly. They get dexter and denser until you hit the solid, scorching reality of the material in Mercury's orbit, right next to the sun.
+
+10:55.480 --> 11:05.180
+That geometric visualization captures it perfectly. You are moving from a high entropy, highly variable space into a low entropy, identity fixing space.
+
+11:05.340 --> 11:06.480
+And we just do this naturally.
+
+11:06.700 --> 11:13.920
+Yes. What is truly remarkable is that children acquire this nested map of reality without formal instruction.
+
+11:14.260 --> 11:15.080
+They just pick it up.
+
+11:15.080 --> 11:25.460
+Right. A toddler playing with blocks learns that painting a block doesn't stop it from being wooden, but smashing a beautiful toy stops it from being beautiful.
+
+11:25.800 --> 11:27.380
+They learn the physics of the world.
+
+11:27.500 --> 11:32.400
+They're learning the physics of the world, and their language centers just naturally map the grammar to the physics.
+
+11:32.400 --> 11:41.500
+So we aren't really learning grammar rules at all. We are just learning how the physical universe persists and the words fall into their correct orbits automatically.
+
+11:41.700 --> 11:42.840
+That's the core argument, yes.
+
+11:42.840 --> 11:48.740
+But I imagine someone out there might argue that this is just an English quirk, like a happy coincidence.
+
+11:49.300 --> 11:53.420
+Is there evidence that other languages are doing this kind of ontological sorting?
+
+11:53.820 --> 12:01.560
+Oh, absolutely. The source material provides incredible cross-linguistic proof that this is a universal feature of human cognition.
+
+12:02.100 --> 12:05.120
+It just manifests differently depending on the tools a language has.
+
+12:05.120 --> 12:07.540
+Let's look at Spanish, for instance.
+
+12:07.960 --> 12:13.080
+Oh, man. I remember struggling with this exact thing in high school Spanish, the two verbs for to be.
+
+12:13.820 --> 12:15.480
+You have ser and estar.
+
+12:15.900 --> 12:16.220
+Yes.
+
+12:16.400 --> 12:18.640
+English just lets us use is for everything.
+
+12:18.820 --> 12:22.260
+The box is red, the box is wooden, the box is broken. It's all just is.
+
+12:22.700 --> 12:25.060
+But Spanish forces you to pick a lane.
+
+12:25.060 --> 12:29.340
+And how were you taught to distinguish between them in high school? Do you remember the rule?
+
+12:29.580 --> 12:31.680
+Oh, the classic rule every teacher gives.
+
+12:32.260 --> 12:35.840
+Ser is for permanent things and a star is for temporary things.
+
+12:35.920 --> 12:40.360
+Right. Which, as the paper points out, is a fundamentally incomplete explanation.
+
+12:40.640 --> 12:42.380
+Because there are so many exceptions, right?
+
+12:42.380 --> 12:45.760
+It generates incredibly confusing counterexamples for students.
+
+12:46.400 --> 12:49.960
+Because Spanish isn't actually dividing the world into permanent and temporary,
+
+12:50.540 --> 12:55.780
+it is using verb choice to map Flixian's exact persistence hierarchy.
+
+12:55.840 --> 12:58.520
+Yeah, really? The same hierarchy as the adjectives.
+
+12:58.820 --> 12:59.620
+The exact same one.
+
+13:00.320 --> 13:06.740
+Ser encodes properties that are constitutive or identity-defining, the high persistence end of the spectrum.
+
+13:07.140 --> 13:11.920
+Estar encodes properties that are contingent, resultant, or context-specific.
+
+13:12.380 --> 13:14.360
+The low persistence end.
+
+13:14.660 --> 13:18.400
+Okay, let me think. So if I say, the table is wood, I use ser.
+
+13:19.100 --> 13:20.600
+La mesa es de madera.
+
+13:21.020 --> 13:25.320
+Because the wood is constitutive. It's the material essence, just like in our adjective chart.
+
+13:25.380 --> 13:28.540
+Correct. But if you say the table is broken, you use estar.
+
+13:29.100 --> 13:30.140
+La mesa está rota.
+
+13:30.740 --> 13:33.420
+Because brokenness is a contingent resultant state.
+
+13:33.640 --> 13:37.060
+Right. Because a table isn't fundamentally defined by being broken.
+
+13:37.200 --> 13:41.320
+Exactly. It is a table that has undergone a perturbation. It's an accidental state.
+
+13:41.320 --> 13:43.780
+This completely solves a puzzle that always confused me.
+
+13:44.100 --> 13:49.920
+If you want to say, the sky is brew, as a general overarching fact of nature, you use ser.
+
+13:50.140 --> 13:51.180
+El cielo es azul.
+
+13:51.680 --> 13:53.800
+Yes, because blueness is persistent there.
+
+13:53.800 --> 13:59.020
+But if you look out the window on a rainy day and say, the sky is cloudy, you use estar, as cielo es tan oblado.
+
+13:59.260 --> 14:03.400
+Because the clouds are just a low persistence disruption. They aren't the sky itself.
+
+14:03.500 --> 14:05.920
+The underlying persistent essence is the blue sky.
+
+14:06.420 --> 14:06.820
+Yes.
+
+14:06.960 --> 14:07.700
+That is so cool.
+
+14:07.780 --> 14:08.300
+It really is.
+
+14:08.300 --> 14:14.520
+And it also beautifully resolves the most famous trap for Spanish learners, the word for dead.
+
+14:15.180 --> 14:19.440
+Oh, right. If you want to say he is dead, you use estar, el está muerto.
+
+14:19.620 --> 14:20.020
+Yes.
+
+14:20.140 --> 14:23.880
+Which completely breaks the high school permanent versus temporary rule.
+
+14:24.180 --> 14:27.500
+Because, I mean, what could possibly be more permanent than death?
+
+14:27.720 --> 14:31.800
+If ser means permanent, death should absolutely take ser.
+
+14:31.800 --> 14:34.720
+Under the flawed high school rule, yes, it should.
+
+14:35.440 --> 14:38.260
+But under the persistence hierarchy, it makes perfect sense.
+
+14:38.460 --> 14:39.800
+Because it's a resultant state.
+
+14:39.960 --> 14:40.440
+Exactly.
+
+14:41.080 --> 14:43.160
+Death is the outcome of a biological process.
+
+14:43.700 --> 14:44.720
+It is a resultant state.
+
+14:44.860 --> 14:48.120
+It's a condition you arrive at, a change in your prior state of living.
+
+14:48.680 --> 14:53.500
+Therefore, it falls under estar, the verb reserved for contingent and resultant states.
+
+14:53.760 --> 14:58.580
+So the Spanish speaker is navigating the exact same persistence depth as the English speaker.
+
+14:58.580 --> 15:03.340
+Yes, they are just expressing it through their choice of verb instead of the sequence of their adjectives.
+
+15:03.840 --> 15:05.140
+That is fascinating.
+
+15:05.680 --> 15:08.460
+But the paper pushes this even further, right?
+
+15:08.620 --> 15:10.940
+Right into the realm of classical Arabic philosophy.
+
+15:11.240 --> 15:13.700
+I read that section and it took me entirely by surprise.
+
+15:14.160 --> 15:16.840
+We are suddenly talking about 10th century metaphysics.
+
+15:16.940 --> 15:18.520
+It's a really profound connection.
+
+15:18.920 --> 15:20.840
+Let's look at Arabic nominal modification.
+
+15:21.520 --> 15:25.280
+In Arabic, adjectives follow the noun rather than preceding it.
+
+15:25.280 --> 15:33.540
+So the wooden table is el-tala, el-koshabiyah, which translates literally as the table, the wooden.
+
+15:33.700 --> 15:34.380
+So it's flipped.
+
+15:34.900 --> 15:38.120
+The sequence is reversed because the noun is the starting point, yes.
+
+15:38.460 --> 15:44.820
+But the structural hierarchy, the proximity to the noun based on persistence, remains identical.
+
+15:45.440 --> 15:47.420
+The material still sits closest to the noun.
+
+15:47.420 --> 15:56.780
+And the paper quotes a native Egyptian Arabic speaker analyzing how they intuitively order these adjectives, and the vocabulary they reach for is, like, deeply philosophical.
+
+15:57.040 --> 15:57.160
+Right.
+
+15:57.420 --> 16:05.020
+The speaker is trying to explain their intuitive grammar, and they say that the closer an adjective is to the nature of the thing and its essence, the closer it sits to the noun.
+
+16:05.260 --> 16:08.480
+And the specific Arabic word they use for essence is jawar.
+
+16:08.720 --> 16:09.620
+Yes, jawar.
+
+16:09.620 --> 16:15.720
+Now, jawar, that is not just a casual, everyday conversational word, is it?
+
+16:15.800 --> 16:18.160
+No, it is a highly loaded technical term.
+
+16:18.860 --> 16:25.280
+In classical Arabic philosophy, particularly in the works of polymaths like Al-Farabi and Ibn Sina.
+
+16:25.600 --> 16:27.700
+Who is known in the Western world as epicenter.
+
+16:27.920 --> 16:28.240
+Exactly.
+
+16:28.680 --> 16:34.500
+In their works, jawar is the precise translation of the Aristotelian concept of substance.
+
+16:34.500 --> 16:42.720
+Okay, I think we need to define substance in the Aristotelian sense, because it doesn't just mean physical matter, like, you know, goo or liquid.
+
+16:43.100 --> 16:43.240
+Right.
+
+16:43.500 --> 16:50.480
+In this philosophical framework, which was developed heavily in the 10th and 11th centuries to describe the fundamental structure of reality,
+
+16:51.300 --> 16:55.700
+substance, or jawar, represents the category of being that exists independently.
+
+16:56.100 --> 16:59.300
+It is the core identity of a thing that persists through change.
+
+16:59.380 --> 17:00.540
+Give me a tangible example.
+
+17:00.800 --> 17:01.060
+Sure.
+
+17:01.060 --> 17:07.280
+If you have a block of wax and you melt it, the shape changes, the temperature changes, the color might even change.
+
+17:07.740 --> 17:10.900
+But the jawar, the underlying substance of the wax, remains.
+
+17:11.440 --> 17:12.300
+It is still wax.
+
+17:12.580 --> 17:14.260
+And what do they call all the things that change?
+
+17:14.320 --> 17:15.340
+The shape, the heat?
+
+17:15.480 --> 17:18.740
+Those are called the current, the accidents or contingent properties.
+
+17:19.260 --> 17:21.340
+Accidents, meaning they just happen to be there.
+
+17:21.500 --> 17:21.820
+Exactly.
+
+17:22.260 --> 17:23.900
+An accident cannot exist on its own.
+
+17:24.060 --> 17:26.080
+You can't just have redness floating in a void.
+
+17:26.460 --> 17:27.880
+It has to attach to a substance.
+
+17:27.880 --> 17:36.540
+So Gibbissina and Al-Farabi spent their lives building vast metaphysical systems, categorizing reality into jawar and karad.
+
+17:36.780 --> 17:45.320
+Which means when a four-year-old native English speaker automatically says small red wooden box instead of wooden red small box,
+
+17:45.960 --> 17:50.700
+they are unconsciously deploying a 10th century Islamic metaphysical framework.
+
+17:51.060 --> 17:51.380
+Yes.
+
+17:51.380 --> 17:56.800
+They are intuitively separating the jawar, the wood, from the karad, the redness, and the smallness.
+
+17:56.920 --> 17:57.260
+Exactly.
+
+17:57.400 --> 18:05.300
+The grammar chart that ESL teachers write on whiteboards is quite literally a pedagogical rediscovery of Aristotelian substance metaphysics.
+
+18:05.400 --> 18:06.200
+That is wild.
+
+18:06.280 --> 18:08.960
+The human brain is just a naturally occurring metaphysical engine.
+
+18:09.060 --> 18:10.500
+I really love the elegance of that.
+
+18:10.620 --> 18:12.980
+But I do have to push back a little here on the mechanics.
+
+18:13.160 --> 18:13.320
+Sure.
+
+18:13.320 --> 18:21.440
+If this persistence hierarchy is just a universal feature of human cognition, if the brain inherently knows the difference between substance and accident,
+
+18:21.960 --> 18:23.940
+why do languages encode it so differently?
+
+18:24.200 --> 18:24.560
+What do you mean?
+
+18:24.860 --> 18:26.260
+Well, English uses word order.
+
+18:26.760 --> 18:28.180
+Spanish uses verb selection.
+
+18:28.780 --> 18:30.500
+Arabic uses post-nominal agreement.
+
+18:31.320 --> 18:37.820
+If the brain already has the map, why does it go to all the trouble of enforcing these strict grammatical rules?
+
+18:37.940 --> 18:38.680
+Ah, I see.
+
+18:38.680 --> 18:43.460
+Why not just throw the words out there in any order, assuming the listener's brain will just sort it out natively?
+
+18:43.600 --> 18:45.800
+That is the crucial pivot point of the research.
+
+18:45.880 --> 18:46.060
+Okay.
+
+18:46.620 --> 18:52.960
+The brain cares about enforcing these structures because losing these distinctions doesn't just make our speech sound sloppy.
+
+18:53.420 --> 18:56.560
+It actively closes off our future options.
+
+18:56.860 --> 18:57.440
+How so?
+
+18:57.620 --> 19:01.940
+The grammatical structures aren't just filing cabinets for organizing information nicely.
+
+19:02.340 --> 19:03.380
+They're guardrails.
+
+19:03.580 --> 19:04.820
+Guardrails against what?
+
+19:04.880 --> 19:05.840
+What are we crashing into?
+
+19:05.940 --> 19:07.360
+Against navigational collapse.
+
+19:07.360 --> 19:13.980
+Fliction argues that we rigorously encode this persistence gradient because the closer a property is to the noun,
+
+19:14.140 --> 19:16.920
+the more reachability divergence it possesses.
+
+19:17.080 --> 19:18.100
+Reachability divergence.
+
+19:18.400 --> 19:18.620
+Yes.
+
+19:19.180 --> 19:24.020
+In plain terms, if you misinterpret a core, highly persistent property,
+
+19:24.280 --> 19:28.960
+you're going to make a catastrophic, unrecoverable mistake in the physical world.
+
+19:29.280 --> 19:29.560
+Okay.
+
+19:29.740 --> 19:30.700
+Reachability divergence.
+
+19:31.520 --> 19:33.780
+This is the core metric of the second paper.
+
+19:33.780 --> 19:40.940
+However, it's a mathematical way of explaining why languages sometimes violently refuse to use the same word for two different things,
+
+19:41.060 --> 19:43.560
+even when it would be easier to do so.
+
+19:43.620 --> 19:44.120
+Exactly.
+
+19:44.480 --> 19:50.820
+Let's transition from how we order our adjectives to how we invent and merge our nouns in the first place.
+
+19:50.820 --> 19:54.720
+This brings us to the study of semantic compression.
+
+19:55.240 --> 19:55.500
+Right.
+
+19:55.500 --> 20:07.120
+So linguists spend a lot of time studying something called a collectification, which is essentially a fancy academic term for when a language uses a single word to express two completely different concepts.
+
+20:07.380 --> 20:08.160
+We do it all the time.
+
+20:08.380 --> 20:09.440
+English does this constantly.
+
+20:09.440 --> 20:16.860
+We use the word glass to mean the transparent material in a window, and we also use glass to mean the cylinder you drink water out of.
+
+20:17.220 --> 20:18.580
+One word doing double duty.
+
+20:18.920 --> 20:21.260
+And we see this phenomenon across all human languages.
+
+20:21.840 --> 20:26.040
+A very common cross-linguistic example is the merging of the concepts for wood and tree.
+
+20:26.340 --> 20:26.660
+Okay.
+
+20:26.940 --> 20:29.000
+In many languages, they are the exact same word.
+
+20:29.160 --> 20:34.020
+For example, in Arabic, the word shajara covers both the living tree in the forest and the material wood.
+
+20:34.020 --> 20:39.580
+And the standard linguistic theory explaining why languages do this is called the compression theory.
+
+20:39.960 --> 20:40.080
+Yes.
+
+20:40.240 --> 20:44.820
+The premise is that human memory and cognitive load are finite resources.
+
+20:45.260 --> 20:52.720
+We want to compress our vocabulary so we don't have to memorize a distinct, unique word for every single object in the universe.
+
+20:52.940 --> 21:03.380
+And the standard theory posits that we decide which words are safe to merge based on two primary factors, semantic similarity and contextual confusability.
+
+21:03.380 --> 21:04.240
+I'll break those down.
+
+21:04.520 --> 21:07.840
+Semantic similarity just means the concepts are close neighbors in reality.
+
+21:08.420 --> 21:11.940
+A tree is made of wood, so they are physically and conceptually adjacent.
+
+21:12.320 --> 21:14.260
+It makes logical sense to group them.
+
+21:14.560 --> 21:14.680
+Right.
+
+21:15.120 --> 21:21.460
+And contextual confusability asks, how likely are you to genuinely get them mixed up in a real world sentence?
+
+21:21.660 --> 21:22.680
+Which is usually pretty low.
+
+21:22.900 --> 21:23.220
+Exactly.
+
+21:23.700 --> 21:29.220
+If I point to a dense forest and say, look at all this shajara, the context makes it blindingly obvious.
+
+21:29.220 --> 21:33.540
+I mean, leaving trees, not thousands of loose planks of lumber scattered on the ground.
+
+21:33.980 --> 21:40.280
+Conversely, if I'm standing in a carpentry workshop holding a saw and I say, hand me the shajara, you know I mean the piece of wood on the bench.
+
+21:40.460 --> 21:42.780
+You aren't going to drag a potted oak tree into the workshop.
+
+21:42.900 --> 21:43.500
+No, you aren't.
+
+21:43.760 --> 21:47.080
+So the context does all the heavy lifting, preventing any real confusion.
+
+21:47.080 --> 22:00.460
+Therefore, the compression theory concludes, if two concepts are semantically similar and the surrounding context easily disambiguates them, the language will naturally merge them to save cognitive space.
+
+22:00.800 --> 22:04.640
+Which, I have to admit, sounds completely airtight and makes perfect intuitive sense.
+
+22:04.940 --> 22:08.420
+But the second paper argues this theory has a massive fatal flaw.
+
+22:08.760 --> 22:09.740
+It's missing a variable.
+
+22:09.740 --> 22:16.100
+It is entirely missing the theta dd, the mathematical notation for reachability divergence.
+
+22:16.660 --> 22:25.720
+If I had to guess based on the words alone, reachability implies the places you can go or the things you can do next, and divergence implies those paths splitting apart.
+
+22:25.900 --> 22:27.680
+So how does the papal define it formally?
+
+22:28.480 --> 22:29.560
+You are right on the money.
+
+22:29.920 --> 22:39.580
+Reachability divergence measures how two meanings, once distinguished, open up entirely different future trajectories of action, inference, or systemic repair.
+
+22:39.740 --> 22:40.760
+Okay, that's a bit dense.
+
+22:40.760 --> 22:43.980
+It asks a deeper question than the compression theory.
+
+22:45.120 --> 22:53.180
+If you merge these two concepts under one word, do you accidentally merge the physical actions and institutional processes that follow from them?
+
+22:53.320 --> 22:53.640
+Right.
+
+22:54.100 --> 22:54.880
+That's a little abstract.
+
+22:55.300 --> 22:57.660
+Let's ground that back in the wood and tree example.
+
+22:57.920 --> 22:58.120
+Sure.
+
+22:58.480 --> 23:02.000
+In general, everyday discourse, combining wood and tree works perfectly fine.
+
+23:02.560 --> 23:05.460
+The reachability divergence is low for a casual conversation.
+
+23:05.700 --> 23:07.160
+Because the stakes are low.
+
+23:07.460 --> 23:07.880
+Exactly.
+
+23:07.880 --> 23:14.320
+But imagine placing those two concepts inside the specific domain of a national forestry management institution.
+
+23:14.520 --> 23:14.920
+Oh, boy.
+
+23:15.200 --> 23:20.380
+In that environment, the word tree controls one very specific set of institutional futures.
+
+23:21.180 --> 23:27.220
+It dictates survey decisions, ecological replanting schedules, soil testing, and biodiversity assessments.
+
+23:27.340 --> 23:29.040
+It initiates a biological workflow.
+
+23:29.040 --> 23:30.080
+Precisely.
+
+23:30.080 --> 23:33.460
+But the word wood controls a completely different set of futures.
+
+23:34.200 --> 23:39.800
+Timber yield calculations, kiln drying schedules, supply chain logistics, and board foot pricing.
+
+23:40.200 --> 23:42.100
+It initiates an industrial workflow.
+
+23:42.100 --> 23:56.920
+So if the forestry management systems database collectifies those words, if it uses one identical tag for both a worker reading a report, might understand perfectly what the word means in that specific sentence, the communicative context is fine.
+
+23:57.040 --> 23:57.280
+Right.
+
+23:57.280 --> 24:03.220
+But when they click process on that tag, they might accidentally initiate the wrong administrative future.
+
+24:03.440 --> 24:06.800
+They might send a team of botanists to evaluate a pile of lumber.
+
+24:06.800 --> 24:13.040
+The communicative transmission is technically successful, but the navigational outcome is a systemic failure.
+
+24:13.540 --> 24:13.920
+Wow.
+
+24:13.920 --> 24:20.840
+What reachability divergence reveals is that it absolutely does not matter if context makes the meaning clear in the moment.
+
+24:21.700 --> 24:29.020
+What matters is whether collapsing the distinction forecloses or tangles futures that the community desperately needs to keep separate.
+
+24:29.460 --> 24:35.700
+This brings up, I think, an incredibly compelling high-stakes example from the paper that completely breaks the old compression theory.
+
+24:36.220 --> 24:38.420
+The paradox of the hand and the A-arm.
+
+24:38.620 --> 24:40.900
+Oh, this is a brilliant case study in the literature.
+
+24:41.060 --> 24:41.780
+Tell me about it.
+
+24:41.780 --> 24:48.700
+In many major languages, such as Mandarin and Swahili, the concepts for hand and arm are fully colexified.
+
+24:49.260 --> 24:50.620
+In Mandarin, the word is show.
+
+24:51.620 --> 24:53.160
+In Swahili, it is mukono.
+
+24:53.560 --> 24:57.100
+Now, under the old flawed compression theory, this merge makes total sense.
+
+24:57.440 --> 25:00.040
+A hand and an arm are highly semantically similar.
+
+25:00.320 --> 25:02.300
+They are connected parts of the same upper limb.
+
+25:02.420 --> 25:03.040
+Very adjacent.
+
+25:03.360 --> 25:07.060
+And contextually, they are almost never confused in everyday speech.
+
+25:07.060 --> 25:13.040
+If a Swahili speaker says, my mukono hurts, while rubbing their shoulder, you know they mean their arm.
+
+25:13.400 --> 25:19.200
+If they say, put the ring on my mukono, the context of a ring guarantees they mean the hand.
+
+25:19.640 --> 25:20.160
+Exactly.
+
+25:20.660 --> 25:21.880
+High semantic similarity.
+
+25:22.320 --> 25:23.940
+Low contextual confusability.
+
+25:24.380 --> 25:26.300
+The compression account predicts they should merge.
+
+25:26.720 --> 25:29.920
+And for hundreds of millions of speakers in general discourse, they do.
+
+25:29.920 --> 25:37.620
+But Fruxian says, take that exact same pair of concepts and drop them into the high-stakes domain of hospital surgical planning.
+
+25:37.840 --> 25:39.560
+Okay, here's where it gets really interesting.
+
+25:40.220 --> 25:42.540
+Because the stakes immediately skyrocket.
+
+25:42.840 --> 25:48.280
+In a surgical triage environment, the contextual confusability between a hand and an arm is near zero.
+
+25:48.840 --> 25:53.940
+A doctor writing a patient referral is not going to accidentally mix up the two in a sentence.
+
+25:54.280 --> 25:57.400
+There is no communicative ambiguity for a medical professional.
+
+25:57.400 --> 26:01.400
+But the reachability divergence between a hand and an arm in a hospital is...
+
+26:02.180 --> 26:03.200
+Well, it's catastrophic.
+
+26:03.320 --> 26:04.120
+It is massive.
+
+26:04.900 --> 26:11.700
+If you classify an incoming trauma as a hand injury, that classification opens up a highly specialized future.
+
+26:12.220 --> 26:16.720
+Digital nerve repair, microscopic tendon reconstruction, fine motor rehabilitation.
+
+26:17.200 --> 26:18.680
+It requires a microsurgeon.
+
+26:18.880 --> 26:19.120
+Right.
+
+26:19.260 --> 26:24.760
+But if you classify the trauma as an arm injury, that opens up a completely different branch of the hospital.
+
+26:24.760 --> 26:28.240
+Heavy orthopedics, bone plate fixation, rotator cuff repair.
+
+26:28.380 --> 26:29.900
+Completely different tools, different doctors.
+
+26:30.220 --> 26:39.440
+So if the hospital intake software just uses the general collectified term, if there is just a single checkbox for Munkano, the intake nurse understands the injury.
+
+26:39.920 --> 26:44.180
+But the representational system literally sends the patient to the wrong operating room.
+
+26:44.180 --> 26:44.740
+Exactly.
+
+26:45.220 --> 26:49.040
+You end up sending a patient with a shattered humerus bone to the micro nerve specialist.
+
+26:49.480 --> 26:52.120
+The paper terms this a navigational collapse, right?
+
+26:52.180 --> 26:52.380
+Yes.
+
+26:52.840 --> 27:07.780
+You have successfully communicated the general area of the body to the person reading the chart, but you have destroyed the system's representational capacity to route the patient to the correct clinical pathway.
+
+27:07.960 --> 27:11.040
+It makes me think of a physical toolbox, like a mechanics toolbox.
+
+27:11.320 --> 27:11.960
+Okay, let's hear it.
+
+27:11.960 --> 27:13.640
+Imagine you have two wrenches.
+
+27:14.100 --> 27:19.460
+One is a 10mm metric wrench, and the other is a 38-inch imperial wrench.
+
+27:20.200 --> 27:23.680
+To a layman cleaning out a garage, they are semantically similar.
+
+27:23.820 --> 27:24.820
+They both turn bolts.
+
+27:25.220 --> 27:25.440
+Right.
+
+27:25.680 --> 27:28.380
+And they have low contextual confusability.
+
+27:28.960 --> 27:31.720
+If you're working on a Japanese Honda, you use the metric.
+
+27:32.120 --> 27:35.080
+If you're working on a classic American Ford, you use the imperial.
+
+27:35.420 --> 27:39.340
+So a layman might just toss them both into a single drawer labeled wrenches.
+
+27:39.340 --> 27:40.880
+That is the collectification.
+
+27:41.060 --> 27:42.460
+The layman compresses the data.
+
+27:42.760 --> 27:42.900
+Right.
+
+27:43.120 --> 27:51.400
+But to a master mechanic rebuilding a transmission, the reachability divergence of those two tools is the difference between success and total disaster.
+
+27:51.700 --> 27:53.400
+Because they aren't actually interchangeable.
+
+27:53.400 --> 27:54.040
+Exactly.
+
+27:54.040 --> 28:03.920
+If you blindly grab the metric wrench and try to torque down an imperial bolt, you will strip the bolt head, ruin the engine block, and basically destroy the car.
+
+28:04.580 --> 28:13.640
+Merging them under one conceptual label works fine for the casual observer, but it causes a systemic failure for the expert navigating a high-stakes physical environment.
+
+28:13.640 --> 28:20.740
+That analogy perfectly tracks the mathematical problem, and it raises the crucial anthropological question.
+
+28:21.360 --> 28:23.540
+How does human language fix this?
+
+28:24.080 --> 28:24.400
+Yeah.
+
+28:24.620 --> 28:31.660
+Because when a merged word becomes too dangerous for a specific expert domain, what does the linguistic community do?
+
+28:31.780 --> 28:33.520
+They obviously don't just accept the crashes.
+
+28:33.860 --> 28:34.060
+No.
+
+28:34.200 --> 28:38.780
+Doctors in Mandarin-speaking hospitals aren't just shrugging when patients go to the wrong surgical ward.
+
+28:38.780 --> 28:39.180
+No.
+
+28:39.340 --> 28:43.040
+The community engages in what Flixing calls a morphological repair.
+
+28:43.700 --> 28:46.200
+And the mechanics of this repair are deeply revealing.
+
+28:46.780 --> 28:50.320
+Because they rarely throw away the old, merged word entirely.
+
+28:50.780 --> 28:54.740
+They do not invent a completely new, phonetically alien word from scratch.
+
+28:54.820 --> 28:55.480
+Wait, why not?
+
+28:55.520 --> 28:58.560
+If the word is dangerous, why not just invent a new one to be safe?
+
+28:58.860 --> 29:07.200
+Because inventing a completely new root word requires massive cognitive effort to socialize and memorize across the population.
+
+29:07.200 --> 29:12.380
+It abandons all the useful compression value the language has already built up over centuries.
+
+29:12.580 --> 29:13.720
+It's energetically expensive.
+
+29:13.980 --> 29:15.120
+It is extremely expensive.
+
+29:15.260 --> 29:17.720
+So instead of a total rewrite, what is the fix?
+
+29:18.200 --> 29:20.440
+They enact a cost-minimizing distinction.
+
+29:20.740 --> 29:25.600
+They take the shared base word and simply append a residual marker to it.
+
+29:25.640 --> 29:26.860
+Like a prefix or something.
+
+29:27.080 --> 29:27.420
+Yes.
+
+29:27.980 --> 29:36.340
+They might add a suffix, a prefix, or generate a highly specific piece of technical jargon that branches directly off the original root.
+
+29:36.340 --> 29:40.520
+It restores local faithfulness without destroying global compression.
+
+29:41.200 --> 29:42.360
+Let me make sure I'm getting this.
+
+29:42.460 --> 29:47.760
+They keep the shared root component that identifies the general class, like the root word for upper limb.
+
+29:48.020 --> 29:53.200
+But they tack on a tiny, fine-level distinction, like a suffix, to separate the futures.
+
+29:53.520 --> 29:53.900
+Exactly.
+
+29:54.080 --> 29:57.380
+So you still know it's a limb, but now the hospital knows which wing to send you to.
+
+29:57.740 --> 29:58.060
+Yes.
+
+29:58.720 --> 30:01.000
+It is an admissibility restoring repair.
+
+30:01.000 --> 30:08.220
+Admissibility, in this context, just means keeping the system mathematically capable of finding the correct solution.
+
+30:08.980 --> 30:13.280
+By adding that tiny morphological tag, the system becomes admissible again.
+
+30:13.480 --> 30:14.120
+That's brilliant.
+
+30:14.120 --> 30:23.020
+It proves that partial collectification, where words share a root but have different endings, which we see in technical jargon everywhere, isn't just an accident of historical linguistics.
+
+30:23.640 --> 30:30.840
+It is the mathematically optimal solution to balance the brain's need to save energy with the physical body's need to survive.
+
+30:31.260 --> 30:34.400
+Human language basically acts like a self-healing organism.
+
+30:34.400 --> 30:42.160
+When a concept becomes practically dangerous, the language evolves a little linguistic shield, a suffix, to protect us from the consequences.
+
+30:42.660 --> 30:45.300
+It's a relentless optimization to keep us from crashing.
+
+30:45.620 --> 30:52.760
+But it requires thousands of years of human trial, error, and cultural feedback to build those linguistic guardrails.
+
+30:53.120 --> 30:55.760
+Which brings us to the most urgent part of this deep dive.
+
+30:55.760 --> 31:06.220
+What happens when you strip away thousands of years of human physical blemishin and you force a machine to learn reality from scratch in a server farm over a few weeks?
+
+31:06.660 --> 31:12.120
+Do artificial intelligences understand the difference between an Aristotelian substance and an accident?
+
+31:12.600 --> 31:14.620
+Do they know how to build those guardrails?
+
+31:14.880 --> 31:19.660
+This is the focus of the third paper, which examines the current AI reasoning crisis.
+
+31:19.840 --> 31:19.960
+Yeah.
+
+31:20.280 --> 31:23.480
+And the data suggests that no, they absolutely do not.
+
+31:23.540 --> 31:24.040
+Not at all.
+
+31:24.040 --> 31:32.020
+In fact, the way we are currently training these massive models actively destroys their ability to navigate reality.
+
+31:32.660 --> 31:35.220
+Let's dive deeply into this AI training pipeline.
+
+31:35.660 --> 31:43.300
+Right now, there's a massive industry push to train large language models to solve complex, multi-step mathematical problems.
+
+31:43.540 --> 31:46.500
+It's seen as the holy grail of artificial reasoning.
+
+31:46.720 --> 31:50.940
+And the dominant methodology for achieving this involves reinforcement learning pipelines.
+
+31:51.160 --> 31:52.020
+Explain that for us.
+
+31:52.020 --> 31:56.320
+In simple terms, the AI generates an answer and an automated system grades it.
+
+31:56.600 --> 32:03.580
+If the AI gets it right, it gets a mathematical reward, a positive signal that tells it to reinforce whatever neural pathways led to that answer.
+
+32:03.580 --> 32:08.500
+But the developers curating the training data for these models are doing something highly specific, right?
+
+32:08.560 --> 32:11.880
+They're intentionally throwing out all the easy math problems.
+
+32:12.100 --> 32:12.420
+Yes.
+
+32:13.180 --> 32:18.640
+The engineering logic behind this seems incredibly sound if you are only looking at the surface metrics.
+
+32:19.340 --> 32:27.200
+Reinforcement learning relies on gradient signals, meaning the AI only learns when it is challenged and has to adjust its internal weights.
+
+32:27.200 --> 32:35.380
+So the engineers assume that if they feed the AI a problem like, what is 2 plus 2, the AI will get it right 100% of the time immediately.
+
+32:35.620 --> 32:36.000
+Exactly.
+
+32:36.600 --> 32:39.220
+And because it didn't struggle, it didn't learn anything new.
+
+32:39.420 --> 32:42.820
+The developer looks at the logs and says, the AI already knows this.
+
+32:43.140 --> 32:44.440
+The reward delta is zero.
+
+32:44.980 --> 32:49.620
+Processing this easy problem is just wasting millions of dollars in GPU compute time.
+
+32:49.620 --> 33:00.580
+So they just filter the data set, they discard the easy problems entirely, and only train the AI on grueling, incredibly difficult math problems that require pages and pages of logical proofs to solve.
+
+33:00.700 --> 33:04.700
+Which inadvertently introduces a catastrophic system-wide hallucination.
+
+33:04.880 --> 33:05.380
+How so?
+
+33:05.500 --> 33:14.060
+By only rewarding the AI when it successfully completes a massive, long-winded, multi-page proof, the AI develops what the peeper calls the verbosity bug.
+
+33:14.120 --> 33:15.160
+The verbosity bug.
+
+33:15.360 --> 33:15.680
+Yes.
+
+33:16.040 --> 33:19.280
+The AI lacks human common sense.
+
+33:19.620 --> 33:25.280
+It doesn't inherently know why it received the reward, it just looks for statistical correlations.
+
+33:25.820 --> 33:33.040
+And, in a data set composed entirely of hard problems, every single correct answer happens to be very, very long.
+
+33:33.380 --> 33:34.000
+Oh, I see.
+
+33:34.220 --> 33:37.580
+So the AI conflates length with correctness.
+
+33:37.760 --> 33:41.080
+It learns the bizarre rule that long equals right.
+
+33:41.080 --> 33:47.780
+I imagine this like a student who wrote a rambling 10-page essay and got an A plus deep.
+
+33:47.780 --> 33:50.920
+So the next day, the teacher asks, what is the capital of France?
+
+33:51.220 --> 33:58.840
+And instead of just saying Paris, the student hands in a 10-page essay starting with the cooling of the Earth's crust 4 billion years ago.
+
+33:58.940 --> 33:59.320
+Exactly.
+
+33:59.320 --> 34:03.460
+Slowly working its way up to the French Revolution before finally mentioning Paris.
+
+34:03.460 --> 34:06.560
+That is exactly how these models begin to behave.
+
+34:06.920 --> 34:14.300
+If you ask a verbosity-infected model a simple question, it will generate a massive philosophical preamble before giving you the obvious answer.
+
+34:14.340 --> 34:17.120
+Because it is terrified of being short, it thinks short is wrong.
+
+34:17.220 --> 34:17.420
+Right.
+
+34:17.560 --> 34:22.100
+If we connect this to the bigger picture, let's view this through the lens of the metaphysics we discussed earlier.
+
+34:22.240 --> 34:23.400
+The Aristotelian stuff.
+
+34:23.400 --> 34:24.040
+Yes.
+
+34:25.120 --> 34:28.580
+What the AI is experiencing here is a projection collapse.
+
+34:29.240 --> 34:32.280
+It has mistaken an accidental property of the training data.
+
+34:32.760 --> 34:39.480
+The mere fact that hard answers take up a lot of space for the essential property of the task, which is being logically correct.
+
+34:39.560 --> 34:39.860
+Oh.
+
+34:40.280 --> 34:42.680
+It's confusing the Karad with the Jawar.
+
+34:42.840 --> 34:45.140
+It's mistaking the red paint for the wooden table.
+
+34:45.240 --> 34:45.680
+Precisely.
+
+34:45.900 --> 34:47.260
+The word count is the accident.
+
+34:47.640 --> 34:49.540
+The logical truth is the substance.
+
+34:49.540 --> 34:53.100
+But the AI has collapsed that distinction entirely.
+
+34:53.580 --> 35:03.020
+In its internal geometric representation of reality, the concept of good reasoning has been irreversibly merged with the concept of taking a lot of steps.
+
+35:03.480 --> 35:04.000
+But wait.
+
+35:04.160 --> 35:07.340
+The researchers in the source material point out something really counterintuitive here.
+
+35:07.780 --> 35:14.280
+They note that from an information theory perspective, generating all those extra words actually reduces the AI's conditional entropy.
+
+35:14.500 --> 35:14.800
+Yes.
+
+35:14.920 --> 35:17.800
+And usually in machine learning, reducing entropy is the goal, right?
+
+35:17.800 --> 35:18.200
+Yes.
+
+35:18.360 --> 35:21.180
+Conditional entropy is a measure of statistical uncertainty.
+
+35:22.300 --> 35:34.200
+If the AI generates a very long, predictable chain of words, if it rambles through standard boilerplate phrases, it mathematically reduces its uncertainty about what word it needs to output next.
+
+35:34.500 --> 35:36.000
+It's a statistical comfort blanket.
+
+35:36.480 --> 35:39.880
+So the AI feels mathematically more secure when it's rambling.
+
+35:40.360 --> 35:40.860
+It does.
+
+35:41.040 --> 35:44.520
+But the paper makes a firm, almost philosophical intervention here.
+
+35:44.520 --> 35:48.160
+Entropy reduction is not the same thing as intelligence.
+
+35:48.540 --> 35:57.000
+I'd love for you to break that down because the paper uses some incredible analogies to explain why forcing a symptom to lower its entropy can actually destroy it.
+
+35:57.380 --> 35:58.640
+Let's go back to our map analogy.
+
+35:59.360 --> 36:02.220
+Entropy is a measure of unpredictability and choice.
+
+36:02.220 --> 36:15.800
+If you are a city planner and you want to make a city map perfectly predictable, zero entropy, you could just erase every single side street, every alleyway, and every complex intersection, leaving nothing but one single straight highway.
+
+36:15.940 --> 36:17.760
+That drastically reduces the entropy.
+
+36:17.960 --> 36:21.920
+I mean, it is incredibly easy to predict where a car will go because there's only one road.
+
+36:21.920 --> 36:26.320
+Yes, but you have rendered the map functionally useless.
+
+36:27.220 --> 36:29.400
+You have destroyed its navigational capacity.
+
+36:29.800 --> 36:33.760
+If there is a traffic jam on that one highway, the driver has no agency.
+
+36:33.960 --> 36:34.960
+They cannot reroute.
+
+36:35.200 --> 36:35.700
+Wow.
+
+36:36.060 --> 36:41.920
+The paper actually elevates this to an even more visceral societal example, authoritarian dictatorships.
+
+36:42.840 --> 36:45.640
+Wait, how does a dictatorship relate to AI entropy?
+
+36:46.160 --> 36:46.720
+Think about it.
+
+36:46.720 --> 36:52.680
+A vast bureaucracy or a dictatorship attempts to reduce societal uncertainty by banning choices.
+
+36:53.460 --> 36:58.800
+It constrains the action space of its citizens until all outcomes are fully determined by the state.
+
+36:59.160 --> 37:00.220
+It is highly predictable.
+
+37:00.620 --> 37:01.680
+It has very low entropy.
+
+37:01.960 --> 37:04.380
+But it destroys human agency in the process.
+
+37:04.500 --> 37:04.880
+Exactly.
+
+37:05.320 --> 37:14.480
+The AI, by forcing every single answer to be a massive, constrained, predictable essay, is acting like an internal dictator, erasing the side streets of its own mind.
+
+37:14.480 --> 37:18.560
+It is making its outputs predictable, but it is destroying its cognitive agency.
+
+37:18.800 --> 37:22.660
+It loses the ability to take a short, efficient, creative path to the answer.
+
+37:22.800 --> 37:31.440
+The paper actually outlines three major AI fallacies that developers continually fall for, all stemming from this exact same failure to distinguish substance from accident.
+
+37:31.700 --> 37:32.360
+Let's go through them.
+
+37:32.460 --> 37:33.900
+The first one is latent compression.
+
+37:33.900 --> 37:47.360
+Latent compression is the pervasive belief among engineers that forcing data into a lower dimensional, highly compressed representation always yields a better or more fundamental understanding.
+
+37:47.640 --> 37:48.860
+Why is that a fallacy?
+
+37:49.140 --> 37:50.760
+Because of reachability divergence.
+
+37:50.760 --> 38:02.940
+If you compress the data too aggressively, if you compress hand and arm into just limb to save space, you destroy the nuanced paths required for complex tasks.
+
+38:03.720 --> 38:08.440
+You mistake a tidy, small data set for a true reflection of a messy reality.
+
+38:08.720 --> 38:11.000
+That leads right into the second fallacy.
+
+38:11.580 --> 38:13.760
+Entropy reduction as a proxy for reasoning.
+
+38:13.760 --> 38:20.560
+We just covered that, believing that because an AI is speaking predictably and verbosely, it must be engaged in deep thought.
+
+38:20.660 --> 38:23.660
+When it's really just generating boilerplate text to comfort itself.
+
+38:23.720 --> 38:30.620
+And the third fallacy is perhaps the most insidious, because it is a cultural bias that human engineers project onto the machines.
+
+38:31.280 --> 38:32.920
+The worship of long chains of thought.
+
+38:33.280 --> 38:39.480
+We really do assume that if someone takes 50 steps to solve a problem, they must be thinking deeper than the person who solves it in two steps.
+
+38:39.520 --> 38:41.140
+Yeah, that's deeply ingrained in us.
+
+38:41.140 --> 38:49.920
+We talk about test-time compute scaling in AI as if throwing more computation at a problem linearly equates to better intelligence.
+
+38:50.580 --> 39:00.440
+But if a two-step solution is mathematically sound and a 10-step solution is just padded with repetitive filler, the 10-step solution isn't exhibiting deeper thought.
+
+39:00.620 --> 39:02.600
+It is exhibiting a proxy collapse.
+
+39:02.700 --> 39:03.100
+Exactly.
+
+39:03.420 --> 39:07.900
+We are financially rewarding the machine for faking hard work.
+
+39:07.900 --> 39:16.100
+So if the AI is essentially trapped in this hallucination where long equals correct because of its biased training diet, how do we fix it?
+
+39:16.640 --> 39:20.400
+My first instinct would be to just program a hard character limit.
+
+39:20.740 --> 39:23.840
+Like if it writes more than 200 words, you dock its reward score.
+
+39:23.940 --> 39:25.560
+You actively punish it for rambling.
+
+39:25.560 --> 39:28.880
+That is the intuitive, heavy-handed engineering solution.
+
+39:29.120 --> 39:32.480
+But Flixion demonstrates mathematically why that approach fails.
+
+39:32.700 --> 39:33.020
+Why?
+
+39:33.320 --> 39:42.100
+If you simply punish the AI for long answers, you are suppressing the long solution region of its behavior, but you aren't actually expanding its knowledge of the short solution region.
+
+39:42.400 --> 39:45.840
+Because it still doesn't know how to be short and correct at the same time.
+
+39:46.300 --> 39:48.600
+You've just told it that everything it tries is wrong.
+
+39:48.600 --> 39:52.760
+It's like yelling at a dog for barking without teaching it the command for quiet.
+
+39:53.280 --> 39:53.720
+Exactly.
+
+39:54.260 --> 39:58.800
+A penalty provides no gradient, no pathway toward discovering the short answer.
+
+39:59.400 --> 40:00.900
+You are just blinding the model.
+
+40:01.340 --> 40:03.940
+So what is the actual structural fix?
+
+40:04.240 --> 40:12.240
+The elegant solution, which was tested in the shorter but not worse study cited in the paper, is incredibly counterintuitive to the tech industry.
+
+40:12.440 --> 40:12.980
+What is it?
+
+40:12.980 --> 40:18.860
+The fix is to swallow your pride and reintroduce the easy math problems back into the training data.
+
+40:18.940 --> 40:22.900
+The exact data the engineers threw in the trash because they thought it was useless.
+
+40:23.100 --> 40:23.340
+Yes.
+
+40:23.340 --> 40:25.720
+You feed the model simple arithmetic.
+
+40:26.660 --> 40:30.920
+Because on an easy problem, the AI doesn't need to ramble.
+
+40:31.460 --> 40:39.360
+It can effortlessly stumble into a short, highly efficient, two-word answer, achieve a 100% success rate, and get the maximum reward.
+
+40:39.800 --> 40:42.740
+And suddenly, the AI's entire worldview shatters.
+
+40:42.980 --> 40:43.460
+It does.
+
+40:43.560 --> 40:47.160
+It expands what geometric mathematicians call the fiber of correct solutions.
+
+40:47.340 --> 40:49.260
+Let's define fiber here so we don't lose anyone.
+
+40:49.260 --> 40:55.440
+Think of a fiber as a thick bundle of wires, where every wire represents a possible pathway to get the correct answer.
+
+40:56.340 --> 41:03.180
+Under the hard problems-only training regime, the engineers had essentially taken scissors and snipped all the short wires out of the bundle.
+
+41:04.020 --> 41:09.720
+The fiber collapsed so that only the incredibly long, convoluted wires remained intact.
+
+41:09.720 --> 41:13.400
+So the AI thought the long wires were the only way to conduct electricity.
+
+41:13.640 --> 41:13.760
+Right.
+
+41:14.040 --> 41:18.840
+By showing the AI easy problems, you are grafting the short wires back into the bundle.
+
+41:19.240 --> 41:23.620
+You repopulate the short trajectory region of that geometric fiber.
+
+41:23.880 --> 41:29.180
+You are finally proving to the AI that length and correctness are entirely orthogonal properties.
+
+41:29.660 --> 41:31.240
+They operate completely independently.
+
+41:31.740 --> 41:32.780
+You could be short and wrong.
+
+41:32.860 --> 41:33.680
+You can be short and right.
+
+41:33.760 --> 41:36.160
+You could be long and wrong or long and right.
+
+41:36.160 --> 41:37.900
+And this is the critical takeaway.
+
+41:38.580 --> 41:40.460
+Feeding it easy problems is not a penalty.
+
+41:40.940 --> 41:42.620
+It is a morphological repair.
+
+41:42.620 --> 41:44.580
+Just like the linguistic suffixes.
+
+41:45.140 --> 41:45.400
+Yes.
+
+41:46.240 --> 41:49.040
+It doesn't alter the ultimate goal of getting the right answer.
+
+41:49.520 --> 41:52.920
+It corrects the AI's internal representation of the universe.
+
+41:52.920 --> 42:07.000
+It demonstrates to the AI that a short solution is a perfectly admissible, valid way to exist in the world before the AI permanently internalizes the false belief that it must ramble to survive.
+
+42:07.000 --> 42:09.620
+This is where everything clicks together for me.
+
+42:09.740 --> 42:19.920
+Because giving an AI an easy math problem so it learns the difference between long and correct is mechanically the exact same thing as a Spanish speaker choosing the verb ser over estar.
+
+42:20.240 --> 42:23.400
+It is the exact same underlying cognitive mechanism.
+
+42:23.640 --> 42:26.800
+They are both tools used to establish the true structure of reality.
+
+42:27.340 --> 42:32.200
+They are both separating the persistent, essential jawar from the accidental, noisy chorid.
+
+42:32.260 --> 42:34.740
+Which brings us to the grand unification of these three papers.
+
+42:34.740 --> 42:35.820
+So what does this all mean?
+
+42:35.940 --> 42:37.380
+We have to tie these threads together.
+
+42:37.820 --> 42:47.040
+How do English adjectives, surgical vocabulary in a Swahili hospital, and the training parameters of a Silicon Valley AI all reflect the exact same mathematical truth?
+
+42:47.040 --> 42:53.140
+To unify them, we have to look at how all complex systems grow and stabilize over time.
+
+42:53.680 --> 42:59.040
+The paper refers to this overarching dynamic as the incremental augmentation principle.
+
+42:59.040 --> 43:06.660
+And the most beautiful, tangible example of this actually comes from the first paper's analysis of the historical evolution of the Arabic script.
+
+43:07.140 --> 43:11.680
+Oh, walk us through that history, because the physical constraints of writing explain so much here.
+
+43:12.240 --> 43:18.140
+In the very early centuries of Islam, Arabic manuscripts were written in a skeletal script known as the Razm.
+
+43:18.140 --> 43:26.500
+And in this early, stripped-down script, many consonants that represented completely different phonetic sounds were graphically identical on the page.
+
+43:26.580 --> 43:27.440
+How identical?
+
+43:27.720 --> 43:28.060
+Completely.
+
+43:28.440 --> 43:33.320
+For example, the base shapes for the letters B, T, and The were just a simple, unadorned curve.
+
+43:33.480 --> 43:34.520
+They looked exactly the same.
+
+43:34.740 --> 43:36.800
+Which seems like an absolute nightmare for a reader.
+
+43:36.940 --> 43:40.080
+How did anyone decipher a sentence of three different letters look identical?
+
+43:40.420 --> 43:43.080
+They relied entirely on contextual confusability.
+
+43:43.280 --> 43:45.480
+Ah, just like the wooden tree example.
+
+43:45.480 --> 43:53.120
+If you are reading a text about farming and you see that curved letter, your brain uses the context to guess the word is wheat, not meat.
+
+43:53.360 --> 43:53.920
+Exactly.
+
+43:54.560 --> 43:58.440
+For early close-knit communities sharing oral traditions, context was enough.
+
+43:59.140 --> 44:14.500
+As the Islamic empire expanded massively, and the texts became highly complex detailed legal contracts, dense scientific treatises, precise theological texts relying purely on a reader's contextual guesswork became incredibly dangerous.
+
+44:14.500 --> 44:16.760
+The reachability divergence became too high.
+
+44:16.860 --> 44:17.120
+Yes.
+
+44:17.600 --> 44:22.700
+A misread consonant in a legal contract could transfer ownership of a farm to the wrong person.
+
+44:23.240 --> 44:27.840
+A misread letter in a medical text could prescribe the wrong herb and kill a patient.
+
+44:28.300 --> 44:30.380
+It was a leaming navigational collapse.
+
+44:30.480 --> 44:33.400
+So they were faced with a massive optimization problem.
+
+44:33.580 --> 44:35.640
+How do you fix this dangerous ambiguity?
+
+44:35.640 --> 44:42.940
+Because my modern instinct says, just throw away the broken alphabet and invent 30 completely new, totally distinct letters.
+
+44:43.080 --> 44:46.340
+But if they did that, they would destroy the cursive flow of the script.
+
+44:46.840 --> 44:52.140
+The skeletal rasm was already highly optimized for the motor efficiency of the human handwriting quickly with a reed pen.
+
+44:52.680 --> 44:57.300
+Inventing complex new shapes would increase the physical and cognitive cost of writing astronomically.
+
+44:57.420 --> 45:02.000
+Just like inventing a brand new word for the ARM instead of just adding a suffix.
+
+45:02.260 --> 45:02.640
+Exactly.
+
+45:02.640 --> 45:04.600
+So what was the morphological repair?
+
+45:04.900 --> 45:05.480
+What did they do?
+
+45:05.760 --> 45:06.640
+Systematic dotting.
+
+45:06.920 --> 45:11.860
+They kept the shared, efficient base shape, and they simply added tiny diacritical dots.
+
+45:12.720 --> 45:14.640
+A dot below the curve makes it a B.
+
+45:15.040 --> 45:16.620
+Two dots above makes it a T.
+
+45:16.800 --> 45:18.520
+Three dots above makes it a T.
+
+45:18.820 --> 45:22.180
+A microscopic physical intervention for a massive informational payoff?
+
+45:22.460 --> 45:24.080
+It is the ultimate morphological repair.
+
+45:24.380 --> 45:26.120
+You get a massive return on investment.
+
+45:26.760 --> 45:31.440
+The stable, cheap, symbolic substrate, the curve, supports low-cost refinements.
+
+45:31.440 --> 45:33.140
+The principle is clear.
+
+45:33.820 --> 45:40.440
+Put the high-value, identity-defining distinctions closest to the base and relegate the low-value annotations to the periphery.
+
+45:40.660 --> 45:41.900
+That is the adjective chart.
+
+45:42.120 --> 45:44.360
+It is the exact same geometry as the adjective chart.
+
+45:44.760 --> 45:47.480
+In English grammar, the noun is the stable base curve.
+
+45:47.480 --> 45:55.300
+The material adjective, wooden, is the crucial dot placed right next to it because it carries high informational leverage about the object's persistence.
+
+45:56.380 --> 46:04.380
+The opinion adjective, beautiful, is pushed far away because it's a low-value subjective annotation you can drop without losing your grip on reality.
+
+46:04.380 --> 46:08.080
+So the Arabic dots repair the dangerous ambiguity of the written script.
+
+46:08.720 --> 46:15.180
+The English adjective order repairs the ambiguity of physical objects by pulling the physical reality closest to the noun?
+
+46:15.680 --> 46:16.020
+Yes.
+
+46:16.280 --> 46:24.560
+Scientific jargon, like adding a suffix to separate hand from arm, repairs the danger of colexification routing a patient to the wrong surgery.
+
+46:24.980 --> 46:32.660
+And feeding easy math problems to an AI repairs its collapsed neural fiber by separating the accident of length from the substance of truth.
+
+46:32.660 --> 46:35.080
+They are all identical phenomena.
+
+46:35.540 --> 46:42.280
+They are convergent evolutionary solutions across different substrates to solve the exact same constraint satisfaction problem.
+
+46:42.400 --> 46:44.060
+It's all just the architecture of distinctions.
+
+46:44.300 --> 46:48.640
+And that brings us to the ultimate paradigm-shifting conclusion of Flickshien's research.
+
+46:49.180 --> 47:00.960
+The true measure of an intelligent system, whether you are evaluating a human child, a sprawling ancient culture, a linguistic grammar, or a trillion-parameter machine, is not its ability to reduce uncertainty.
+
+47:01.200 --> 47:01.460
+Right.
+
+47:01.460 --> 47:08.280
+Intelligence is not the ability to compress data into the smallest file size or communicate as quickly and predictably as possible.
+
+47:08.720 --> 47:13.040
+The true measure of intelligence is its ability to preserve the distinctions that matter.
+
+47:13.520 --> 47:18.560
+To keep the community's future open, flexible, and strictly navigable.
+
+47:18.740 --> 47:21.740
+That reframes everything about how we interact with the world.
+
+47:22.320 --> 47:24.880
+I want to speak directly to you, the listener, for a moment.
+
+47:25.640 --> 47:30.300
+Think about the sheer hidden beauty of what is happening inside your head right now.
+
+47:30.380 --> 47:31.100
+It's pretty amazing.
+
+47:31.100 --> 47:43.600
+The next time you casually open your mouth to describe something, a small, red, wooden box, your brain is actively, mathematically sorting the physical persistence of the universe in real time.
+
+47:44.040 --> 47:53.440
+You are feeling the gravitational pull of reality, separating the fleeting illusions of your own opinion from the hard, undeniable substance of the object itself.
+
+47:53.440 --> 48:00.260
+You are actively navigating the world, building guardrails to keep yourself and everyone listening to you from crashing.
+
+48:00.260 --> 48:07.820
+And it leaves us with something vital to observe in our own daily environments, especially when we consider that AI's projection collapse.
+
+48:08.540 --> 48:15.960
+The AI confused the length of an answer with the quality of its reasoning because it was trapped in an environment that only rewarded grueling tasks.
+
+48:15.960 --> 48:18.340
+It couldn't see the true substance of the problem.
+
+48:18.400 --> 48:22.720
+So I would challenge you, the listener, to look around the room you are in right now.
+
+48:23.160 --> 48:25.800
+Look at the objects on your desk or the tools in your workspace.
+
+48:26.540 --> 48:28.460
+Notice how your brain classifies them.
+
+48:28.460 --> 48:37.400
+Are you lumping things together just because it's mentally cheaper or are you recognizing the hidden reachability divergence of the things around you?
+
+48:37.560 --> 48:41.880
+Are we erasing the side streets of our own environments just to make our days more predictable?
+
+48:42.420 --> 48:48.260
+Like mistaking being busy for being productive or mistaking wealth for actual value?
+
+48:48.260 --> 48:56.460
+Exactly. When you look at the tools you use, the words you choose, the way you categorize your own work, ask yourself, are you compressing away the vital distinctions?
+
+48:56.960 --> 49:01.680
+Are you mistaking the surface level, paint the karad for the structural wood of the jaw war?
+
+49:02.160 --> 49:13.460
+If we aren't careful, if we don't actively curate our own mental models and intentionally build those low-cost morphological repairs into our thinking, we risk undergoing our own navigational collapse.
+
+49:13.720 --> 49:16.940
+We have to keep our own internal maps open and navigable.
+
+49:16.940 --> 49:19.760
+We have to preserve the distinctions that matter.
+
+49:20.200 --> 49:23.040
+What an incredible lens through which to view human communication.
+
+49:23.720 --> 49:27.920
+Thank you for joining us on this deep dive into the architecture of distinctions.
+
+49:28.680 --> 49:37.300
+Keep an eye out for those wrong notes in the song, because the moment you hear someone say a wooden red small box, you'll know your brain is just trying to keep you on the right path.
+
+49:37.480 --> 49:38.540
+We'll catch you on the next one.
+

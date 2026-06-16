@@ -1,0 +1,57 @@
+\contentsline {section}{\numberline {1}The Problem Compression Cannot Solve}{3}{section.1}%
+\contentsline {section}{\numberline {2}The Standard Account and Its Limits}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The compression--differentiation model}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Three structural limitations}{4}{subsection.2.2}%
+\contentsline {paragraph}{Diachronic silence.}{4}{paragraph*.1}%
+\contentsline {paragraph}{Family-level heterogeneity.}{4}{paragraph*.2}%
+\contentsline {paragraph}{The unexplained interaction.}{4}{paragraph*.3}%
+\contentsline {section}{\numberline {3}The Reachability Framework}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Foundational definitions}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}The merge operator and reachability loss}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}The extended lexicalization model}{7}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Reachability Divergence Is Not Contextual Confusability}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The conceptual distinction}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Kanuri partial colexification as morphological repair}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The independence table with colexification-relevant examples}{9}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Five Theorems}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Theorem 1: Navigational Collapse}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Theorem 2: Stability}{13}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Theorem 3: Repair}{14}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Proposition 4: Domain Divergence}{15}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Theorem 4: Projection}{17}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Faithfulness and the Geometry of Compression}{18}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Faithful projections and quotient structure}{18}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Lexical distortion}{19}{subsection.6.2}%
+\contentsline {section}{\numberline {7}A Pilot Estimation of Reachability Divergence}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Method and evidential status}{19}{subsection.7.1}%
+\contentsline {paragraph}{Estimating $S$ and $C$.}{19}{paragraph*.4}%
+\contentsline {paragraph}{Estimating $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle R$}\mathaccent "0362{R}$.}{20}{paragraph*.5}%
+\contentsline {paragraph}{Colexification observations.}{20}{paragraph*.6}%
+\contentsline {paragraph}{Predictions.}{20}{paragraph*.7}%
+\contentsline {subsection}{\numberline {7.2}Results}{20}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Observations}{21}{subsection.7.3}%
+\contentsline {paragraph}{The (H, L, H) cell is where the theories diverge.}{21}{paragraph*.8}%
+\contentsline {paragraph}{$\setbox \z@ \hbox {\mathsurround \z@ $\textstyle R$}\mathaccent "0362{R}$ varies independently of $S$ and $C$.}{22}{paragraph*.9}%
+\contentsline {paragraph}{High-$\setbox \z@ \hbox {\mathsurround \z@ $\textstyle R$}\mathaccent "0362{R}$ pairs shift toward partial or no colexification.}{22}{paragraph*.10}%
+\contentsline {paragraph}{Limitations.}{22}{paragraph*.11}%
+\contentsline {section}{\numberline {8}Operationalizing Reachability Divergence}{22}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Action-consequence corpora}{22}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Downstream divergence in language models}{23}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Expert elicitation with structured protocol}{23}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}The empirical test of Theorem 5}{23}{subsection.8.4}%
+\contentsline {section}{\numberline {9}Consequences for the Compression Account}{24}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Family-level heterogeneity}{24}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}The English-proxy distortion}{25}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}The interaction term}{25}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Consequential ambiguity and reachability divergence}{25}{subsection.9.4}%
+\contentsline {section}{\numberline {10}Language as Reachability Preservation}{26}{section.10}%
+\contentsline {section}{\numberline {11}Scope, Limitations, and the Research Programme}{27}{section.11}%
+\contentsline {subsection}{\numberline {11.1}What this paper establishes}{27}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}What this paper does not establish}{28}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Principal limitations}{28}{subsection.11.3}%
+\contentsline {paragraph}{Assumption sensitivity.}{28}{paragraph*.12}%
+\contentsline {paragraph}{Domain boundary.}{28}{paragraph*.13}%
+\contentsline {paragraph}{Merge operator dependence.}{28}{paragraph*.14}%
+\contentsline {paragraph}{Pilot estimation scope.}{28}{paragraph*.15}%
+\contentsline {subsection}{\numberline {11.4}Next steps}{29}{subsection.11.4}%
+\contentsline {section}{\numberline {12}Conclusion}{29}{section.12}%
