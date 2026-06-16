@@ -120,7 +120,7 @@ They notice a bizarre AI behavior.
 
 31
 00:01:40,900 --> 00:01:49,260
-And second, we have our main focus, which is a massive, profound theoretical paper from June 2026 by a researcher named Fliction,
+And second, we have our main focus, which is a massive, profound theoretical paper from June 2026 by a researcher named Flyxion,
 
 32
 00:01:49,480 --> 00:01:54,560
@@ -156,7 +156,7 @@ It is.
 
 40
 00:02:15,720 --> 00:02:20,020
-And Fliction's paper steps back from that empirical finding and asks, well, why?
+And Flyxion's paper steps back from that empirical finding and asks, well, why?
 
 41
 00:02:20,240 --> 00:02:23,660
@@ -180,7 +180,7 @@ That's the logical assumption, yeah.
 
 46
 00:02:34,020 --> 00:02:40,220
-But Fliction uses this anomaly to explore the literal geometry of how knowledge is stored.
+But Flyxion uses this anomaly to explore the literal geometry of how knowledge is stored.
 
 47
 00:02:40,960 --> 00:02:46,320
@@ -436,7 +436,7 @@ Precisely.
 
 110
 00:05:59,080 --> 00:06:02,320
-But Fliction points out that it goes deeper than just classical conditioning.
+But Flyxion points out that it goes deeper than just classical conditioning.
 
 111
 00:06:02,780 --> 00:06:05,500
@@ -600,7 +600,7 @@ That's the standard industry assumption.
 
 151
 00:08:01,560 --> 00:08:04,100
-But Flixion pushes back on this incredibly hard.
+But Flyxion pushes back on this incredibly hard.
 
 152
 00:08:04,240 --> 00:08:04,700
@@ -608,7 +608,7 @@ How so?
 
 153
 00:08:05,060 --> 00:08:08,020
-Flixion argues that entropy reduction is not intelligence.
+Flyxion argues that entropy reduction is not intelligence.
 
 154
 00:08:08,280 --> 00:08:08,420
@@ -624,7 +624,7 @@ It completely fails to identify what is actually wrong with it.
 
 157
 00:08:17,620 --> 00:08:27,060
-And Flixion provides three vivid analogies to illustrate why blindly optimizing for reduced uncertainty can actually destroy a complex system.
+And Flyxion provides three vivid analogies to illustrate why blindly optimizing for reduced uncertainty can actually destroy a complex system.
 
 158
 00:08:27,520 --> 00:08:32,860
@@ -636,7 +636,7 @@ They're very helpful.
 
 160
 00:08:33,420 --> 00:08:35,780
-The first one Flixion uses is about language.
+The first one Flyxion uses is about language.
 
 161
 00:08:35,780 --> 00:08:40,980
@@ -892,7 +892,7 @@ Yeah.
 
 224
 00:11:53,780 --> 00:12:00,340
-I want to get into the hidden geometry of how knowledge is soared, because Fliction talks about representational collapse,
+I want to get into the hidden geometry of how knowledge is soared, because Flyxion talks about representational collapse,
 
 225
 00:12:00,680 --> 00:12:02,740
@@ -964,7 +964,7 @@ The distinction collapsed.
 
 242
 00:12:53,940 --> 00:12:59,440
-Fliction uses a specific geometric language to describe this, drawing on the CLIO framework.
+Flyxion uses a specific geometric language to describe this, drawing on the CLIO framework.
 
 243
 00:12:59,440 --> 00:13:00,920
@@ -996,7 +996,7 @@ Right.
 
 250
 00:13:12,080 --> 00:13:16,840
-In this geometric space, fliction introduces the concept of a fiber.
+In this geometric space, Flyxion introduces the concept of a fiber.
 
 251
 00:13:17,060 --> 00:13:17,540
@@ -1180,7 +1180,7 @@ It reveals a systemic flaw in how we measure progress.
 
 296
 00:16:13,000 --> 00:16:20,040
-Fliction lays this out in Proposition 5.1, defining the algebraic skeleton of these failures as a proxy collapse.
+Flyxion lays this out in Proposition 5.1, defining the algebraic skeleton of these failures as a proxy collapse.
 
 297
 00:16:20,420 --> 00:16:20,740
@@ -1200,7 +1200,7 @@ Instead of saying proxy A predicts target B, the system begins to operate as if 
 
 301
 00:16:35,440 --> 00:16:43,380
-And Fliction identifies three distinct machine learning errors that are all, at their core, this exact same projection collapse.
+And Flyxion identifies three distinct machine learning errors that are all, at their core, this exact same projection collapse.
 
 302
 00:16:43,540 --> 00:16:50,120
@@ -1280,7 +1280,7 @@ But the third error is the one that really caught my eye.
 
 321
 00:17:48,320 --> 00:17:50,320
-Fliction calls it the reasoning length error.
+Flyxion calls it the reasoning length error.
 
 322
 00:17:51,040 --> 00:17:53,360
@@ -1328,7 +1328,7 @@ It is a massive cultural delusion.
 
 333
 00:18:23,060 --> 00:18:27,900
-Fliction brings in philosophical terminology to explain why we are being fooled by this.
+Flyxion brings in philosophical terminology to explain why we are being fooled by this.
 
 334
 00:18:28,140 --> 00:18:28,840
@@ -1764,7 +1764,7 @@ But now, look at what happens when you introduce easy problems.
 
 442
 00:23:08,380 --> 00:23:12,180
-You create what Fliction calls a budget-truncated asymmetry.
+You create what Flyxion calls a budget-truncated asymmetry.
 
 443
 00:23:12,580 --> 00:23:13,660
@@ -1844,7 +1844,7 @@ Okay, but this circles back to my question about penalties.
 
 462
 00:24:35,200 --> 00:24:39,860
-In section 8 of the paper, Fliction talks about the information gap of length penalties.
+In section 8 of the paper, Flyxion talks about the information gap of length penalties.
 
 463
 00:24:40,020 --> 00:24:40,260
@@ -1932,7 +1932,7 @@ That makes perfect sense.
 
 484
 00:25:52,340 --> 00:25:55,060
-As Fliction writes, repair dominates penalty.
+As Flyxion writes, repair dominates penalty.
 
 485
 00:25:55,060 --> 00:25:59,740
@@ -2088,7 +2088,7 @@ This is where the structural brilliance of the intervention really shines.
 
 523
 00:28:03,260 --> 00:28:05,340
-Fliction details a two-stage curriculum.
+Flyxion details a two-stage curriculum.
 
 524
 00:28:05,520 --> 00:28:06,160
@@ -2180,7 +2180,7 @@ Exactly.
 
 546
 00:29:18,540 --> 00:29:27,780
-It can modulate its solution length based on the task, but fliction issues a major warning here in theorem 9.2, the stability condition.
+It can modulate its solution length based on the task, but Flyxion issues a major warning here in theorem 9.2, the stability condition.
 
 547
 00:29:28,020 --> 00:29:28,540
@@ -2236,11 +2236,11 @@ That's spot on.
 
 560
 00:30:17,840 --> 00:30:24,960
-And this ties into a profound concept Fliction calls monotone correspondence in Proposition 9.4.
+And this ties into a profound concept Flyxion calls monotone correspondence in Proposition 9.4.
 
 561
 00:30:25,860 --> 00:30:34,840
-Fliction connects the fiber admissibility gap, how much of the correct solution space the model is currently blind to, with something called reachability loss.
+Flyxion connects the fiber admissibility gap, how much of the correct solution space the model is currently blind to, with something called reachability loss.
 
 562
 00:30:35,180 --> 00:30:36,220
@@ -2300,7 +2300,7 @@ If you try to expand a collapsed representation, you just magnify the collapse.
 
 576
 00:31:32,300 --> 00:31:35,640
-Which brings us to the part of Fliction's paper that absolutely blew my mind.
+Which brings us to the part of Flyxion's paper that absolutely blew my mind.
 
 577
 00:31:35,640 --> 00:31:36,740
@@ -2312,7 +2312,7 @@ Yes.
 
 579
 00:31:37,880 --> 00:31:44,740
-Fliction takes this highly specific, very modern mathematical fix in artificial intelligence and makes a stunning leap.
+Flyxion takes this highly specific, very modern mathematical fix in artificial intelligence and makes a stunning leap.
 
 580
 00:31:45,460 --> 00:31:53,400
@@ -2328,7 +2328,7 @@ It really is.
 
 583
 00:32:01,120 --> 00:32:07,600
-Fliction looks at three massive, real-world examples outside of AI to show that this is how all progress happens.
+Flyxion looks at three massive, real-world examples outside of AI to show that this is how all progress happens.
 
 584
 00:32:07,780 --> 00:32:14,160
@@ -2832,7 +2832,7 @@ It is a profound unification of learning theory, and it brings us directly to th
 
 709
 00:39:01,380 --> 00:39:03,220
-learning lesson in Fliction's paper.
+learning lesson in Flyxion's paper.
 
 710
 00:39:03,440 --> 00:39:03,620
@@ -2840,7 +2840,7 @@ Right.
 
 711
 00:39:03,720 --> 00:39:09,000
-Because if Fliction is right about this universal pattern, then the immediate future of AI and
+Because if Flyxion is right about this universal pattern, then the immediate future of AI and
 
 712
 00:39:09,000 --> 00:39:12,420
@@ -2848,7 +2848,7 @@ how we relate to information needs a massive paradigm shift.
 
 713
 00:39:12,860 --> 00:39:16,880
-Fliction is basically calling out the entire tech industry in Section 12 of the paper.
+Flyxion is basically calling out the entire tech industry in Section 12 of the paper.
 
 714
 00:39:16,880 --> 00:39:21,260
@@ -2948,7 +2948,7 @@ You don't penalize it for sounding confident.
 
 738
 00:40:33,200 --> 00:40:35,920
-Based on Fliction's theory, you have to demonstrate the empty fiber.
+Based on Flyxion's theory, you have to demonstrate the empty fiber.
 
 739
 00:40:36,100 --> 00:40:40,940
@@ -3020,7 +3020,7 @@ Show it slang that cuts perfectly to the core of an issue.
 
 756
 00:41:27,080 --> 00:41:30,420
-What Fliction is doing here is redefining the true measure of intelligence.
+What Flyxion is doing here is redefining the true measure of intelligence.
 
 757
 00:41:31,200 --> 00:41:34,580

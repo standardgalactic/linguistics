@@ -108,11 +108,11 @@ Today, we are unpacking a stack of three incredible papers published in June 202
 
 28
 00:01:20,980 --> 00:01:22,720
-Right, by an independent researcher named Flixion.
+Right, by an independent researcher named Flyxion.
 
 29
 00:01:22,720 --> 00:01:24,100
-Yes, Flixion.
+Yes, Flyxion.
 
 30
 00:01:24,240 --> 00:01:30,160
@@ -736,7 +736,7 @@ Because Spanish isn't actually dividing the world into permanent and temporary,
 
 185
 00:12:50,540 --> 00:12:55,780
-it is using verb choice to map Flixian's exact persistence hierarchy.
+it is using verb choice to map Flyxion's exact persistence hierarchy.
 
 186
 00:12:55,840 --> 00:12:58,520
@@ -1188,7 +1188,7 @@ Against navigational collapse.
 
 298
 00:19:07,360 --> 00:19:13,980
-Fliction argues that we rigorously encode this persistence gradient because the closer a property is to the noun,
+Flyxion argues that we rigorously encode this persistence gradient because the closer a property is to the noun,
 
 299
 00:19:14,140 --> 00:19:16,920
@@ -1788,7 +1788,7 @@ No.
 
 448
 00:28:39,340 --> 00:28:43,040
-The community engages in what Flixing calls a morphological repair.
+The community engages in what Flyxion calls a morphological repair.
 
 449
 00:28:43,700 --> 00:28:46,200
@@ -2416,7 +2416,7 @@ That is the intuitive, heavy-handed engineering solution.
 
 605
 00:39:29,120 --> 00:39:32,480
-But Flixion demonstrates mathematically why that approach fails.
+But Flyxion demonstrates mathematically why that approach fails.
 
 606
 00:39:32,700 --> 00:39:33,020

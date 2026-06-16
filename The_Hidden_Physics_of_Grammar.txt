@@ -25,8 +25,8 @@ I mean, you obey that invisible rule flawlessly every single time you speak, tho
 Yeah, and that weird unconscious grammar rule is actually the starting point for unlocking something massive.
 So welcome to this deep dive.
 Today, we are unpacking a stack of three incredible papers published in June 2026.
-Right, by an independent researcher named Flixion.
-Yes, Flixion.
+Right, by an independent researcher named Flyxion.
+Yes, Flyxion.
 And what makes these papers so compelling is that on the surface, they seem, well, completely unrelated.
 I mean, one is about linguistics, one is about the architecture of artificial intelligence,
 and one is about the historical evolution of human written language.
@@ -182,7 +182,7 @@ Right. Which, as the paper points out, is a fundamentally incomplete explanation
 Because there are so many exceptions, right?
 It generates incredibly confusing counterexamples for students.
 Because Spanish isn't actually dividing the world into permanent and temporary,
-it is using verb choice to map Flixian's exact persistence hierarchy.
+it is using verb choice to map Flyxion's exact persistence hierarchy.
 Yeah, really? The same hierarchy as the adjectives.
 The exact same one.
 Ser encodes properties that are constitutive or identity-defining, the high persistence end of the spectrum.
@@ -295,7 +295,7 @@ They're guardrails.
 Guardrails against what?
 What are we crashing into?
 Against navigational collapse.
-Fliction argues that we rigorously encode this persistence gradient because the closer a property is to the noun,
+Flyxion argues that we rigorously encode this persistence gradient because the closer a property is to the noun,
 the more reachability divergence it possesses.
 Reachability divergence.
 Yes.
@@ -445,7 +445,7 @@ They obviously don't just accept the crashes.
 No.
 Doctors in Mandarin-speaking hospitals aren't just shrugging when patients go to the wrong surgical ward.
 No.
-The community engages in what Flixing calls a morphological repair.
+The community engages in what Flyxion calls a morphological repair.
 And the mechanics of this repair are deeply revealing.
 Because they rarely throw away the old, merged word entirely.
 They do not invent a completely new, phonetically alien word from scratch.
@@ -602,7 +602,7 @@ My first instinct would be to just program a hard character limit.
 Like if it writes more than 200 words, you dock its reward score.
 You actively punish it for rambling.
 That is the intuitive, heavy-handed engineering solution.
-But Flixion demonstrates mathematically why that approach fails.
+But Flyxion demonstrates mathematically why that approach fails.
 Why?
 If you simply punish the AI for long answers, you are suppressing the long solution region of its behavior, but you aren't actually expanding its knowledge of the short solution region.
 Because it still doesn't know how to be short and correct at the same time.

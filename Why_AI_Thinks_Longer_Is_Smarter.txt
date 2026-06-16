@@ -28,7 +28,7 @@ just completely upend how we think about artificial intelligence.
 Really do.
 First, we have a highly practical empirical piece of research by Bownhar and colleagues called Shorter But Not Worse.
 They notice a bizarre AI behavior.
-And second, we have our main focus, which is a massive, profound theoretical paper from June 2026 by a researcher named Fliction,
+And second, we have our main focus, which is a massive, profound theoretical paper from June 2026 by a researcher named Flyxion,
 titled The Substance and Accident of Reasoning, Admissibility, Repair, and the Geometry of Verbosity.
 Yeah, Bownhar's paper kind of provides the inciting incident here.
 Right.
@@ -37,13 +37,13 @@ They found that if you take an AI model that's struggling with complex math and 
 it actually makes the AI's reasoning more efficient, more accurate, and much more concise.
 Which is wild.
 It is.
-And Fliction's paper steps back from that empirical finding and asks, well, why?
+And Flyxion's paper steps back from that empirical finding and asks, well, why?
 What is the actual geometry of thought that makes that possible?
 Because, I mean, that makes no sense on the surface.
 You'd think harder training makes a smarter AI.
 Like, if I want to get better at chess, I shouldn't play against novices.
 That's the logical assumption, yeah.
-But Fliction uses this anomaly to explore the literal geometry of how knowledge is stored.
+But Flyxion uses this anomaly to explore the literal geometry of how knowledge is stored.
 So we're going to understand why these models, and let's be honest, perhaps our own human minds,
 mistake the appearance of hard work for actual intelligence.
 It's a huge shift in perspective.
@@ -107,7 +107,7 @@ Get the food.
 Write a huge block of text.
 Get the reward.
 Precisely.
-But Fliction points out that it goes deeper than just classical conditioning.
+But Flyxion points out that it goes deeper than just classical conditioning.
 There is an information theoretic trap happening here.
 Okay.
 Information theoretic.
@@ -148,16 +148,16 @@ Uncertainty is going down.
 So the model is getting smarter and more confident.
 Yeah.
 That's the standard industry assumption.
-But Flixion pushes back on this incredibly hard.
+But Flyxion pushes back on this incredibly hard.
 How so?
-Flixion argues that entropy reduction is not intelligence.
+Flyxion argues that entropy reduction is not intelligence.
 Okay.
 The conventional argument only identifies the mechanism of why verbosity emerges.
 It completely fails to identify what is actually wrong with it.
-And Flixion provides three vivid analogies to illustrate why blindly optimizing for reduced uncertainty can actually destroy a complex system.
+And Flyxion provides three vivid analogies to illustrate why blindly optimizing for reduced uncertainty can actually destroy a complex system.
 Let's walk through those analogies because they really, uh, they really crystallize the danger of this mindset for me.
 They're very helpful.
-The first one Flixion uses is about language.
+The first one Flyxion uses is about language.
 Imagine a language that wants to reduce uncertainty so it starts merging words together.
 It collapses distinct meanings into a single semantic form.
 Right.
@@ -221,7 +221,7 @@ It traded true understanding for a highly specific, brittle proxy.
 Okay, so if entropy reduction is this, like false idol, what physically broke inside the AI model's brain when it learned to be so wordy?
 That's where we get into the geometry.
 Yeah.
-I want to get into the hidden geometry of how knowledge is soared, because Fliction talks about representational collapse,
+I want to get into the hidden geometry of how knowledge is soared, because Flyxion talks about representational collapse,
 specifically a projection collapse.
 So, in a healthy, well-functioning neural network, the model maintains a multidimensional space of concepts.
 It knows that the correctness of an answer and the length of an answer are two entirely separate things.
@@ -239,7 +239,7 @@ So, the model's internal map literally merged the two concepts.
 The mathematical function of correct, f of correct, literally became conflated with the function of long, f of long.
 The distinction collapsed.
 The distinction collapsed.
-Fliction uses a specific geometric language to describe this, drawing on the CLIO framework.
+Flyxion uses a specific geometric language to describe this, drawing on the CLIO framework.
 How does that work visually?
 Imagine a two-dimensional graph.
 The we-axis is quality, is the answer good or bad.
@@ -247,7 +247,7 @@ The x-axis is length, is the answer short or long.
 Got it.
 A simple coordinate plane.
 Right.
-In this geometric space, fliction introduces the concept of a fiber.
+In this geometric space, Flyxion introduces the concept of a fiber.
 A fiber.
 A fiber is the pre-image of a good solution.
 It's the physical region on our graph, and corresponding to the literal matrix of weights in the neural network that represents all the valid ways to arrive at a correct answer.
@@ -293,12 +293,12 @@ Which opens up a massive can of worms regarding how the entire tech industry is 
 Oh, absolutely.
 Because this geometry of collapse doesn't just explain why an AI writes a novel to solve 2 plus 2.
 It reveals a systemic flaw in how we measure progress.
-Fliction lays this out in Proposition 5.1, defining the algebraic skeleton of these failures as a proxy collapse.
+Flyxion lays this out in Proposition 5.1, defining the algebraic skeleton of these failures as a proxy collapse.
 Right.
 A proxy collapse occurs when a learner replaces a strong correlation with a strict identity.
 Okay, unpack that.
 Instead of saying proxy A predicts target B, the system begins to operate as if proxy A is target B.
-And Fliction identifies three distinct machine learning errors that are all, at their core, this exact same projection collapse.
+And Flyxion identifies three distinct machine learning errors that are all, at their core, this exact same projection collapse.
 Yeah, we've talked deeply about one of them, the entropy reduction error or verbosity, where the model conflates correct reasoning with length.
 But the other two are everywhere right now.
 Let's look at the latent compression error.
@@ -318,7 +318,7 @@ The model fails because it threw away the side streets to make a perfectly strai
 That's it.
 Exactly.
 But the third error is the one that really caught my eye.
-Fliction calls it the reasoning length error.
+Flyxion calls it the reasoning length error.
 Conflating good reasoning with many steps.
 This is the cultural myth of long chains of thought.
 I mean, I see this everywhere.
@@ -330,7 +330,7 @@ It's reasoning just like a human.
 The entire discourse assumes that an AI that takes 10 steps to answer is inherently thinking
 deeper than one taking two steps.
 It is a massive cultural delusion.
-Fliction brings in philosophical terminology to explain why we are being fooled by this.
+Flyxion brings in philosophical terminology to explain why we are being fooled by this.
 Let's hear it.
 These properties, low dimensions, low entropy, many steps, they are what philosophers call
 accidental properties.
@@ -439,7 +439,7 @@ The objective function is mathematically incapable of teaching the policy to pre
 Because short solutions are so rare, they just get lumped in with any successful trajectory.
 Wow.
 But now, look at what happens when you introduce easy problems.
-You create what Fliction calls a budget-truncated asymmetry.
+You create what Flyxion calls a budget-truncated asymmetry.
 Budget truncation.
 Yeah.
 Meaning, there is a hard limit to how many tokens or words the AI is allowed to output before the system cuts it off.
@@ -459,7 +459,7 @@ The short answer gets the 1.0, and the long, waffling answer hits the ceiling, g
 Easy problems finally provide the positive differential gradient to favor short solutions.
 They physically demonstrate to the model that a short, correct answer is not only possible, but highly successful.
 Okay, but this circles back to my question about penalties.
-In section 8 of the paper, Fliction talks about the information gap of length penalties.
+In section 8 of the paper, Flyxion talks about the information gap of length penalties.
 Right.
 Why is just subtracting points for long answers worse than this easy problem repair?
 If I add a penalty, couldn't I just alter the GRPO formula so the long answer gets a lower score?
@@ -481,7 +481,7 @@ I literally don't know what else to do.
 A penalty just compresses the long solution region without expanding the short solution region.
 It penalizes the accident without demonstrating the substance.
 That makes perfect sense.
-As Fliction writes, repair dominates penalty.
+As Flyxion writes, repair dominates penalty.
 You have to demonstrate admissibility before the model has fully internalized that it cannot be done.
 Let's try to map this to a physical analogy because the difference between regularization, which is fixing the objective via a penalty,
 and morphological repair, which is fixing the representation, is huge.
@@ -520,7 +520,7 @@ Because eventually, the AI still has to solve those incredibly hard PhD-level ma
 That's a great point.
 If it learned that short is good, won't it just start giving short, wrong answers to hard problems?
 This is where the structural brilliance of the intervention really shines.
-Fliction details a two-stage curriculum.
+Flyxion details a two-stage curriculum.
 Okay. What's stage one?
 Stage one is what we just discussed.
 Emergent brevity.
@@ -543,7 +543,7 @@ But it does so only because the specific mathematical structure of the problem r
 It's using the back door when the back door makes sense and the front door when the front door makes sense.
 It has agency again.
 Exactly.
-It can modulate its solution length based on the task, but fliction issues a major warning here in theorem 9.2, the stability condition.
+It can modulate its solution length based on the task, but Flyxion issues a major warning here in theorem 9.2, the stability condition.
 A warning?
 The repaired fiber requires active maintenance.
 Yes. Corollary 9.3 explicitly states that if you completely remove all easy problems in stage 2, if you go back to a strictly hard-only diet, the model will eventually relapse into verbosity.
@@ -557,8 +557,8 @@ Very much so.
 If you do heavy bench presses every single day but never stretch, eventually the joint tightens up and you lose your range of motion.
 You have to keep doing the light mobility work to maintain the joint's capacity.
 That's spot on.
-And this ties into a profound concept Fliction calls monotone correspondence in Proposition 9.4.
-Fliction connects the fiber admissibility gap, how much of the correct solution space the model is currently blind to, with something called reachability loss.
+And this ties into a profound concept Flyxion calls monotone correspondence in Proposition 9.4.
+Flyxion connects the fiber admissibility gap, how much of the correct solution space the model is currently blind to, with something called reachability loss.
 What is reachability loss?
 It's a formal measure of how many successful futures a system permanently loses access to because of its rigid behavior.
 A loss of future potential.
@@ -573,14 +573,14 @@ You have to restore its local faithfulness first.
 You have to make sure its basic map of reality isn't conflating the accident with the substance.
 That is the universal principle of admissibility-based learning.
 If you try to expand a collapsed representation, you just magnify the collapse.
-Which brings us to the part of Fliction's paper that absolutely blew my mind.
+Which brings us to the part of Flyxion's paper that absolutely blew my mind.
 The broader implications.
 Yes.
-Fliction takes this highly specific, very modern mathematical fix in artificial intelligence and makes a stunning leap.
+Flyxion takes this highly specific, very modern mathematical fix in artificial intelligence and makes a stunning leap.
 The paper demonstrates that this morphological repair, repopulating an empty fiber by demonstrating a hidden distinction,
 is actually a universal pattern of how knowledge evolves across all of science, biology, and history.
 It really is.
-Fliction looks at three massive, real-world examples outside of AI to show that this is how all progress happens.
+Flyxion looks at three massive, real-world examples outside of AI to show that this is how all progress happens.
 Let's look at the scientific anomaly first, because the history of physics is essentially a history of projection collapses and subsequent repairs.
 Exactly.
 We're talking about Newton and Einstein.
@@ -611,7 +611,7 @@ Through anomalies and extreme theoretical stress testing culminating in Einstein
 Einstein's equivalence principle forced the distinction open.
 The anomaly revealed that they are theoretically and geometrically distinct properties of space-time,
 even if they cover locally on Earth.
-Infliction makes a crucial point here, right?
+Flyxion makes a crucial point here, right?
 Einstein didn't add massive amounts of new physical matter to the universe to prove this.
 No.
 He didn't impose a penalty yet.
@@ -645,7 +645,7 @@ It reopens a survival trajectory that the heavy evolutionary pressure of the har
 The mutation acts exactly like the easy math problems for the AI.
 It demonstrates a new viability without destroying the old capability.
 This is so fascinating.
-And the final example Affliction uses is from Pure Mathematics, a historical counterexample involving Augustine Louis Kocci.
+And the final example Flyxion uses is from Pure Mathematics, a historical counterexample involving Augustine Louis Kocci.
 I really need you to break this one down because 19th century calculus is deeply intimidating.
 What was Kocci's projection collapse?
 In the early 19th century, Kocci was doing foundational work in calculus.
@@ -706,11 +706,11 @@ They all serve the exact same geometric function.
 They break the illusion that the way things have been is the way things must be.
 They shatter the projection collapse and repopulate the fiber.
 It is a profound unification of learning theory, and it brings us directly to the broader machine
-learning lesson in Fliction's paper.
+learning lesson in Flyxion's paper.
 Right.
-Because if Fliction is right about this universal pattern, then the immediate future of AI and
+Because if Flyxion is right about this universal pattern, then the immediate future of AI and
 how we relate to information needs a massive paradigm shift.
-Fliction is basically calling out the entire tech industry in Section 12 of the paper.
+Flyxion is basically calling out the entire tech industry in Section 12 of the paper.
 We need to completely reframe how we view AI failures.
 Right now, when a large language model hallucinates or fails a reasoning task, what do the developers
 say?
@@ -735,7 +735,7 @@ The model collapsed confidence into correctness.
 F of correct became F of confident.
 So how do you fix it?
 You don't penalize it for sounding confident.
-Based on Fliction's theory, you have to demonstrate the empty fiber.
+Based on Flyxion's theory, you have to demonstrate the empty fiber.
 You have to feed it training examples of highly confident prose that is completely undeniably
 factually wrong.
 You have to break the proxy identity.
@@ -753,7 +753,7 @@ An AI might use massive vocabulary and formal syntax, but be logically incredibl
 Because it learned that smart people use big words.
 The fix is to show it highly informal conversational language that is laser precise in its logic.
 Show it slang that cuts perfectly to the core of an issue.
-What Fliction is doing here is redefining the true measure of intelligence.
+What Flyxion is doing here is redefining the true measure of intelligence.
 The tech world right now is obsessed with entropy reduction making models
 that spit out highly predictable, highly confident, highly structured text.
 But the measure of an intelligent system is not its ability to reduce uncertainty.

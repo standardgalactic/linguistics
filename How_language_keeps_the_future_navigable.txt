@@ -55,7 +55,7 @@ Exactly.
 So what was the old theory explaining why we do this?
 Well, the reigning theory was called the compression differentiation model.
 Okay.
-Specifically, Fliction's paper takes aim at a very prominent iteration of this model developed by Brock Hagen and colleagues.
+Specifically, Flyxion's paper takes aim at a very prominent iteration of this model developed by Brock Hagen and colleagues.
 And for years, this model was the absolute gold standard.
 It was. It essentially treated the human brain like a highly efficient zip file.
 A zip file. I love that.
@@ -106,7 +106,7 @@ And this model wasn't just, you know, theoretical, right?
 No. They tested it across nearly 2,000 different languages and the empirical fit was incredibly strong.
 So the data seemed to prove that human language was just a simple efficiency engine.
 Right. But, and this is a big but, the more I dug into the source material, the more it became clear that this perfect efficiency engine had some glaring structural flaws.
-Yeah. Affliction points out that the standard model suffers from something called diachronic silence.
+Yeah. Flyxion points out that the standard model suffers from something called diachronic silence.
 Which is such a great phrase.
 It really is. It basically means the model is trapped in the present tense.
 Exactly. It can look at a language as it exists right now, today, and accurately describe how words are grouped together.
@@ -167,7 +167,7 @@ Admissible future region. Okay, what is that?
 For any specific word you use in that kitchen, the admissible future region is the narrow subset of those possible futures that actually lead to success.
 So if the head chef yells, whisk, the admissible future is you picking up a wired tool and aerating a liquid.
 Right. If you grab a knife and start chopping, you have exited the admissible future region. You have failed.
-And this is where affliction draws a massive, brilliant line in the sand.
+And this is where Flyxion draws a massive, brilliant line in the sand.
 Yeah, reachability divergence is entirely logically independent of contextual confusability.
 This is the critical dissociation, right?
 It is. The risk of someone misunderstanding your word right now in the present moment has absolutely nothing to do with whether the word you chose strips away the specific details needed to take the correct action five steps down the road.
@@ -188,7 +188,7 @@ You completely understand they are experiencing pain in their upper limb.
 The context, their body language, the casual setting, it makes the message perfectly clear.
 The old model looks at that and says, see? High similarity, low confusability.
 Therefore, the words merge. The system works.
-But then fliction applies reachability divergence to a specific high stakes domain theta.
+But then Flyxion applies reachability divergence to a specific high stakes domain theta.
 Surgical planning.
 Which goes back to our opening scenario with the orthopedic surgeon.
 Right. In a written medical referral, there is no physical pointing. There is no body language.
@@ -227,7 +227,7 @@ the clerk cannot navigate the hospital's future.
 Right. They don't know whether to route the patient to the microscopic nerve specialist or the heavy bone orthopedist.
 And that is a catastrophe.
 The system fails, not because someone was confused, but because the linguistic representation itself was a dead end.
-Which brings us to the rigorous mechanics of what Fliction formally defines as navigational collapse.
+Which brings us to the rigorous mechanics of what Flyxion formally defines as navigational collapse.
 Let's dive deep into the mechanics of this collapse.
 Yeah.
 Because the paper outlines a formal proof for this, which revolves around the concept of a representational bottleneck.
@@ -325,7 +325,7 @@ Because if we had to invent a brand new, completely unique word every single tim
 distinction mattered, our dictionaries would be millions of words long.
 We wouldn't be able to memorize them all.
 You're hitting on the core of the economics of linguistic repair, which is the third theorem
-Flixian formalizes mathematically in the paper.
+Flyxion formalizes mathematically in the paper.
 Okay.
 It is a constant, brutal balancing act between two competing costs.
 On one side, you have the formal complexity cost.
@@ -395,7 +395,7 @@ If an international logging conglomerate tries to manage its supply chain using 
 that only has one single word for both the living organism and the harvested material,
 their entire logistical system collapses.
 They wouldn't know if they were buying a protected forest or a stack of 2x4s.
-And this is where Fliction's theory leaves the realm of grammar and becomes a theory of
+And this is where Flyxion's theory leaves the realm of grammar and becomes a theory of
 human knowledge generation.
 This proposition literally predicts the emergence of technical vocabularies.
 It explains, at a fundamental mathematical level, why scientific nomenclature exists, why legal
@@ -434,7 +434,7 @@ theoretically inadmissible.
 So we have this sweeping, elegant theory.
 We've gone from universal remotes to surgical pathways to the logging industry.
 But, you know, theories are just stories until you test them.
-I spent a lot of time looking at Section 7 of the source material, where Affliction actually
+I spent a lot of time looking at Section 7 of the source material, where Flyxion actually
 puts this entire framework to the test against the real-world cross-linguistic databases.
 Because this isn't just a thought experiment.
 No.
@@ -444,7 +444,7 @@ standardized databases like Lexibank and CLICS.
 For those unfamiliar, databases like CLICS, the Database of Cross-Linguistic Collectifications,
 map out how thousands of concepts are linked together across thousands of languages.
 It is literally a treasure trove of human cognitive mapping.
-Affliction used this data to see if reachability divergence actually predicts the real structure
+Flyxion used this data to see if reachability divergence actually predicts the real structure
 of human language better than Brock Hagen's old similarity confusability model.
 And the ultimate battleground for this test, the place where the old theory and the new
 theory go head-to-head, is what the paper designates as the HLH cell.
@@ -457,7 +457,7 @@ Because if you have two concepts with high similarity and low confusability, Bro
 is screaming at the top of its lungs.
 These words must merge.
 They are the perfect ideal candidates for full, harmless compression.
-But Flixen's new theory steps in and says, wait, look at the third variable.
+But Flyxion's new theory steps in and says, wait, look at the third variable.
 They have high reachability divergence.
 Right.
 If you merge them, you might save some cognitive space, but you will cause catastrophic navigational

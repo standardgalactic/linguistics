@@ -228,7 +228,7 @@ Okay.
 
 58
 00:03:38,520 --> 00:03:46,300
-Specifically, Fliction's paper takes aim at a very prominent iteration of this model developed by Brock Hagen and colleagues.
+Specifically, Flyxion's paper takes aim at a very prominent iteration of this model developed by Brock Hagen and colleagues.
 
 59
 00:03:46,740 --> 00:03:50,580
@@ -760,7 +760,7 @@ Therefore, the words merge. The system works.
 
 191
 00:13:50,160 --> 00:13:55,500
-But then fliction applies reachability divergence to a specific high stakes domain theta.
+But then Flyxion applies reachability divergence to a specific high stakes domain theta.
 
 192
 00:13:55,700 --> 00:13:56,420
@@ -916,7 +916,7 @@ The system fails, not because someone was confused, but because the linguistic r
 
 230
 00:16:22,320 --> 00:16:27,880
-Which brings us to the rigorous mechanics of what Fliction formally defines as navigational collapse.
+Which brings us to the rigorous mechanics of what Flyxion formally defines as navigational collapse.
 
 231
 00:16:28,160 --> 00:16:30,760
@@ -1308,7 +1308,7 @@ You're hitting on the core of the economics of linguistic repair, which is the t
 
 328
 00:21:42,120 --> 00:21:44,540
-Flixian formalizes mathematically in the paper.
+Flyxion formalizes mathematically in the paper.
 
 329
 00:21:44,740 --> 00:21:44,900
@@ -1588,7 +1588,7 @@ They wouldn't know if they were buying a protected forest or a stack of 2x4s.
 
 398
 00:25:25,720 --> 00:25:30,380
-And this is where Fliction's theory leaves the realm of grammar and becomes a theory of
+And this is where Flyxion's theory leaves the realm of grammar and becomes a theory of
 
 399
 00:25:30,380 --> 00:25:31,800
@@ -1836,7 +1836,7 @@ They are the perfect ideal candidates for full, harmless compression.
 
 460
 00:29:03,240 --> 00:29:06,680
-But Flixen's new theory steps in and says, wait, look at the third variable.
+But Flyxion's new theory steps in and says, wait, look at the third variable.
 
 461
 00:29:07,020 --> 00:29:08,640

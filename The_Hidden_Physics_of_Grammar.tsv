@@ -26,8 +26,8 @@ start	end	text
 66800	72540	Yeah, and that weird unconscious grammar rule is actually the starting point for unlocking something massive.
 72880	74700	So welcome to this deep dive.
 75060	80880	Today, we are unpacking a stack of three incredible papers published in June 2026.
-80980	82720	Right, by an independent researcher named Flixion.
-82720	84100	Yes, Flixion.
+80980	82720	Right, by an independent researcher named Flyxion.
+82720	84100	Yes, Flyxion.
 84240	90160	And what makes these papers so compelling is that on the surface, they seem, well, completely unrelated.
 90420	94520	I mean, one is about linguistics, one is about the architecture of artificial intelligence,
 94520	99400	and one is about the historical evolution of human written language.
@@ -183,7 +183,7 @@ start	end	text
 760640	762380	Because there are so many exceptions, right?
 762380	765760	It generates incredibly confusing counterexamples for students.
 766400	769960	Because Spanish isn't actually dividing the world into permanent and temporary,
-770540	775780	it is using verb choice to map Flixian's exact persistence hierarchy.
+770540	775780	it is using verb choice to map Flyxion's exact persistence hierarchy.
 775840	778520	Yeah, really? The same hierarchy as the adjectives.
 778820	779620	The exact same one.
 780320	786740	Ser encodes properties that are constitutive or identity-defining, the high persistence end of the spectrum.
@@ -296,7 +296,7 @@ start	end	text
 1143580	1144820	Guardrails against what?
 1144880	1145840	What are we crashing into?
 1145940	1147360	Against navigational collapse.
-1147360	1153980	Fliction argues that we rigorously encode this persistence gradient because the closer a property is to the noun,
+1147360	1153980	Flyxion argues that we rigorously encode this persistence gradient because the closer a property is to the noun,
 1154140	1156920	the more reachability divergence it possesses.
 1157080	1158100	Reachability divergence.
 1158400	1158620	Yes.
@@ -446,7 +446,7 @@ start	end	text
 1713860	1714060	No.
 1714200	1718780	Doctors in Mandarin-speaking hospitals aren't just shrugging when patients go to the wrong surgical ward.
 1718780	1719180	No.
-1719340	1723040	The community engages in what Flixing calls a morphological repair.
+1719340	1723040	The community engages in what Flyxion calls a morphological repair.
 1723700	1726200	And the mechanics of this repair are deeply revealing.
 1726780	1730320	Because they rarely throw away the old, merged word entirely.
 1730780	1734740	They do not invent a completely new, phonetically alien word from scratch.
@@ -603,7 +603,7 @@ start	end	text
 2360740	2363840	Like if it writes more than 200 words, you dock its reward score.
 2363940	2365560	You actively punish it for rambling.
 2365560	2368880	That is the intuitive, heavy-handed engineering solution.
-2369120	2372480	But Flixion demonstrates mathematically why that approach fails.
+2369120	2372480	But Flyxion demonstrates mathematically why that approach fails.
 2372700	2373020	Why?
 2373320	2382100	If you simply punish the AI for long answers, you are suppressing the long solution region of its behavior, but you aren't actually expanding its knowledge of the short solution region.
 2382400	2385840	Because it still doesn't know how to be short and correct at the same time.

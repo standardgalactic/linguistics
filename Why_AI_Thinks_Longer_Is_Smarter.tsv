@@ -29,7 +29,7 @@ start	end	text
 89940	90620	Really do.
 90620	98160	First, we have a highly practical empirical piece of research by Bownhar and colleagues called Shorter But Not Worse.
 98660	100720	They notice a bizarre AI behavior.
-100900	109260	And second, we have our main focus, which is a massive, profound theoretical paper from June 2026 by a researcher named Fliction,
+100900	109260	And second, we have our main focus, which is a massive, profound theoretical paper from June 2026 by a researcher named Flyxion,
 109480	114560	titled The Substance and Accident of Reasoning, Admissibility, Repair, and the Geometry of Verbosity.
 114560	117860	Yeah, Bownhar's paper kind of provides the inciting incident here.
 118100	118180	Right.
@@ -38,13 +38,13 @@ start	end	text
 128180	133260	it actually makes the AI's reasoning more efficient, more accurate, and much more concise.
 133580	134640	Which is wild.
 134740	135380	It is.
-135720	140020	And Fliction's paper steps back from that empirical finding and asks, well, why?
+135720	140020	And Flyxion's paper steps back from that empirical finding and asks, well, why?
 140240	143660	What is the actual geometry of thought that makes that possible?
 143660	146460	Because, I mean, that makes no sense on the surface.
 146720	149080	You'd think harder training makes a smarter AI.
 149480	152060	Like, if I want to get better at chess, I shouldn't play against novices.
 152200	153660	That's the logical assumption, yeah.
-154020	160220	But Fliction uses this anomaly to explore the literal geometry of how knowledge is stored.
+154020	160220	But Flyxion uses this anomaly to explore the literal geometry of how knowledge is stored.
 160960	166320	So we're going to understand why these models, and let's be honest, perhaps our own human minds,
 167020	169740	mistake the appearance of hard work for actual intelligence.
 169820	171140	It's a huge shift in perspective.
@@ -108,7 +108,7 @@ start	end	text
 355760	357040	Write a huge block of text.
 357160	357760	Get the reward.
 358100	358620	Precisely.
-359080	362320	But Fliction points out that it goes deeper than just classical conditioning.
+359080	362320	But Flyxion points out that it goes deeper than just classical conditioning.
 362780	365500	There is an information theoretic trap happening here.
 365660	365900	Okay.
 366040	367060	Information theoretic.
@@ -149,16 +149,16 @@ start	end	text
 476300	478460	So the model is getting smarter and more confident.
 478780	479060	Yeah.
 479160	480960	That's the standard industry assumption.
-481560	484100	But Flixion pushes back on this incredibly hard.
+481560	484100	But Flyxion pushes back on this incredibly hard.
 484240	484700	How so?
-485060	488020	Flixion argues that entropy reduction is not intelligence.
+485060	488020	Flyxion argues that entropy reduction is not intelligence.
 488280	488420	Okay.
 488420	493600	The conventional argument only identifies the mechanism of why verbosity emerges.
 493840	497080	It completely fails to identify what is actually wrong with it.
-497620	507060	And Flixion provides three vivid analogies to illustrate why blindly optimizing for reduced uncertainty can actually destroy a complex system.
+497620	507060	And Flyxion provides three vivid analogies to illustrate why blindly optimizing for reduced uncertainty can actually destroy a complex system.
 507520	512860	Let's walk through those analogies because they really, uh, they really crystallize the danger of this mindset for me.
 512880	513420	They're very helpful.
-513420	515780	The first one Flixion uses is about language.
+513420	515780	The first one Flyxion uses is about language.
 515780	520980	Imagine a language that wants to reduce uncertainty so it starts merging words together.
 521300	524440	It collapses distinct meanings into a single semantic form.
 524680	524800	Right.
@@ -222,7 +222,7 @@ start	end	text
 700500	711620	Okay, so if entropy reduction is this, like false idol, what physically broke inside the AI model's brain when it learned to be so wordy?
 711660	712960	That's where we get into the geometry.
 713460	713640	Yeah.
-713780	720340	I want to get into the hidden geometry of how knowledge is soared, because Fliction talks about representational collapse,
+713780	720340	I want to get into the hidden geometry of how knowledge is soared, because Flyxion talks about representational collapse,
 720680	722740	specifically a projection collapse.
 722740	730080	So, in a healthy, well-functioning neural network, the model maintains a multidimensional space of concepts.
 730660	736220	It knows that the correctness of an answer and the length of an answer are two entirely separate things.
@@ -240,7 +240,7 @@ start	end	text
 765180	771220	The mathematical function of correct, f of correct, literally became conflated with the function of long, f of long.
 771340	772380	The distinction collapsed.
 772420	773440	The distinction collapsed.
-773940	779440	Fliction uses a specific geometric language to describe this, drawing on the CLIO framework.
+773940	779440	Flyxion uses a specific geometric language to describe this, drawing on the CLIO framework.
 779440	780920	How does that work visually?
 781460	783020	Imagine a two-dimensional graph.
 783620	786360	The we-axis is quality, is the answer good or bad.
@@ -248,7 +248,7 @@ start	end	text
 789740	790080	Got it.
 790160	791360	A simple coordinate plane.
 791480	791700	Right.
-792080	796840	In this geometric space, fliction introduces the concept of a fiber.
+792080	796840	In this geometric space, Flyxion introduces the concept of a fiber.
 797060	797540	A fiber.
 797540	800500	A fiber is the pre-image of a good solution.
 801080	810820	It's the physical region on our graph, and corresponding to the literal matrix of weights in the neural network that represents all the valid ways to arrive at a correct answer.
@@ -294,12 +294,12 @@ start	end	text
 962280	962980	Oh, absolutely.
 962980	968800	Because this geometry of collapse doesn't just explain why an AI writes a novel to solve 2 plus 2.
 969080	972480	It reveals a systemic flaw in how we measure progress.
-973000	980040	Fliction lays this out in Proposition 5.1, defining the algebraic skeleton of these failures as a proxy collapse.
+973000	980040	Flyxion lays this out in Proposition 5.1, defining the algebraic skeleton of these failures as a proxy collapse.
 980420	980740	Right.
 981300	986780	A proxy collapse occurs when a learner replaces a strong correlation with a strict identity.
 987040	987840	Okay, unpack that.
 987840	995380	Instead of saying proxy A predicts target B, the system begins to operate as if proxy A is target B.
-995440	1003380	And Fliction identifies three distinct machine learning errors that are all, at their core, this exact same projection collapse.
+995440	1003380	And Flyxion identifies three distinct machine learning errors that are all, at their core, this exact same projection collapse.
 1003540	1010120	Yeah, we've talked deeply about one of them, the entropy reduction error or verbosity, where the model conflates correct reasoning with length.
 1010240	1011940	But the other two are everywhere right now.
 1012280	1014080	Let's look at the latent compression error.
@@ -319,7 +319,7 @@ start	end	text
 1064420	1064960	That's it.
 1065100	1065300	Exactly.
 1065300	1067640	But the third error is the one that really caught my eye.
-1068320	1070320	Fliction calls it the reasoning length error.
+1068320	1070320	Flyxion calls it the reasoning length error.
 1071040	1073360	Conflating good reasoning with many steps.
 1073680	1076000	This is the cultural myth of long chains of thought.
 1076220	1077480	I mean, I see this everywhere.
@@ -331,7 +331,7 @@ start	end	text
 1092640	1098500	The entire discourse assumes that an AI that takes 10 steps to answer is inherently thinking
 1098500	1100920	deeper than one taking two steps.
 1101020	1102840	It is a massive cultural delusion.
-1103060	1107900	Fliction brings in philosophical terminology to explain why we are being fooled by this.
+1103060	1107900	Flyxion brings in philosophical terminology to explain why we are being fooled by this.
 1108140	1108840	Let's hear it.
 1108840	1115000	These properties, low dimensions, low entropy, many steps, they are what philosophers call
 1115000	1116720	accidental properties.
@@ -440,7 +440,7 @@ start	end	text
 1379540	1383580	Because short solutions are so rare, they just get lumped in with any successful trajectory.
 1384000	1384120	Wow.
 1384120	1387860	But now, look at what happens when you introduce easy problems.
-1388380	1392180	You create what Fliction calls a budget-truncated asymmetry.
+1388380	1392180	You create what Flyxion calls a budget-truncated asymmetry.
 1392580	1393660	Budget truncation.
 1393940	1394120	Yeah.
 1394220	1400380	Meaning, there is a hard limit to how many tokens or words the AI is allowed to output before the system cuts it off.
@@ -460,7 +460,7 @@ start	end	text
 1459420	1464860	Easy problems finally provide the positive differential gradient to favor short solutions.
 1465560	1472240	They physically demonstrate to the model that a short, correct answer is not only possible, but highly successful.
 1472680	1474820	Okay, but this circles back to my question about penalties.
-1475200	1479860	In section 8 of the paper, Fliction talks about the information gap of length penalties.
+1475200	1479860	In section 8 of the paper, Flyxion talks about the information gap of length penalties.
 1480020	1480260	Right.
 1480260	1484480	Why is just subtracting points for long answers worse than this easy problem repair?
 1484620	1489580	If I add a penalty, couldn't I just alter the GRPO formula so the long answer gets a lower score?
@@ -482,7 +482,7 @@ start	end	text
 1542060	1547780	A penalty just compresses the long solution region without expanding the short solution region.
 1547920	1551060	It penalizes the accident without demonstrating the substance.
 1551240	1552200	That makes perfect sense.
-1552340	1555060	As Fliction writes, repair dominates penalty.
+1552340	1555060	As Flyxion writes, repair dominates penalty.
 1555060	1559740	You have to demonstrate admissibility before the model has fully internalized that it cannot be done.
 1560140	1567780	Let's try to map this to a physical analogy because the difference between regularization, which is fixing the objective via a penalty,
 1568340	1573660	and morphological repair, which is fixing the representation, is huge.
@@ -521,7 +521,7 @@ start	end	text
 1673840	1674780	That's a great point.
 1674900	1679160	If it learned that short is good, won't it just start giving short, wrong answers to hard problems?
 1679260	1682520	This is where the structural brilliance of the intervention really shines.
-1683260	1685340	Fliction details a two-stage curriculum.
+1683260	1685340	Flyxion details a two-stage curriculum.
 1685520	1686160	Okay. What's stage one?
 1686440	1688420	Stage one is what we just discussed.
 1688800	1689500	Emergent brevity.
@@ -544,7 +544,7 @@ start	end	text
 1751220	1755420	It's using the back door when the back door makes sense and the front door when the front door makes sense.
 1756160	1757580	It has agency again.
 1757800	1758220	Exactly.
-1758540	1767780	It can modulate its solution length based on the task, but fliction issues a major warning here in theorem 9.2, the stability condition.
+1758540	1767780	It can modulate its solution length based on the task, but Flyxion issues a major warning here in theorem 9.2, the stability condition.
 1768020	1768540	A warning?
 1768540	1771240	The repaired fiber requires active maintenance.
 1771240	1784300	Yes. Corollary 9.3 explicitly states that if you completely remove all easy problems in stage 2, if you go back to a strictly hard-only diet, the model will eventually relapse into verbosity.
@@ -558,8 +558,8 @@ start	end	text
 1806640	1812660	If you do heavy bench presses every single day but never stretch, eventually the joint tightens up and you lose your range of motion.
 1813000	1816680	You have to keep doing the light mobility work to maintain the joint's capacity.
 1817020	1817840	That's spot on.
-1817840	1824960	And this ties into a profound concept Fliction calls monotone correspondence in Proposition 9.4.
-1825860	1834840	Fliction connects the fiber admissibility gap, how much of the correct solution space the model is currently blind to, with something called reachability loss.
+1817840	1824960	And this ties into a profound concept Flyxion calls monotone correspondence in Proposition 9.4.
+1825860	1834840	Flyxion connects the fiber admissibility gap, how much of the correct solution space the model is currently blind to, with something called reachability loss.
 1835180	1836220	What is reachability loss?
 1836280	1843400	It's a formal measure of how many successful futures a system permanently loses access to because of its rigid behavior.
 1843520	1844700	A loss of future potential.
@@ -574,14 +574,14 @@ start	end	text
 1878400	1883200	You have to make sure its basic map of reality isn't conflating the accident with the substance.
 1883720	1886860	That is the universal principle of admissibility-based learning.
 1887280	1892120	If you try to expand a collapsed representation, you just magnify the collapse.
-1892300	1895640	Which brings us to the part of Fliction's paper that absolutely blew my mind.
+1892300	1895640	Which brings us to the part of Flyxion's paper that absolutely blew my mind.
 1895640	1896740	The broader implications.
 1897020	1897260	Yes.
-1897880	1904740	Fliction takes this highly specific, very modern mathematical fix in artificial intelligence and makes a stunning leap.
+1897880	1904740	Flyxion takes this highly specific, very modern mathematical fix in artificial intelligence and makes a stunning leap.
 1905460	1913400	The paper demonstrates that this morphological repair, repopulating an empty fiber by demonstrating a hidden distinction,
 1914000	1919860	is actually a universal pattern of how knowledge evolves across all of science, biology, and history.
 1919860	1920760	It really is.
-1921120	1927600	Fliction looks at three massive, real-world examples outside of AI to show that this is how all progress happens.
+1921120	1927600	Flyxion looks at three massive, real-world examples outside of AI to show that this is how all progress happens.
 1927780	1934160	Let's look at the scientific anomaly first, because the history of physics is essentially a history of projection collapses and subsequent repairs.
 1934340	1934800	Exactly.
 1935000	1936400	We're talking about Newton and Einstein.
@@ -707,11 +707,11 @@ start	end	text
 2327860	2332120	They break the illusion that the way things have been is the way things must be.
 2332320	2335720	They shatter the projection collapse and repopulate the fiber.
 2335720	2341380	It is a profound unification of learning theory, and it brings us directly to the broader machine
-2341380	2343220	learning lesson in Fliction's paper.
+2341380	2343220	learning lesson in Flyxion's paper.
 2343440	2343620	Right.
-2343720	2349000	Because if Fliction is right about this universal pattern, then the immediate future of AI and
+2343720	2349000	Because if Flyxion is right about this universal pattern, then the immediate future of AI and
 2349000	2352420	how we relate to information needs a massive paradigm shift.
-2352860	2356880	Fliction is basically calling out the entire tech industry in Section 12 of the paper.
+2352860	2356880	Flyxion is basically calling out the entire tech industry in Section 12 of the paper.
 2356880	2361260	We need to completely reframe how we view AI failures.
 2361480	2366980	Right now, when a large language model hallucinates or fails a reasoning task, what do the developers
 2366980	2367260	say?
@@ -736,7 +736,7 @@ start	end	text
 2428000	2430240	F of correct became F of confident.
 2430380	2431160	So how do you fix it?
 2431180	2432880	You don't penalize it for sounding confident.
-2433200	2435920	Based on Fliction's theory, you have to demonstrate the empty fiber.
+2433200	2435920	Based on Flyxion's theory, you have to demonstrate the empty fiber.
 2436100	2440940	You have to feed it training examples of highly confident prose that is completely undeniably
 2440940	2442060	factually wrong.
 2442240	2443880	You have to break the proxy identity.
@@ -754,7 +754,7 @@ start	end	text
 2474620	2477140	Because it learned that smart people use big words.
 2477720	2483580	The fix is to show it highly informal conversational language that is laser precise in its logic.
 2483980	2486800	Show it slang that cuts perfectly to the core of an issue.
-2487080	2490420	What Fliction is doing here is redefining the true measure of intelligence.
+2487080	2490420	What Flyxion is doing here is redefining the true measure of intelligence.
 2491200	2494580	The tech world right now is obsessed with entropy reduction making models
 2494580	2499100	that spit out highly predictable, highly confident, highly structured text.
 2499480	2503180	But the measure of an intelligent system is not its ability to reduce uncertainty.

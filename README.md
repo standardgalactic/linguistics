@@ -16,4 +16,6 @@
 
 [Distinction Engine](https://standardgalactic.github.io/linguistics/) — *Audio Overviews*
 
+Language, cognition, and reasoning all face the same problem: deciding which distinctions must be preserved and which can be compressed away. These essays develop a reachability-based account of lexical preservation, adjective order, and representational failure, arguing that distinctions survive when they support different futures of action, inference, repair, or decision. The result is a unified perspective on meaning, grammar, and reasoning as problems of preserving navigational structure.
+
 ![](distinctions-overview.png)
