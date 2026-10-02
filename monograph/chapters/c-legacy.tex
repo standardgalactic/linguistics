@@ -1,0 +1,13 @@
+\chapter{Legacy Sources}\label{app:legacy}
+Earlier files are preserved unmodified in the project.
+
+\begin{itemize}
+\item \texttt{toarabic.ahk}, an AutoHotkey layout from the author's repository. It assigns one Arabic letter to each Latin key, so \texttt{p} and \texttt{v} map to key assignments and not to claims about how the sounds are written.
+\item \texttt{pronouncing\_translit\_chat\_version.py}, the pronouncing-based script as pasted from a chat. Its defects are that the vowel table mixes letters and diacritics, the entry for \texttt{sh} is never reached, the voiced-$v$ test indexes letters with a phoneme index, and no vowel or sukoon placement is done.
+\item \texttt{cli\_main\_as\_pasted.py}, the command-line wrapper, which imports \texttt{transliterate\_text} from a module named \texttt{transliterator}. A shim of that name forwards to the package.
+\end{itemize}
+
+\section{The old version}
+The author's earlier program (the files \texttt{old\_version\_}\allowbreak\texttt{transliterator.py} and \texttt{old\_version\_}\allowbreak\texttt{mappings.py}) converts spelling to the first CMU pronunciation and then writes one letter and one mark per phoneme, with nine fixed words. Its consonant choices are $p\to$\ar{ب}, $v\to$\ar{ف}, hard $g\to$\ar{ج}, \emph{ch}$\to$\ar{ش}, \emph{ng}$\to$\ar{ن} and \emph{zh}$\to$\ar{ز}. It merges $p/b$, $v/f$, hard $g$ and $j$, \emph{ch} and \emph{sh}, and \emph{ng} and $n$. It writes each vowel letter before its mark (so AY gives \ar{يَ}), uses no sukoon outside the fixed words, and takes the first dictionary pronunciation without regard to context. Unrecognised phonemes are dropped silently. The author describes it as not definitive.
+
+The current toolkit differs in three ways that matter. It places the vowel mark on the preceding consonant and writes glides with a sukoon (\ar{سَايْ}), which is the form on the handwritten page. It writes hard $g$ as \ar{غ} and \emph{ch} as \ar{تْش} by default, with switches (\texttt{--g jeem}) to return to the old choices. And the $v$ choice is a switch, with \ar{ف} the default as in the old version, since the author regards $v$ as a voiced $f$; \emph{individual} and \emph{universal} in the typed passage use \ar{ب} and are reproduced by \texttt{--v b}. Both versions use only standard Arabic letters, and the author accepts near equivalents such as \ar{ب} for $p$ when exact recovery of short words is not possible.

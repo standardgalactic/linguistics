@@ -1,0 +1,86 @@
+\chapter{The Sound Key}
+
+\section{Vowels}
+Each English vowel is written as a short mark on the preceding consonant and, for long vowels and glides, a vowel letter. Table~\ref{tab:vowels} shows the default correspondences using words from the page. Phonemes are named in ARPAbet, the notation of the pronouncing dictionary.
+
+\begin{table}[ht]\centering\small
+\input{generated/vowels.tex}
+\caption{Vowel key. The mark is the short vowel; the letters are the vowel letters added for long vowels and glides.}\label{tab:vowels}
+\end{table}
+
+Three kinds of vowel letter occur. A \emph{long} letter, as in \ar{سِينِمَا}, takes no sukoon. A \emph{glide} letter, the second element of a diphthong as in \ar{سَايْكُو}, takes sukoon. A \emph{rhotic} vowel is written as a mark followed by \ar{ر}, as in \ar{شَرْ}.
+
+\section{Sukoon}
+Sukoon marks a consonant followed by no vowel. In full density every such consonant carries it, including the last consonant of a word, as in \ar{لَاكْ} \emph{lack} and \ar{كَابِتَالِسْتْ} \emph{capitalist}. Sukoon records the absence of a vowel; it does not make a letter silent, and English double letters are not marked with shadda.
+
+\section{Word-initial vowels}
+A word that begins with a vowel takes a hamza seat: \ar{أ} for fatha and damma, \ar{إ} for kasra, as in \ar{أُفْ} \emph{of} and \ar{إِنْ} \emph{in}. An initial diphthong beginning with fatha and alef is written with \ar{آ}. A vowel that follows another vowel is hosted by a preceding \ar{ي} when there is one (\ar{ثِيُ}) and otherwise takes a seat.
+
+\section{Frequent words}
+Frequent function words have fixed spellings (Table~\ref{tab:common}). These come from the original fixed word table and from forms that the page and the typed passage share. They also resolve the contextual variation of \emph{the} and \emph{a}: the toolkit writes \ar{ذَا} before a vowel too, as the typed passage does, and offers the phonemic alternative \ar{ذِي} as an option.
+
+\begin{table}[ht]\centering\small
+\input{generated/common.tex}
+\caption{Fixed spellings of frequent words.}\label{tab:common}
+\end{table}
+
+\section{Punctuation and numbers}
+The comma, semicolon and question mark take their Arabic forms \ar{،}, \ar{؛}, \ar{؟}. A possessive apostrophe after $s$ is silent, as on the page. Digits default to Arabic-Indic numerals. A \code{spoken} option writes numbers as English number words in the notation (\emph{twenty five}), which avoids the earlier failure of rendering numbers as Arabic number words.
+
+\section{Letter sound and assigned function}
+Each Arabic letter has an ordinary sound in Arabic, and in this notation it also has an assigned function in writing English. The two often coincide, as with \ar{ب} for \emph{b} and \ar{ل} for \emph{l}, and sometimes they differ. The letter \ar{غ} is a voiced uvular fricative in Arabic, and it is used here for the hard English \emph{g} by convention. The same holds for \ar{ث} and \ar{ذ}, which are close to English \emph{th} and \emph{dh} sounds, and for \ar{ب}, which stands for both \emph{b} and \emph{p}. The letters \ar{و} and \ar{ي} serve as consonants (\emph{w} and \emph{y}) and also as vowel letters.
+
+Knowing Arabic script is therefore a useful starting point, since the letter shapes, the direction of writing and the role of the marks are already familiar. It does not supply every reading rule. A reader who pronounces \ar{غ} as in Arabic will mispronounce \emph{good} and \emph{begin}, and a reader who expects \ar{ب} to be only \emph{b} will miss the \emph{p} in \emph{script}. The tables in this chapter give the assigned function, and the Arabic sound is only a mnemonic where it helps.
+
+\section{Short vowels in practice}
+Short vowels are written with a single mark on the preceding consonant and no vowel letter. The words below show the five English short vowels, each followed by one consonant or a cluster.
+
+\begin{table}[ht]\centering\small
+\input{generated/w_short.tex}
+\caption{Short vowels, written with a mark only.}\label{tab:wshort}
+\end{table}
+
+\section{Long vowels and the final e}
+English marks long vowels in several ways: a doubled letter, a vowel digraph, or a final silent \emph{e}. The dictionary reading already gives the long vowel in each case, so the notation writes a vowel letter after the mark. The final \emph{e} itself is silent and is not written.
+
+\begin{table}[ht]\centering\small
+\input{generated/w_long.tex}
+\caption{Long vowels and glides written for the silent-e pattern.}\label{tab:wlong}
+\end{table}
+
+\section{Doubled letters and vowel digraphs}
+When the English spelling uses two vowel letters for one vowel, the notation keeps a waw or a yeh. This applies to the short vowel of \emph{book} as much as to the long vowel of \emph{food}. The spelling carries the weight here and the Arabic letter signals it. Chapter~\ref{ch:vowels} explains why \emph{book} is \ar{بُوكْ} and not \ar{بُكْ}.
+
+\begin{table}[ht]\centering\small
+\input{generated/w_oo.tex}
+\caption{Words with a written double o, and related spellings.}\label{tab:woo}
+\end{table}
+
+\begin{table}[ht]\centering\small
+\input{generated/w_ee.tex}
+\caption{Words with ee and ea.}\label{tab:wee}
+\end{table}
+
+\section{Glides and diphthongs}
+The diphthongs of English are written as a vowel mark followed by a glide letter that takes sukoon, so \emph{day} is \ar{دَيْ}, \emph{light} is \ar{لَايْتْ} and \emph{voice} is \ar{فُويْسْ}. This is the placement seen on the handwritten page.
+
+\begin{table}[ht]\centering\small
+\input{generated/w_ai.tex}
+\caption{Glides and diphthongs.}\label{tab:wai}
+\end{table}
+
+\section{R-coloured vowels}
+A vowel followed by \emph{r} in the dictionary is written as a vowel mark and \ar{ر}. The mark of an unstressed final syllable is fatha in every attested form, as in \ar{نَيْتْشَر} and \ar{هَوِبَرْ}. Stressed syllables take their mark from the spelling.
+
+\begin{table}[ht]\centering\small
+\input{generated/w_r.tex}
+\caption{R-coloured vowels.}\label{tab:wr}
+\end{table}
+
+\section{Clusters and sukoon}
+English has many consonant clusters that Arabic does not allow at the start of a word. The notation writes them with sukoon on all but the last consonant, so the cluster \emph{str} in \emph{street} appears as \ar{سْتْرِيتْ}. Word-final consonants also take sukoon in the full density. The \texttt{medial} density removes the final sukoon, which leaves clusters inside words intact.
+
+\begin{table}[ht]\centering\small
+\input{generated/w_clusters.tex}
+\caption{Clusters, written with sukoon.}\label{tab:wclusters}
+\end{table}

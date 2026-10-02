@@ -1,0 +1,108 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{fontspec,geometry,booktabs,array,multicol,xcolor}
+\geometry{margin=17mm}
+\setmainfont{DejaVu Serif}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.1]{DejaVu Sans}
+\ifdefined\luatexversion
+  \newcommand{\ar}[1]{{\arabicfont\textdir TRT #1\textdir TLT}}% LuaLaTeX (untested here)
+\else
+  \TeXXeTstate=1
+  \newcommand{\ar}[1]{{\arabicfont\beginR #1\endR}}% XeLaTeX
+\fi
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\begin{document}
+{\LARGE English in Arabic Script}\hfill Flyxion\\
+{\large Reading and Writing Cheat Sheet}\hfill October 2026
+
+Write English words and sentences from right to left using Arabic letters. Preserve English meaning and word order. These are the current working conventions; some sounds share a spelling, and context helps identify the word.
+
+\begin{multicols}{2}
+\textbf{Consonants}\\[3pt]
+\begin{tabular}{@{}ll@{}}\toprule
+English sound & Letter\\\midrule
+b or p & \ar{ب}\\
+d & \ar{د}\\
+f or v & \ar{ف}\\
+hard g & \ar{غ}\\
+h & \ar{ه}\\
+j (judge) & \ar{ج}\\
+k, l, m, n & \ar{ك}\quad\ar{ل}\quad\ar{م}\quad\ar{ن}\\
+r, s, t, z & \ar{ر}\quad\ar{س}\quad\ar{ت}\quad\ar{ز}\\
+w, y & \ar{و}\quad\ar{ي}\\
+sh (she) & \ar{ش}\\
+ch (change) & \ar{تْش}\\
+th (this) & \ar{ذ}\\
+th (think) & \ar{ث}\\
+ng (sing) & \ar{نغ}\\
+zh (measure) & \ar{ز}\\\bottomrule
+\end{tabular}
+
+The assigned English sound can differ from the letter's usual Arabic sound. Use Arabic letters only; no Persian additions. Earlier specimens also used jeem for hard g and ba for v.
+
+\textbf{Vowels and marks}\\[3pt]
+\begin{tabular}{@{}lll@{}}\toprule
+Cue & Form & Example\\\midrule
+short a & \ar{بَ} & \ar{بَتْ} (but)\\
+short i/e & \ar{بِ} & \ar{ذِسْ} (this)\\
+short u & \ar{بُ} & \ar{بُوكْ} (book)\\
+ee & \ar{بِي} & \ar{شِي} (she)\\
+oo & \ar{بُو} & \ar{مُونْ} (moon)\\
+ay & \ar{بَيْ} & \ar{دَيْ} (day)\\
+ai & \ar{بَايْ} & \ar{نَايْتْ} (night)\\
+ow & \ar{بَاوْ} & \ar{فْلَاوَرْ} (flower)\\
+oy & \ar{بُويْ} & \ar{فُويْسْ} (voice)\\\bottomrule
+\end{tabular}
+
+Place a short vowel mark on the preceding consonant. Sukoon \ar{بْ} means no following vowel; the consonant is still pronounced. Long vowel letters normally take no sukoon; glides may take it. Initial vowels use \ar{أَ}, \ar{أُ}, or \ar{إِ}.
+
+\columnbreak
+\textbf{Common words}\\[3pt]
+\begin{tabular}{@{}ll@{}}\toprule
+English & Spelling\\\midrule
+the & \ar{ذَا}\\
+this & \ar{ذِسْ}\\
+that & \ar{ذَتْ}\\
+of & \ar{أُفْ}\\
+and & \ar{أَنْدْ}\\
+in & \ar{إِنْ}\\
+to & \ar{تُو}\\
+a & \ar{أَ}\\
+is & \ar{إِزْ}\\
+she & \ar{شِي}\\
+it / its & \ar{إِتْ}\quad /\quad\ar{إِتْسْ}\\
+as & \ar{أَزْ}\\
+into & \ar{إِنْتُو}\\
+with & \ar{وِذْ}\\
+are & \ar{أَرْ}\\\bottomrule
+\end{tabular}
+
+\textbf{Words to recognise}\\[3pt]
+\begin{tabular}{@{}ll@{}}\toprule
+English & Spelling\\\midrule
+book & \ar{بُوكْ}\\
+look & \ar{لُوكْ}\\
+good & \ar{غُودْ}\\
+food & \ar{فُودْ}\\
+moon & \ar{مُونْ}\\
+foot & \ar{فُوتْ}\\
+wood & \ar{وُودْ}\\
+green & \ar{غْرِينْ}\\
+sleep & \ar{سْلِيبْ}\\
+night & \ar{نَايْتْ}\\
+voice & \ar{فُويْسْ}\\
+change & \ar{تْشَيْنْجْ}\\\bottomrule
+\end{tabular}
+
+\textbf{Spelling memory}
+
+Book retains waw because its English spelling has \emph{oo}. The current draft extends this to look, good, foot and wood. These spellings do not distinguish all English vowel qualities. Unstressed vowels can also reflect English spelling.
+\end{multicols}
+\vspace{2mm}\hrule\vspace{3mm}
+\textbf{Read a sentence}\\[4pt]
+{\large\ar{ذَا بُوكْ إِزْ رِتِنْ إِنْ إِنْغْلِشْ.}}\\
+The book is written in English.
+
+Start with marked words and their English equivalents, then cover the English and read a short passage. Marks may be reduced as recognition develops. This sheet shows working spellings, not a lossless transcription or a keyboard layout.
+\end{document}

@@ -1,0 +1,46 @@
+\chapter{The Reverse Reader}\label{ch:reader}
+
+\section{Why the notation is many to one}
+Several English spellings share one sound, and several English sounds share one letter. The notation therefore cannot return a unique English word without help. \emph{knight} and \emph{night} are written identically, and so are \emph{write} and \emph{right}. Unstressed vowels that are optional marks add further collisions, as do the shared letters \ar{ب} (for $b$ and $p$, and for $v$ under the \texttt{b} setting) and \ar{ج} or \ar{غ} (for sounds merged with $j$).
+
+\section{Reader design}
+The reader indexes every dictionary word by its Arabic skeleton, the letters without marks, and by a coarser key without vowel letters. For an input word it returns candidates in tiers: attested forms first, then skeleton matches ranked by corpus frequency with a preference for those whose marks agree with the input, then matches on the coarse key. It reports a ranked list and never a single guess.
+
+Table~\ref{tab:rt} shows pairs that the notation cannot separate. The original word is among the candidates but not always first.
+
+\begin{table}[ht]\centering\small
+\input{generated/roundtrip_examples.tex}
+\caption{Words whose spelling is shared with another English word.}\label{tab:rt}
+\end{table}
+
+\section{Measured ambiguity}
+Two measures describe the notation, both over the \NFreq{} most frequent English words that the dictionary covers.
+
+\begin{itemize}
+\item \textbf{Collisions.} \PctSharedFull{}\% of these words share their fully marked form with at least one other word, and \PctSharedSkel{}\% share their unmarked form. Table~\ref{tab:coll} shows the largest classes.
+\item \textbf{Reading back.} For the \RtWords{} most frequent words, the reader returns the original as its first candidate \RtTopOne{}\% of the time and among its first five \RtTopFive{}\%. The mean candidate list has \RtMeanCand{} entries. This figure is optimistic by construction: the test words are frequent, frequency ranks the candidates, and the reader uses the same dictionary as the writer.
+\end{itemize}
+
+\begin{table}[ht]\centering\small
+\input{generated/collisions.tex}
+\caption{Largest classes of words that share an unmarked spelling.}\label{tab:coll}
+\end{table}
+
+\section{Consequence}
+Exact recovery of English spelling from the Arabic form is not available. A phonetic reading is always available. A lossless round trip would require extra information: surrounding context, a language model over the candidates, or optional disambiguation marks. The tools therefore separate recovering a pronunciation from recovering a spelling, and they report ambiguity in place of hiding it.
+
+\section{A reading in detail}
+The reader treats each token separately. The example below passes the earlier sentence back through it, with the specimen forms switched off. Fixed spellings of frequent words are always available, because they are part of the notation.
+
+\begin{table}[ht]\centering\small
+\input{generated/reader_demo.tex}
+\caption{Reader output for one sentence: the first four candidates for each token.}\label{tab:readerdemo}
+\end{table}
+
+In most rows the intended word is first. The token \ar{إِزْ} is shared by \emph{is} and \emph{as}, and the reader cannot choose between them without context. Such pairs are the main cost of the compact notation.
+
+\section{Using context}
+The reader treats words independently. Choosing among candidates with a language model over the whole sentence is the natural next step, because each candidate list is short and most ambiguities resolve easily from context. The data structures already return ranked lists, so a context model can be added as a reranking step without changing the index.
+
+\section{Tiers and their meaning}
+The tier attached to each candidate says how closely it matches. An attested or fixed form is an exact recovery. A skeleton match means the letters agree and the marks are compatible. A consonant match means only the consonant skeleton agrees, and it is offered when the other tiers have little to say. A reader that shows the tier lets the user judge how much weight a candidate deserves.

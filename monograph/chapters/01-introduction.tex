@@ -1,0 +1,50 @@
+\chapter{Scope and Definition}
+
+\section{What is being written}
+The system writes English. Vocabulary, word order, sentence boundaries and punctuation stay English; only the letters change. A reader who sounds out the Arabic letters recovers the sound of the English word, and a reader who knows English recovers its meaning. Nothing is translated. The sentence
+\begin{quote}\ar{إِنْ ذِسْ بَارْتْ أُفْ هِيلِنْ رُولِنْزْ سَايْكُوسِينِمَا}\end{quote}
+means \emph{In this part of Helen Rollins' psychocinema} because it sounds like that English phrase, not because any word in it is an Arabic word.
+
+The intended product is a book written in this orthography, accompanied by a pronunciation key and parallel examples. The tools described here exist to produce and check such a book, not to replace the decisions about how the orthography should look.
+
+\section{Constraints}
+Four constraints recur in the source material and define the system.
+\begin{enumerate}
+\item \textbf{English throughout.} Earlier generated texts repeatedly drifted into Arabic vocabulary, for instance spelling out numbers as Arabic number words or substituting a real Arabic word where an English word was expected. Each such drift is an error against this constraint.
+\item \textbf{Standard Arabic letters only.} The Persian letters \ar{پ}, \ar{ڤ}, \ar{گ}, \ar{چ}, \ar{ژ} are excluded. English sounds that Arabic lacks are approximated with standard letters.
+\item \textbf{Short vowels are optional marks.} Fatha, damma, kasra and sukoon may be written to help the reader. Both fully marked and unmarked presentations were requested, so mark density is a presentation setting, not part of the spelling.
+\item \textbf{Approximation is acknowledged.} Several English sounds share a letter, and several English vowels share a representation. The orthography is an approximate phonetic notation. Claims that it reproduces English pronunciation exactly are not made here.
+\end{enumerate}
+
+\section{What is not claimed}
+Interpretive frameworks attached to the project in earlier discussions, including semiotic or epistemological readings, are outside this monograph. They would need separate justification before becoming part of the foundation. The keyboard layout used for typing the script is treated as an input method, distinct from the sound key (Chapter~\ref{ch:typesetting}).
+
+\section{Organisation}
+Part one of the work (Chapters 2 to 5) reconstructs the notation from evidence. Chapters 6 to 10 describe the tools and how they are checked. Chapters 11 to 13 cover teaching formats, typesetting and open work. The appendices give the command line, the full list of attested forms and the legacy sources.
+
+\section{What the notation is for}
+The notation serves three uses that pull in slightly different directions. As a reading aid, it lets a reader of Arabic script sound out English text without any knowledge of English spelling, because every word is written as it is said. As a writing system in its own right, it allows English to be handwritten quickly with a small inventory of letters and marks, which is how the handwritten page was produced. As a typographic exercise, it asks how far a script built for another language can carry English before it breaks. The tools in this book support all three. They differ only in how many marks are shown, which is why mark density is a presentation setting and not a change of notation.
+
+\section{Design principles}
+Six principles run through the later chapters. They are stated here once so that individual rules can be judged against them.
+\begin{enumerate}
+\item \textbf{English words, English order.} Nothing is translated and nothing is reordered. A line of the notation has the same number of words as the English line it comes from, and a reader can align the two word by word.
+\item \textbf{Standard Arabic letters only.} The letters of the basic Arabic block are used, together with fatha, damma, kasra and sukoon. Persian letters such as \ar{پ}, \ar{چ}, \ar{گ} and \ar{ڤ} are excluded, and near equivalents are accepted instead.
+\item \textbf{Near equivalents over new letters.} Where English has a sound that Arabic lacks, the nearest Arabic letter is used. English \emph{p} is written \ar{ب} and English \emph{v} is written \ar{ف}, as a voiced \emph{f}. Exact recovery of short words is not required.
+\item \textbf{Marks are optional.} The same letters can be shown with every mark, with vowel marks only, or with none, and the choice never alters a letter.
+\item \textbf{Evidence before invention.} A rule is added only when specimens support it, and each unsupported choice is a switch with a stated default.
+\item \textbf{Ambiguity is reported.} The notation merges some distinctions, so the reverse tool returns ranked candidates and does not pretend to recover spelling exactly.
+\end{enumerate}
+
+\section{How to approach the text}
+A reader of this notation is reading English. The Arabic letters are a set of learned conventions for writing it, and they do not turn the text into Arabic or into a transliteration to be decoded each time. At first, sounding out every letter is the natural strategy, and it works because the notation is written as the words are said. With practice the strategy fades. Familiar words become recognisable as whole shapes, as printed English words do, and frequent words such as \ar{ذَا} (\emph{the}) and \ar{أَنْدْ} (\emph{and}) are recognised before their letters are consciously read. Letter-by-letter decoding is therefore a stage in learning, and it is not the reading experience the notation aims at. Later chapters that give a Latin respelling beside the Arabic-script line offer it as a support for that early stage.
+
+\section{A first reading}
+The sentences below were composed in the notation and then checked against the toolkit. Each block gives the Arabic-script form with all marks, a plain Latin respelling that is only a reading aid, and the English original. The second line of the first two blocks shows the same words with all marks removed, which is how the notation looks at its lightest.
+
+\input{generated/p_fresh.tex}
+
+Several choices of the system are visible even in these three sentences. English \emph{p} in \emph{script} is written \ar{ب}. English \emph{v} in \emph{voice} is written \ar{ف}. The \emph{g} of \emph{English} and \emph{begins} is written \ar{غ}, and \emph{ch} in \emph{change} is the two-letter sequence \ar{تْش}. The word \emph{book} keeps a waw because English writes two letters for its vowel, a point that Chapter~\ref{ch:vowels} treats as a general principle.
+
+\section{Plan of the book}
+Chapters~2 and~3 describe the specimens and separate what they establish from what remains open. Chapters~4 and~5 state the sound key and the spelling-conditioned vowel rules. Chapters~6 and~7 describe the software architecture and the forward transliterator, and Chapter~8 the reverse reader. Chapters~9 and~10 cover checking and evaluation. Chapter~11 collects worked passages, Chapter~12 deals with typesetting and input, and Chapter~13 lists the open questions. The appendices give the command-line reference, the attested forms and the legacy sources.

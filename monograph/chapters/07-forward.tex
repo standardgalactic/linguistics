@@ -1,0 +1,65 @@
+\chapter{The Forward Transliterator}
+
+\section{From words to segments}
+For each word the engine obtains a phoneme list, aligns vowel phonemes to the vowel letter groups of the spelling when their counts agree, and builds a list of segments. Each segment is a letter with a kind (consonant, long vowel letter, glide, seat) and an optional mark.
+
+Consonant phonemes append their letters, digraphs such as \ar{تْش} appending two segments of one unit. Vowel phonemes attach their mark to the last consonant, or to a preceding \ar{ي}, or to a new hamza seat, and then append their vowel letters. Rhotic vowels append \ar{ر}.
+
+\section{The sukoon pass}
+After all segments are placed, every consonant or glide without a vowel receives sukoon. Long vowel letters and seats do not. The resulting form is the full-density spelling.
+
+\section{Mark density}
+A final filter produces the other densities, so density can never change a letter.
+\begin{description}
+\item[full] all marks, including sukoon on every vowelless consonant.
+\item[medial] sukoon removed from the end of the word.
+\item[vowels] fatha, damma and kasra only.
+\item[none] no marks. This is the consonantal skeleton with vowel letters, the form requested in the earliest experiments.
+\end{description}
+
+\section{Attested forms}
+With \code{--attested} the engine prefers a form recorded in a specimen whenever the word occurs there. The list is built by aligning each specimen token to its English word and asserting that token counts match (\code{scripts/build\_attested.py}). Page forms are listed before typed forms.
+
+\section{Demonstration}
+Table~\ref{tab:demo} shows one sentence of the page under several settings. The first row is the page itself.
+
+\begin{table}[ht]\centering\small
+\input{generated/demo.tex}
+\caption{One sentence in several settings. The second row is the computed form with the defaults.}\label{tab:demo}
+\end{table}
+
+\section{The density ladder}
+The four densities are best seen on a single sentence. Each line contains the same letters; only the marks differ.
+
+\begin{table}[ht]\centering\small
+\input{generated/p_density.tex}
+\caption{One sentence at each density.}\label{tab:density}
+\end{table}
+
+\section{Worked passages}
+The following passages are public-domain texts and short originals, set with the default options. Each block shows the Arabic-script form, a Latin respelling that is only a reading aid, and the English. They illustrate how the rules behave on running prose and not on isolated words, and they include some of the weaknesses that Chapter~\ref{ch:open} lists.
+
+\subsection{Children's prose}
+\input{generated/p_alice.tex}
+
+\subsection{Scripture}
+\input{generated/p_genesis.tex}
+
+\subsection{Verse}
+\input{generated/p_sonnet.tex}
+\input{generated/p_raven.tex}
+
+\subsection{A long sentence}
+\input{generated/p_declaration.tex}
+
+\subsection{Narrative}
+\input{generated/p_voltaire.tex}
+
+\section{Names, dates and numbers}
+Proper names are looked up like other words, and the fallback handles names the dictionary lacks. Numbers can be written in Arabic-Indic digits, in Latin digits or spoken, depending on the \texttt{digits} option. The spoken form is useful for text meant to be read aloud.
+
+\input{generated/p_names.tex}
+\input{generated/p_numbers.tex}
+
+\section{Reading the results}
+Three habits of the output are worth noting. Common words always take their fixed form, so \emph{the}, \emph{of}, \emph{and} and \emph{is} look the same everywhere. Stressed vowels are usually marked more heavily than unstressed ones, which gives longer words a visible rhythm. And function words with weak forms in speech, such as \emph{to} and \emph{a}, keep their fixed spellings and are not reduced.

@@ -1,0 +1,65 @@
+\chapter{Vowels Conditioned by Spelling}\label{ch:vowels}
+
+\section{Observation}
+A purely phonemic mapping from the pronouncing dictionary reproduces the page's consonants well and its vowels less well. Comparing the computed forms with the attested forms shows a regular departure: the letter used for a vowel sometimes follows the English spelling rather than the sound.
+
+\begin{enumerate}
+\item \textbf{Stressed o.} The dictionary gives \emph{Rollins}, \emph{on}, \emph{psychology} and \emph{concept} an open back vowel. The specimens write them with damma and waw: \ar{رُولِنْزْ}, \ar{أُونْ}, \ar{سَايْكُولُوجِي}, \ar{كُونْسِبْتْ}. Contrast \emph{part}, written \ar{بَارْتْ} with fatha and alef, where the spelling letter is $a$.
+\item \textbf{Open-syllable e and i.} \emph{Helen} and \emph{psychocinema} are written with kasra and \ar{ي}: \ar{هِيلِنْ}, \ar{سِينِمَا}. The stressed vowel letter is followed by one consonant and another vowel. In \emph{delves}, \emph{this} and \emph{its}, where the vowel letter is followed by a cluster, only kasra is written.
+\item \textbf{Schwa colour.} An unstressed vowel takes the colour of its letter: $a$ gives fatha, $e$ and $i$ give kasra, $o$ gives damma, as in \ar{سِمْبْتُمْزْ} \emph{symptoms}.
+\item \textbf{Short initial vowels.} An unstressed vowel in the first syllable is written short, with no vowel letter: \ar{رِبْرِشَنْ} \emph{repression}, \ar{يُتُوبِيَانِيزْمْ} \emph{utopianism}.
+\item \textbf{Hosted hiatus.} A vowel after \ar{ي} is written on the \ar{ي}, as in \ar{بِيَ} and \ar{ثِيُ}.
+\end{enumerate}
+
+\section{Why pronunciation and spelling both contribute}
+The notation could have been defined as a pure phonetic transcription, with each vowel written from its dictionary sound alone. The author's practice shows that it is not. Familiar English words carry a visual identity that readers use in recognising them, and the notation keeps some of it. The word \emph{book} is written \ar{بُوكْ} with a waw because English writes two vowel letters, and the waw retains that feature even though it does not reproduce the short vowel narrowly. The waw is a deliberate orthographic choice. It is not an error of pronunciation to be corrected.
+
+The consequence for later revision is practical. A departure from dictionary pronunciation in an attested form is not automatically a mistake. It may be the spelling showing through, and a rule that removes it would make the notation more phonetic and less like the author's writing. Before such a form is changed, the question to ask is whether the departure is systematic across words with the same spelling, as the waw of \emph{book}, \emph{good} and \emph{foot} is, or whether it is a lapse.
+
+\section{Reading of the pattern}
+These observations suggest that the notation is a hybrid. It is phonetic in its consonants and in the broad shape of its syllables, and orthographic in the choice of some vowel letters. The evidence is one author's page, a typed passage and generated texts, so the hybrid reading is a hypothesis about how the notation behaves, not a finding about how it must behave. The rules implemented from it are listed with their results in Chapter~\ref{ch:eval}.
+
+\section{Remaining disagreements}
+After the rules are applied, \NDiffers{} of the \NAttested{} attested forms still differ from the computed forms by more than marks. Table~\ref{tab:differs} lists them. They fall into five groups:
+\begin{description}
+\item[Lexical alef.] \emph{capitalist}, \emph{capitalism}, \emph{utopianism} and \emph{psychoanalytic} carry an alef where the rules give only fatha. Other words with the same spelling pattern, such as \emph{fundamental} and \emph{cultural}, do not. No rule from spelling or stress separates them, so these stay in the attested list.
+\item[The choice of v.] \emph{individual} and \emph{universal}, written with \ar{ب} in the typed passage, discussed in Chapter~\ref{ch:evidence}. The default \ar{ف} is the author's decision and the specimens disagree with it in these two words.
+\item[Failed alignment.] When the number of vowel letter groups differs from the number of vowel phonemes, as in \emph{ideology} and \emph{individual}, spelling-based colouring is skipped and the phonemic default applies.
+\item[Seat letter.] The article \emph{a} is written \ar{اَ} in the typed passage and \ar{أَ} in the original fixed table. Both appear in the sources; the toolkit keeps the hamza form.
+\item[Generated-text noise.] \emph{nature} in the typed passage, which uses \ar{ش} where the page has \ar{تْش}, and \emph{structures}, whose typed spelling departs from both the page conventions and the sound.
+\end{description}
+
+\begin{table}[ht]\centering\small
+\input{generated/differs.tex}
+\caption{Attested forms that differ from the computed forms in their letters.}\label{tab:differs}
+\end{table}
+
+\section{The rules in order}
+The vowel rules are applied in a fixed order for each vowel phoneme, and the first rule that fires decides the mark and the vowel letters.
+\begin{enumerate}
+\item Schwa (AH) takes the colour of its spelling letter: $e$, $i$ and $y$ give kasra, $o$ gives damma, $a$ gives fatha, with fatha also for the vowel pairs \emph{ia} and \emph{io} and for word-final \emph{-em}. A stressed AH spelled with $o$ is written with damma and waw.
+\item A rhotic vowel (ER) is written with fatha when unstressed, with the exception of the prefix \emph{inter-}, which keeps kasra. Stressed ER takes its mark from the spelling letter, but \emph{ea} gives fatha (\emph{learn}).
+\item The vowels AA and AO, when the spelling letter is $o$, are written with damma and waw (\emph{on}, \emph{Rollins}).
+\item A stressed AE that is not word-initial gains an alef (\emph{lack}).
+\item A stressed EH or IH in an open syllable spelled with $e$ or $i$ gains a yeh (\emph{Helen}, \emph{cinema}).
+\item An unstressed IY or UW in the first syllable is written short.
+\item The vowel UH spelled with a written \emph{oo} or \emph{ou} keeps a waw (\emph{book}, \emph{good}, \emph{foot}).
+\end{enumerate}
+Each rule can be traced to specimen words, and each has exceptions among the attested forms that are listed in Table~\ref{tab:differs}.
+
+\section{Double o and the word book}
+The last rule came from a correction by the author. A composed example wrote \emph{book} as \ar{بُكْ}, following the sound, and the author preferred \ar{بُوكْ} on the ground that English writes two vowel letters and the notation should show them. The author also noted that without the waw an Arabic reader might hear a different vowel. The same reasoning applies to \emph{look}, \emph{good}, \emph{foot} and \emph{wood}, and the toolkit now writes all of them with a waw. It does not yet extend to every doubled vowel, because the specimens contain no attested case of other doubled letters, apart from \emph{ee}, which already receives a yeh as a long vowel.
+
+\section{Hosted vowels after a glide}
+When a vowel follows a glide, the mark is placed on the glide, so no separate hamza seat is needed. This accounts for \emph{flower}, \emph{power} and \emph{hour}, where the diphthong in the first syllable ends in a waw glide and the unstressed syllable takes its fatha or kasra on that waw. The same device was already used after \ar{ي}, as in \emph{utopianism}.
+
+\section{Ng and the hard g}
+In the dictionary, \emph{finger}, \emph{anger} and \emph{English} have an ng sound followed by a hard g. Written as separate sounds this gives a doubled ghain, which no specimen shows. The toolkit therefore writes the nasal and one ghain, as in \ar{إِنْغْلِشْ}. Words such as \emph{singer} and \emph{longer}, where the dictionary has only the nasal, are written the same way, which is a merger the notation accepts.
+
+\section{Examples}
+Table~\ref{tab:whybrid} gives words from the specimens and words that were not in them, written by the rules. The specimen words reproduce their attested forms. The others show how the rules extend.
+
+\begin{table}[ht]\centering\small
+\input{generated/w_hybrid.tex}
+\caption{Words that exercise the spelling-conditioned rules.}\label{tab:whybrid}
+\end{table}

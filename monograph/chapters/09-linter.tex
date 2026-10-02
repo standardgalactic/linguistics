@@ -1,0 +1,46 @@
+\chapter{The Linter}
+
+\section{Purpose}
+The specimens drift. The Atlas text uses Persian letters, the Micromegas text uses one of them, a web export replaced some letters with the Unicode replacement character, and typed passages occasionally place two vowel marks on one letter. A notation that depends on a small inventory needs a mechanical check that the inventory is respected. The linter in \texttt{arabglish.lint} provides that check.
+
+\section{Checks}
+The linter reports each problem with its position, the offending character, a code and a message. The codes are as follows.
+
+\begin{description}
+\item[extended-letter] A letter outside the standard Arabic block, such as \ar{پ}, \ar{چ}, \ar{ژ}, \ar{گ} or \ar{ڤ}. A suggested replacement is attached.
+\item[corrupt] The replacement character U+FFFD. The original letter is lost and cannot be repaired automatically.
+\item[orphan-mark] A vowel mark or sukoon with no base letter.
+\item[double-vowel] Two vowel marks on one letter.
+\item[sukoon-and-vowel] A sukoon and a vowel mark on one letter.
+\item[shadda] A shadda. The system does not mark English doubling, so a shadda is an error.
+\item[tatweel] The elongation character, which is not part of the system.
+\item[unknown-arabic] Any other Arabic-block character outside the inventory.
+\end{description}
+
+Punctuation, Latin text, digits and the Arabic comma, semicolon and question mark are accepted.
+
+\section{Repair}
+Only the deterministic part of the repair is automated. The function \texttt{fix} rewrites extended letters to the core inventory: \ar{پ} becomes \ar{ب}, \ar{ڤ} becomes \ar{ف}, \ar{گ} becomes \ar{غ}, \ar{چ} becomes \ar{تْش}, \ar{ژ} becomes \ar{ز}, and the Persian forms of kaf and yeh become the Arabic ones. This follows the decisions in Chapter~\ref{ch:evidence}. If a different decision is adopted for $v$ or $g$, the replacement table is the one place to change. Corrupt characters, orphan marks and double marks are reported but left for the author, because several repairs are possible.
+
+\section{Results on the specimens}
+Table~\ref{tab:inventory} lists the issue counts. The page transcript and typed passage are clean. The Atlas text has \AtlasExtended{} issues, nearly all extended letters. Running \texttt{fix} on it produces text that passes the linter, which is a convenient way to bring early material into the current inventory.
+
+\section{A worked example}
+The line below is a deliberately damaged piece of text. It contains four extended letters, a stray shadda and an orphan mark. The linter lists every problem with its position, and \texttt{fix} repairs the part that has a single correct repair.
+
+\begin{table}[ht]\centering\small
+\input{generated/lint_demo.tex}
+\caption{Linter output for a damaged line.}\label{tab:lintdemo}
+\end{table}
+
+Before and after the deterministic repair:
+\begin{quote}\noindent
+\input{generated/lint_demo_text.tex}
+\end{quote}
+The shadda is not repaired because there is no single correct reading of it. It may be an error or a deliberate marking of a doubled consonant, and the author decides which.
+
+\section{Using the linter in a workflow}
+The linter returns a nonzero status when issues are found, so it can run in a script before typesetting or before a text is added to the specimen set. A typical sequence is to repair the extended letters automatically, rerun the linter, and read the remaining items by hand. Because the linter reports positions, an editor can jump to each item.
+
+\section{What the linter does not check}
+The linter checks the inventory and the order of marks. It does not check that the spelling is a good rendering of any English word, because the notation has no single correct spelling for many words. Checking against a pronunciation is the job of the forward transliterator, and the evaluation in Chapter~\ref{ch:eval} compares its output with attested forms.

@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{book}
+\usepackage{fontspec}
+\setmainfont{FreeSerif}
+\setmonofont{FreeMono}[Scale=0.9]
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.12]{DejaVu Sans}
+\ifdefined\luatexversion
+  % LuaLaTeX: native right-to-left direction (not tested in the build environment)
+  \newcommand{\ar}[1]{{\arabicfont\textdir TRT #1\textdir TLT}}
+\else
+  % XeLaTeX: TeXXeT right-to-left runs
+  \TeXXeTstate=1
+  \newcommand{\ar}[1]{{\arabicfont\beginR #1\endR}}
+\fi
+\newcommand{\arq}[1]{\ar{#1}}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{booktabs,longtable,enumitem,xcolor}
+\usepackage[hidelinks]{hyperref}
+\setlist{itemsep=2pt,topsep=4pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\newcommand{\code}[1]{\texttt{#1}}
+\input{generated/numbers.tex}
+\input{generated/approved_numbers.tex}
+
+\title{English in Arabic Script\\[4pt]\large Notation, Evidence and Tools}
+\author{Flyxion\\Independent Researcher}
+\date{October 2026}
+
+\begin{document}
+\frontmatter
+\maketitle
+\chapter*{Abstract}
+This monograph specifies a writing system in which ordinary English is written, word for word and without translation, in standard Arabic letters with optional short vowel marks. It reconstructs the system from the surviving evidence: a handwritten page, the typed passage it copies, and several generated test texts. It records which conventions the evidence settles, which it leaves open, and exposes each open point as a named option in a Python toolkit. The toolkit contains a forward transliterator driven by the CMU Pronouncing Dictionary, a reverse reader that returns ranked candidates, an inventory linter, a corpus statistics tool, and a glossary generator. Every table and figure of agreement in the text is produced by the code and the specimens, so the numbers cannot drift from the implementation.
+
+\tableofcontents
+\mainmatter
+\input{chapters/01-introduction}
+\input{chapters/02-specimens}
+\input{chapters/03-evidence}
+\input{chapters/04-sound-key}
+\input{chapters/05-spelling-vowels}
+\input{chapters/06-architecture}
+\input{chapters/07-forward}
+\input{chapters/08-reader}
+\input{chapters/09-linter}
+\input{chapters/10-evaluation}
+\input{chapters/11-glossary}
+\input{chapters/12-typesetting}
+\input{chapters/13-open-work}
+\appendix
+\input{chapters/a-cli}
+\input{chapters/b-attested}
+\input{chapters/c-legacy}
+\end{document}

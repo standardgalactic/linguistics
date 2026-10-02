@@ -1,0 +1,71 @@
+\chapter{Evidence and Open Decisions}\label{ch:evidence}
+
+\section{Consonants}
+Table~\ref{tab:consonants} gives the consonant key as implemented, with a status for each sound. \emph{Firm} means the specimens agree. \emph{Open} means they conflict. \emph{Proposed} means the author has named a preference that later generated passages did not follow. \emph{Provisional} means no specimen word settles it.
+
+\begin{table}[ht]\centering\small
+\input{generated/consonants.tex}
+\caption{Consonant key (default profile). English $p$ is written \ar{ب} in every specimen.}\label{tab:consonants}
+\end{table}
+
+\section{English v}
+The evidence on $v$ is divided. Table~\ref{tab:vcensus} lists every $v$ word that could be checked in the specimens. The letter \ar{ب} appears \VCensusB{} times and \ar{ف} appears \VCensusF{} times. The author's own page writes \emph{delves} with \ar{ف}. The typed passage writes \emph{universal}, \emph{individual}, \emph{however}, \emph{generative}, \emph{never}, \emph{resolved} and \emph{deliver} with \ar{ب}. The earlier glossary passage writes \emph{subjective}, \emph{living}, \emph{reveal} and \emph{selves} with \ar{ف}, while its commentary says the opposite.
+
+\begin{table}[ht]\centering\small
+\input{generated/vcensus.tex}
+\caption{Census of English $v$ in the specimens that could be aligned.}\label{tab:vcensus}
+\end{table}
+
+The earlier Python script used a voicing heuristic, choosing \ar{ب} between voiced neighbours and \ar{ف} otherwise. That heuristic cannot reproduce the census: \emph{delves} and \emph{resolved} have identical neighbourhoods (a liquid before $v$, a voiced consonant after) yet receive different letters. The toolkit therefore offers three policies, \code{b}, \code{f} and \code{context}, and a per-word override through the attested list. The default is \ar{ف}, on the author's reasoning that $v$ is a voiced $f$; this also matches the old program and the page's \emph{delves}. The typed passage's \emph{individual} and \emph{universal} use \ar{ب}, and \code{--v b} reproduces that choice.
+
+\section{Hard g and the velar nasal}
+The author proposed \ar{غ} (ghain) for hard $g$. Generated passages used \ar{ج} (jeem), and the cleaned Python script mapped $g$ to \ar{ج}, which merges $g$ with $j$ in \emph{subject}. The default is \ar{غ}, with \code{--g jeem} available. The velar nasal follows $g$: \ar{نغ} by default and \ar{نج} under \code{jeem}.
+
+\section{The affricate ch}
+The page writes \emph{cultural} and \emph{nature} with the two-letter sequence \ar{تْش}, taking sukoon on the first letter. One typed word, \emph{nature}, uses \ar{ش} alone. The sequence is the default. When the sequence closes a word in full marks both letters carry sukoon, as in \ar{وِتْشْ} \emph{which}.
+
+\section{Remaining decisions}
+Table~\ref{tab:decisions} lists the decisions and where the toolkit exposes them.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}p{3.3cm}p{4.6cm}p{5.2cm}@{}}
+\toprule
+Decision & Default & Switch\\
+\midrule
+English $v$ & \ar{ف} & \code{--v b|f|context}\\
+Hard $g$ & \ar{غ} & \code{--g ghain|jeem}\\
+Persian letters & excluded & \code{--persian} (for conversion only)\\
+Mark density & full marks & \code{--density full|medial|vowels|none}\\
+\emph{the} before a vowel & \ar{ذَا} always & \code{--the-before-vowel}\\
+Numbers & Arabic-Indic digits & \code{--digits indic|latin|spoken}\\
+Specimen forms & computed forms & \code{--attested}\\
+Doubled letters & not marked (no shadda) & none\\
+\bottomrule
+\end{tabular}
+\caption{Open decisions and their switches.}\label{tab:decisions}
+\end{table}
+
+\section{Decision log}
+The consonant and vowel choices are recorded here with the evidence and reasoning behind each, in the order in which they were settled.
+
+\begin{description}
+\item[English p.] Written \ar{ب} in every specimen and in the old program. The author states that \ar{ب} for \emph{p} is acceptable and that exact recovery of short words is not required. Settled.
+\item[English v.] The old program wrote \ar{ف}. The typed passage writes \ar{ب} in \emph{universal} and \emph{individual} and the page writes \ar{ف} in \emph{delves}. The author's reasoning is that \emph{v} is only a voiced \emph{f}, so the default is \ar{ف}. The alternative is kept as \code{--v b}.
+\item[Hard g.] The old program wrote \ar{ج}, merging it with \emph{j}. The author later proposed \ar{غ}, which keeps \emph{g} distinct from \emph{j}. The default is \ar{غ} and \code{--g jeem} restores the older choice.
+\item[English ch.] The page writes the two-letter sequence \ar{تْش}, the typed passage writes \ar{ش} in \emph{nature}, and the old program wrote \ar{ش}. The sequence is the default because it keeps \emph{ch} separate from \emph{sh}.
+\item[English ng.] Written as nasal plus ghain, \ar{نغ}. The old program wrote \ar{ن} alone. A following hard \emph{g}, as in \emph{English} and \emph{finger}, is not written twice.
+\item[Voiced th and voiceless th.] Written \ar{ذ} and \ar{ث} in every source.
+\item[Zh.] Written \ar{ز}. There is no better standard Arabic letter and no specimen word with the sound is attested.
+\item[Vowel colour of unstressed syllables.] Taken from the vowel letter of the spelling, with the exceptions listed in Chapter~\ref{ch:vowels}.
+\end{description}
+
+\section{Consonant examples}
+The following words exercise the consonant decisions: \emph{thing}, \emph{think}, \emph{this}, \emph{that}, \emph{church}, \emph{judge}, \emph{measure}, \emph{vision}, \emph{singer} and \emph{finger}, with a few clusters.
+
+\begin{table}[ht]\centering\small
+\input{generated/w_cons.tex}
+\caption{Words that exercise the consonant decisions.}\label{tab:wcons}
+\end{table}
+
+\section{Decisions that need no more evidence}
+Not every open choice is equally pressing. The choice for \emph{v} affects a small group of words and is a single switch. The choice for hard \emph{g} affects more words but the two options are equally readable. What matters most for the next stage is a larger set of fully marked words in the author's own hand, because most of the vowel rules rest on a few dozen forms.

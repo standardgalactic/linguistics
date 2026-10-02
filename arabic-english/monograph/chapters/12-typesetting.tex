@@ -1,0 +1,27 @@
+\chapter{Typesetting and Input}\label{ch:typesetting}
+
+\section{Typesetting this book}
+The book is set with XeLaTeX. The Arabic-script specimens are short runs inside English text, so the bidirectional machinery of a full Arabic setup is not needed. The \texttt{\textbackslash ar} macro starts a right-to-left run with the TeXXeT primitives (\texttt{\textbackslash beginR} and \texttt{\textbackslash endR}) and selects DejaVu Sans, which carries the Arabic block and positions fatha, damma, kasra and sukoon correctly. Packages that usually do this work, \texttt{polyglossia} and \texttt{bidi}, were not available in the build environment, and LuaLaTeX failed on font lookup. The TeXXeT route is small and has been checked by rendering pages and inspecting them.
+
+Two cautions apply. A right-to-left run must not be broken across lines by hand, since the order of the pieces then depends on the line breaker. Letters and marks that arrive in the wrong order from a generator will render wrongly but silently, which is a reason to lint the text before typesetting it.
+
+\section{Input}
+The AutoHotkey script \texttt{toarabic.ahk} (Appendix~\ref{app:legacy}) is an input method: it maps one Latin key to one Arabic letter. That is useful for typing the notation by hand and unrelated to the sound key. A keyboard that matches the sound key would instead offer the consonant letters under the Latin keys that look most like the sounds (\texttt{b} and \texttt{p} on \ar{ب}, \texttt{f} on \ar{ف}, \texttt{g} on \ar{غ}) and the three vowel marks and sukoon on spare keys. Such a layout could be generated from the tables in \texttt{tables.py}. It is listed with the open work.
+
+\section{Mark density in print}
+Fully marked text is long and visually dense. The \texttt{medial} setting removes sukoon at the ends of words, \texttt{vowels} keeps vowel marks only, and \texttt{none} removes all marks. Because density is applied as a last filter, the same source text can be set at several densities without changing any letters. Table~\ref{tab:demo} shows the settings side by side.
+
+\section{Fonts}
+The notation needs a font that carries the basic Arabic block and positions the three vowel marks and sukoon cleanly above and below their base letters. DejaVu Sans does this reliably in XeLaTeX. Other fonts with full Arabic support, such as Amiri or Noto Naskh, can be substituted, and it is worth checking each by rendering a page, because some place the marks too close to the letters when several letters carry marks in a row.
+
+\section{Copying and pasting}
+Marks are separate code points that follow their base letter. Text copied from a web page or a word processor can lose or reorder them, and the linter's orphan-mark check catches the usual damage. Before a text is added to the specimens, it is worth running the linter once on the pasted result.
+
+\section{Printing the book}
+Because Arabic-script runs are short and set inline, the line breaker treats them as ordinary text, and long runs are better placed in their own paragraph or in a quotation block, as the worked passages in this book are. A run that must break across lines should be split between words, since splitting inside a word separates letters from their marks.
+
+\section{Keyboard layout}
+The AutoHotkey layout in the author's repository maps one Latin key to one Arabic letter, which is an input method. A layout designed from the sound key would put the letters under the Latin keys that look most like the sounds and place the marks on spare keys. A table-driven generator for such a layout would take its data from \texttt{tables.py}, so that a change of defaults changes the layout too. It is listed under open work, because it depends on the author's decision about how many marks should be typed by hand.
+
+\section{Accessibility}
+Screen readers read Arabic script with Arabic pronunciation rules, so notation text will be read as if it were Arabic. For an audience that needs speech, the Latin respelling or the English text should be offered next to it.

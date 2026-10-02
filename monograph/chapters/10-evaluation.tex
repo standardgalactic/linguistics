@@ -1,0 +1,44 @@
+\chapter{Evaluation}\label{ch:eval}
+
+\section{What can be measured}
+The only ground truth available is the set of \NAttested{} word forms written by the author in the typed passage and the handwritten page. The computed form of each word is compared with the attested form at two levels: exact agreement of letters and marks, and agreement of letters once marks are removed.
+
+\section{Results}
+Of \NAttested{} attested words, \NExact{} (\PctExact\%) are reproduced exactly and \NLetters{} (\PctLetters\%) agree at the level of letters. Ten words differ. Table~\ref{tab:differs} lists them.
+
+The differences fall into five groups. A lexical alef appears in forms such as \emph{capitalism}, where the author writes a long vowel the dictionary reading does not require. The choice for $v$ differs in \emph{individual} and \emph{universal}, where the typed passage uses \ar{ب} and the default is \ar{ف}. Some alignments of spelling to sound fail on longer words such as \emph{individual} and \emph{ideology}. The seat letter for an initial vowel differs in \emph{a}. Finally, the digraph \emph{ch} in \emph{nature} is written \ar{تْش} on the page and \ar{ش} in the typed passage, so one of the two attested forms must disagree with any single rule.
+
+\section{Interpretation}
+The rules of Chapter~\ref{ch:vowels} were fitted to these same specimens. The agreement is therefore a description of how well the rules summarise the evidence and is not a validation on unseen text. Held-out specimens are the main need; Chapter~\ref{ch:open} returns to this.
+
+\section{Regression ratchet}
+The test suite fixes lower bounds on the two agreement figures (0.77 for letters and 0.72 for exact forms). A change to the rules that lowers either figure fails the tests. A change that raises them is accepted and the bound can be moved up. This keeps later work from silently undoing earlier fits.
+
+\section{Evaluating the reader}
+The reader is evaluated separately in Chapter~\ref{ch:reader}. It is measured with the attested tier switched off, so that specimen words do not recognise themselves, and on frequent words only.
+
+\section{Sensitivity to the open switches}
+The two main open switches change few attested words, so the agreement figures barely move with them. Table~\ref{tab:sens} shows all four combinations of the settings for $v$ and hard $g$.
+
+\begin{table}[ht]\centering\small
+\input{generated/sensitivity.tex}
+\caption{Agreement with the \NAttested{} attested forms under each setting of $v$ and hard $g$.}\label{tab:sens}
+\end{table}
+
+The equal numbers do not mean the settings are equivalent. The attested set contains only two $v$ words with disagreeing letters, and no word with a hard $g$, so the specimens cannot rank the options. This is the reason both stay as switches.
+
+\section{Agreement on newly composed examples}
+After the main rules were fixed, three further sentences were composed in the notation and reviewed by the author, who accepted them with one correction (\emph{book}). They were then compared with the toolkit word by word. Of \NApprovedWords{} words, \NApprovedSame{} are reproduced exactly. Table~\ref{tab:appdiff} lists the others.
+
+\begin{table}[ht]\centering\small
+\input{generated/approved_diffs.tex}
+\caption{Words in the approved sentences that the toolkit writes differently.}\label{tab:appdiff}
+\end{table}
+
+These sentences were composed after the rules and not before, but they were composed by the same system of reasoning and are not independent evidence. Their value is as a check that the rules produce forms the author finds acceptable on unseen words. One difference, \emph{words}, concerns the vowel before a cluster, and two more concern the open-syllable yeh in \emph{recognise} and \emph{familiar}. Each is a candidate for a rule change once the author has decided which form is wanted.
+
+\section{Error analysis}
+The remaining disagreements with the attested forms are of three kinds. Some are lexical, such as the alef in \emph{capitalism}, and no rule predicts them. Some come from alignment, where the number of vowel letter groups in the spelling does not match the number of vowel sounds. And some are choices that the specimens contradict among themselves, such as \emph{nature}. Only the second kind can be reduced by better software, and the first and third require decisions or more data.
+
+\section{A proper held-out test}
+A real test needs words the rules have not seen. The simplest design is to give the author a list of unseen words, have each written by hand in the notation without the tool, and compare. Fifty words chosen across frequency bands, with a few names and a few long technical words, would be enough to show which rules generalise and which were overfitted. The scripts already accept such a file and print the same tables as for the present specimens.

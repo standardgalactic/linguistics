@@ -1,0 +1,57 @@
+\chapter{Architecture of the Toolkit}
+
+\section{Modules}
+The toolkit is a Python package, \code{arabglish}, with one module per concern.
+
+\begin{description}
+\item[\code{tables}] Sound-to-letter tables and the profile object. Every open decision is a parameter of \code{make\_profile}.
+\item[\code{lexicon}] Pronunciation lookup and alignment of vowel phonemes to vowel letters.
+\item[\code{g2p}] A small spelling-to-sound fallback for words the dictionary lacks.
+\item[\code{translit}] The forward transliterator, mark density, numbers and attested forms.
+\item[\code{reader}] The reverse reader and round-trip measurement.
+\item[\code{lint}, \code{corpus}] Inventory checking and specimen statistics.
+\item[\code{guide}] The Latin respelling used in teaching glossaries.
+\item[\code{cli}] The command line.
+\end{description}
+
+The command \code{arabglish} offers the subcommands \code{fwd}, \code{rev}, \code{lint}, \code{stats}, \code{glossary} and \code{roundtrip} (Appendix~\ref{app:cli}). The original wrapper script, \code{main.py}, runs unchanged through a small compatibility module.
+
+\section{Pronunciation source}
+Pronunciations come from the CMU Pronouncing Dictionary through the \code{cmudict} package, which holds 126,052 entries of General American English. Lookup proceeds in order:
+\begin{enumerate}
+\item an override file, \code{pron\_overrides.tsv}, for words the dictionary lacks or where a specimen needs a specific reading (\emph{psychocinema}, \emph{psychoanalytic}, \emph{utopianism}, \emph{disemvoweling});
+\item the dictionary, using its first pronunciation, and for the reverse index all pronunciations;
+\item possessives built from the stem with the regular suffix;
+\item the spelling fallback, which logs a warning so that weak spots are visible.
+\end{enumerate}
+
+\section{Replacing the pronunciation source}
+The notation is tied to one accent by this choice: General American, with its vowels and rhotics. A different source changes the Arabic output for many words. Pronunciation lookup is isolated in the single function \code{pronounce}, which returns a phoneme list and a source label, so another dictionary can be substituted without touching the rest. Candidates include the eSpeak NG phonemizer, which also covers unknown words and offers British voices, and the IPA transcriptions in Wiktionary. Which accent the book should follow is an open question for the author (Chapter~\ref{ch:open}).
+
+\section{Determinism}
+For a given option set the output is deterministic. Mark density is applied as a final filter over the fully marked form, so changing density never changes a letter: this is checked by a test over a sample text.
+
+\section{Module by module}
+\begin{description}
+\item[\texttt{tables.py}] The sound key as data: consonant letters, vowel marks and letters, fixed spellings of frequent words, punctuation, Arabic-Indic digits and the \texttt{Profile} object that records the open decisions.
+\item[\texttt{g2p.py}] A small spelling-to-phoneme fallback. It handles the common English digraphs, the magic-e pattern and a few suffixes, and it assigns primary stress to the first vowel. It is deliberately simple, because every word that reaches it is logged and can be added to the override file.
+\item[\texttt{lexicon.py}] The pronunciation layer. For a word it tries the override file, then the CMU dictionary, then a possessive rule, then the fallback, and it returns the phonemes with the name of the source. It also aligns the vowel letter groups of the spelling to the vowel phonemes.
+\item[\texttt{translit.py}] The forward transliterator: segments, vowel placement, sukoon, density, attested forms, digits and text tokens.
+\item[\texttt{reader.py}] The reverse reader and its index.
+\item[\texttt{lint.py}] The inventory checker and the extended-letter repair.
+\item[\texttt{corpus.py}] Statistics over specimens: letter counts, mark counts and inventory.
+\item[\texttt{guide.py}] The Latin respelling used for teaching rows.
+\item[\texttt{cli.py}] The command line.
+\end{description}
+
+\section{Data files}
+Two small tab-separated files sit beside the code. \texttt{pron\_overrides.tsv} lists words whose dictionary pronunciation is replaced, mainly the author's coinages and technical words (\emph{psychocinema}, \emph{disemvoweling}). \texttt{attested.tsv} records word forms taken from the specimens, with the source of each. Both are plain text, so they can be edited by hand and reviewed in a diff.
+
+\section{Pronunciation source}
+All pronunciation lookups go through a single function, \texttt{pronounce}. The dictionary is read once and cached. Replacing it with another source, such as a British dictionary, a machine-readable dictionary in a different phone set, or a table of the author's own readings, means changing that function and a mapping from the new phone set to the ARPABET symbols used by the tables. Nothing downstream needs to change.
+
+\section{Diagnostics}
+The fallback logs every word it handles, and the unknown-phoneme path logs a warning, so weak spots are visible. The attested-form comparison is a script, not a test, so that it can be rerun and read. The test suite then fixes the numbers it produces, so regressions fail loudly.
+
+\section{Testing}
+The test suite has three kinds of test. Unit tests check single rules on single words, such as the waw of \emph{book} and the silent possessive apostrophe in \emph{Rollins'}. Invariant tests check properties that must always hold, such as that changing density never changes the unmarked skeleton. A ratchet test checks the agreement with the attested forms against fixed lower bounds, which are raised whenever the rules improve.

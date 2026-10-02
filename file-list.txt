@@ -1,0 +1,310 @@
+.
+├── Adjective_Architecture.pdf
+├── Geometric_Admissibility.pdf
+├── How_language_keeps_the_future_navigable.json
+├── How_language_keeps_the_future_navigable.mp3
+├── How_language_keeps_the_future_navigable.srt
+├── How_language_keeps_the_future_navigable.tsv
+├── How_language_keeps_the_future_navigable.txt
+├── How_language_keeps_the_future_navigable.vtt
+├── LICENSE
+├── README.md
+├── Reachability_Theory.pdf
+├── The_Geometry_of_Reasoning.pdf
+├── The_Hidden_Physics_of_Adjective_Order.json
+├── The_Hidden_Physics_of_Adjective_Order.mp3
+├── The_Hidden_Physics_of_Adjective_Order.srt
+├── The_Hidden_Physics_of_Adjective_Order.tsv
+├── The_Hidden_Physics_of_Adjective_Order.txt
+├── The_Hidden_Physics_of_Adjective_Order.vtt
+├── The_Hidden_Physics_of_Grammar.json
+├── The_Hidden_Physics_of_Grammar.mp3
+├── The_Hidden_Physics_of_Grammar.srt
+├── The_Hidden_Physics_of_Grammar.tsv
+├── The_Hidden_Physics_of_Grammar.txt
+├── The_Hidden_Physics_of_Grammar.vtt
+├── Why_AI_Thinks_Longer_Is_Smarter.json
+├── Why_AI_Thinks_Longer_Is_Smarter.mp3
+├── Why_AI_Thinks_Longer_Is_Smarter.srt
+├── Why_AI_Thinks_Longer_Is_Smarter.tsv
+├── Why_AI_Thinks_Longer_Is_Smarter.txt
+├── Why_AI_Thinks_Longer_Is_Smarter.vtt
+├── arabglish-cheatsheet.pdf
+├── arabic-english
+│   ├── data
+│   ├── legacy
+│   │   ├── README.md
+│   │   ├── cli_main_as_pasted.py
+│   │   ├── old_version_mappings.py
+│   │   ├── old_version_transliterator.py
+│   │   ├── pronouncing_translit_chat_version.py
+│   │   └── toarabic.ahk
+│   ├── main.py
+│   ├── monograph
+│   │   ├── chapters
+│   │   │   ├── 01-introduction.tex
+│   │   │   ├── 02-specimens.tex
+│   │   │   ├── 03-evidence.tex
+│   │   │   ├── 04-sound-key.tex
+│   │   │   ├── 05-spelling-vowels.tex
+│   │   │   ├── 06-architecture.tex
+│   │   │   ├── 07-forward.tex
+│   │   │   ├── 08-reader.tex
+│   │   │   ├── 09-linter.tex
+│   │   │   ├── 10-evaluation.tex
+│   │   │   ├── 11-glossary.tex
+│   │   │   ├── 12-typesetting.tex
+│   │   │   ├── 13-open-work.tex
+│   │   │   ├── a-cli.tex
+│   │   │   ├── b-attested.tex
+│   │   │   └── c-legacy.tex
+│   │   ├── generated
+│   │   │   ├── approved_diffs.tex
+│   │   │   ├── approved_numbers.tex
+│   │   │   ├── attested.tex
+│   │   │   ├── collisions.tex
+│   │   │   ├── common.tex
+│   │   │   ├── consonants.tex
+│   │   │   ├── demo.tex
+│   │   │   ├── differs.tex
+│   │   │   ├── glossary_lines.tex
+│   │   │   ├── inventory.tex
+│   │   │   ├── lint_demo.tex
+│   │   │   ├── lint_demo_text.tex
+│   │   │   ├── numbers.tex
+│   │   │   ├── p_alice.tex
+│   │   │   ├── p_declaration.tex
+│   │   │   ├── p_density.tex
+│   │   │   ├── p_fresh.tex
+│   │   │   ├── p_genesis.tex
+│   │   │   ├── p_names.tex
+│   │   │   ├── p_numbers.tex
+│   │   │   ├── p_raven.tex
+│   │   │   ├── p_sonnet.tex
+│   │   │   ├── p_voltaire.tex
+│   │   │   ├── reader_demo.tex
+│   │   │   ├── roundtrip_examples.tex
+│   │   │   ├── sensitivity.tex
+│   │   │   ├── vcensus.tex
+│   │   │   ├── vowels.tex
+│   │   │   ├── w_ai.tex
+│   │   │   ├── w_clusters.tex
+│   │   │   ├── w_cons.tex
+│   │   │   ├── w_ee.tex
+│   │   │   ├── w_hybrid.tex
+│   │   │   ├── w_long.tex
+│   │   │   ├── w_oo.tex
+│   │   │   ├── w_r.tex
+│   │   │   └── w_short.tex
+│   │   ├── main.out
+│   │   ├── main.pdf
+│   │   ├── main.tex
+│   │   └── main.toc
+│   ├── scripts
+│   │   ├── build_attested.py
+│   │   ├── evaluate.py
+│   │   ├── make_passages.py
+│   │   └── make_tex_tables.py
+│   ├── specimens
+│   │   ├── approved_examples.txt
+│   │   ├── atlas.txt
+│   │   ├── micromegas.txt
+│   │   ├── page_handwritten_transcript.txt
+│   │   ├── typed_passage.txt
+│   │   └── typed_passage_A.txt
+│   ├── src
+│   │   └── arabglish
+│   │       ├── __init__.py
+│   │       ├── __main__.py
+│   │       ├── cli.py
+│   │       ├── corpus.py
+│   │       ├── data
+│   │       │   ├── attested.tsv
+│   │       │   └── pron_overrides.tsv
+│   │       ├── g2p.py
+│   │       ├── guide.py
+│   │       ├── lexicon.py
+│   │       ├── lint.py
+│   │       ├── reader.py
+│   │       ├── tables.py
+│   │       └── translit.py
+│   ├── tests
+│   │   └── test_core.py
+│   └── transliterator.py
+├── archive
+│   ├── 00-latin-square.jpg
+│   ├── 01-name.png
+│   ├── 02-evidence.png
+│   ├── 03-keyboard.png
+│   ├── 04-afterlife.png
+│   ├── 05-credential.png
+│   ├── 06-computer-says-no.png
+│   ├── A_Notation_for_a_Lost_Sound.pdf
+│   ├── Arabic-keyboard.jpg
+│   ├── Emphatic_Consonants_in_Arabic.mp3
+│   ├── Emphatic_Consonants_in_Arabic.txt
+│   ├── Emphatic_Consonants_in_Arabic.vtt
+│   ├── README.md
+│   ├── The_Egyptian_Moon_God_Theory.mp3
+│   ├── The_Egyptian_Moon_God_Theory.txt
+│   ├── The_Egyptian_Moon_God_Theory.vtt
+│   ├── afterlife.pdf
+│   ├── afterlife_source
+│   │   ├── afterlife.aux
+│   │   ├── afterlife.fdb_latexmk
+│   │   ├── afterlife.fls
+│   │   ├── afterlife.log
+│   │   ├── afterlife.out
+│   │   ├── afterlife.pdf
+│   │   ├── afterlife.tex
+│   │   ├── fig_forget.pdf
+│   │   └── make_fig.py
+│   ├── computer.pdf
+│   ├── computer_source
+│   │   ├── computer.aux
+│   │   ├── computer.fdb_latexmk
+│   │   ├── computer.fls
+│   │   ├── computer.log
+│   │   ├── computer.out
+│   │   ├── computer.pdf
+│   │   └── computer.tex
+│   ├── equation.pdf
+│   ├── equation_source
+│   │   ├── equation.aux
+│   │   ├── equation.fdb_latexmk
+│   │   ├── equation.fls
+│   │   ├── equation.log
+│   │   ├── equation.out
+│   │   ├── equation.pdf
+│   │   └── equation.tex
+│   ├── keyboard.jpg
+│   ├── keyboard.pdf
+│   ├── keyboard_source
+│   │   ├── keyboard.aux
+│   │   ├── keyboard.fdb_latexmk
+│   │   ├── keyboard.fls
+│   │   ├── keyboard.jpg
+│   │   ├── keyboard.log
+│   │   ├── keyboard.out
+│   │   ├── keyboard.pdf
+│   │   └── keyboard.tex
+│   ├── lateral-emphasis.pdf
+│   ├── source
+│   │   ├── appendices.tex
+│   │   ├── ch1.tex
+│   │   ├── ch2.tex
+│   │   ├── ch3.tex
+│   │   ├── ch4.tex
+│   │   ├── ch5.tex
+│   │   ├── ch6.tex
+│   │   ├── ch7.tex
+│   │   ├── concl.tex
+│   │   ├── fig_decay.pdf
+│   │   ├── intro.tex
+│   │   ├── keyboard.jpg
+│   │   ├── lateral-emphasis.pdf
+│   │   ├── latin.jpg
+│   │   ├── main.aux
+│   │   ├── main.fdb_latexmk
+│   │   ├── main.fls
+│   │   ├── main.log
+│   │   ├── main.out
+│   │   ├── main.tex
+│   │   ├── main.toc
+│   │   ├── make_fig_decay.py
+│   │   ├── notation.tex
+│   │   └── refs.tex
+│   └── toarabic.ahk
+├── cheatsheet
+│   ├── arabglish-cheatsheet.aux
+│   ├── arabglish-cheatsheet.log
+│   ├── arabglish-cheatsheet.pdf
+│   └── arabglish-cheatsheet.tex
+├── distinctions-overview.png
+├── english-in-arabic-script.pdf
+├── file-list.txt
+├── fix_transcription_errors.sh
+├── flyxion_corrections.log
+├── index.html
+├── monograph
+│   ├── chapters
+│   │   ├── 01-introduction.tex
+│   │   ├── 02-specimens.tex
+│   │   ├── 03-evidence.tex
+│   │   ├── 04-sound-key.tex
+│   │   ├── 05-spelling-vowels.tex
+│   │   ├── 06-architecture.tex
+│   │   ├── 07-forward.tex
+│   │   ├── 08-reader.tex
+│   │   ├── 09-linter.tex
+│   │   ├── 10-evaluation.tex
+│   │   ├── 11-glossary.tex
+│   │   ├── 12-typesetting.tex
+│   │   ├── 13-open-work.tex
+│   │   ├── a-cli.tex
+│   │   ├── b-attested.tex
+│   │   └── c-legacy.tex
+│   ├── english-in-arabic-script.pdf
+│   ├── generated
+│   │   ├── approved_diffs.tex
+│   │   ├── approved_numbers.tex
+│   │   ├── attested.tex
+│   │   ├── collisions.tex
+│   │   ├── common.tex
+│   │   ├── consonants.tex
+│   │   ├── demo.tex
+│   │   ├── differs.tex
+│   │   ├── glossary_lines.tex
+│   │   ├── inventory.tex
+│   │   ├── lint_demo.tex
+│   │   ├── lint_demo_text.tex
+│   │   ├── numbers.tex
+│   │   ├── p_alice.tex
+│   │   ├── p_declaration.tex
+│   │   ├── p_density.tex
+│   │   ├── p_fresh.tex
+│   │   ├── p_genesis.tex
+│   │   ├── p_names.tex
+│   │   ├── p_numbers.tex
+│   │   ├── p_raven.tex
+│   │   ├── p_sonnet.tex
+│   │   ├── p_voltaire.tex
+│   │   ├── reader_demo.tex
+│   │   ├── roundtrip_examples.tex
+│   │   ├── sensitivity.tex
+│   │   ├── vcensus.tex
+│   │   ├── vowels.tex
+│   │   ├── w_ai.tex
+│   │   ├── w_clusters.tex
+│   │   ├── w_cons.tex
+│   │   ├── w_ee.tex
+│   │   ├── w_hybrid.tex
+│   │   ├── w_long.tex
+│   │   ├── w_oo.tex
+│   │   ├── w_r.tex
+│   │   └── w_short.tex
+│   ├── main.aux
+│   ├── main.fdb_latexmk
+│   ├── main.fls
+│   ├── main.log
+│   ├── main.out
+│   ├── main.tex
+│   └── main.toc
+├── persistence_hierarchy.aux
+├── persistence_hierarchy.log
+├── persistence_hierarchy.out
+├── persistence_hierarchy.pdf
+├── persistence_hierarchy.tex
+├── substance_and_accident.aux
+├── substance_and_accident.log
+├── substance_and_accident.out
+├── substance_and_accident.pdf
+├── substance_and_accident.tex
+├── why_distinctions_survive.aux
+├── why_distinctions_survive.log
+├── why_distinctions_survive.out
+├── why_distinctions_survive.pdf
+├── why_distinctions_survive.tex
+└── why_distinctions_survive.toc
+
+23 directories, 285 files

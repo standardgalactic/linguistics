@@ -1,0 +1,51 @@
+\chapter{Specimens and Provenance}
+
+\section{Evidence tiers}
+Not all specimens carry equal authority. The reconstruction ranks them.
+
+\begin{description}
+\item[Tier 1: the handwritten page.] A page written by hand in the orthography, later transcribed with every mark. It contains four lines:
+\begin{quote}\ar{كَابِتَالِسْتْ يُتُوبِيَانِيزْمْ}\\
+\ar{ذَا رِبْرِشَنْ أُفْ لَاكْ أَنْدْ إِتْسْ كَلْتْشَرَلْ سِمْبْتُمْزْ.}\\
+\ar{إِنْ ذِسْ بَارْتْ أُفْ هِيلِنْ رُولِنْزْ سَايْكُوسِينِمَا،}\\
+\ar{شِي دِلْفْزْ إِنْتُو ذَا نَيْتْشَر أُفْ لَاكْ.}\end{quote}
+It is the only specimen produced by the author's own hand and is treated as authoritative.
+\item[Tier 2: the typed passage.] A longer text of which the page is a copy of the opening. It was produced by an assistant working under the author's instructions and accepted as good, with the explicit acknowledgement of glitches and inconsistencies. Acceptance of a specimen did not certify every spelling in it.
+\item[Tier 3: the glossary passage.] An earlier passage with a line-by-line glossary. Its commentary contradicts its examples: it announces one treatment of $p$ and $v$ while the examples show another. Examples outrank commentary.
+\item[Tier 4: generated test texts.] Summaries of \emph{Micromegas} and \emph{Atlas Shrugged}, transliterated by an assistant. The \emph{Atlas} text uses four Persian letters; the \emph{Micromegas} text uses one.
+\item[Unusable: the chat export.] The original conversation titled \emph{English in Arabic Text} survives only as a text export in which every Arabic character has been replaced by the replacement character U+FFFD. It documents the instructions given, but supplies no letter-level evidence.
+\end{description}
+
+\section{Inventory of the specimens}
+Table~\ref{tab:inventory} counts letters and marks per specimen using the corpus tool (\code{arabglish stats}) and the linter (\code{arabglish lint}). The page and typed passage use only standard letters. The \emph{Atlas} text accounts for \AtlasExtended{} occurrences of letters outside the standard inventory.
+
+\begin{table}[ht]\centering\small
+\input{generated/inventory.tex}
+\caption{Letter, mark and inventory statistics for each specimen. Extended letters are letters outside the standard Arabic block, with their counts.}\label{tab:inventory}
+\end{table}
+
+\section{Legacy tools}
+Two earlier tools exist and are preserved verbatim in the project under \code{legacy/}.
+
+\textbf{The keyboard layout.} An AutoHotkey script maps Latin keys to Arabic letters one key at a time. Its assignments, such as the key $p$ producing a two-letter sequence, are key positions chosen for typing. They record how to enter characters, not how English sounds are written, and earlier assistant commentary that read them as sound correspondences conflated the two.
+
+\textbf{The Python script.} A pronunciation-driven script uses the CMU Pronouncing Dictionary to obtain English phonemes and maps them to Arabic characters. The preserved copy is the revision with Persian letters removed, as it appears in a pasted conversation, so it may differ from the file that was run. Its fixed word table (\emph{the, this, that, of, and, in, to, a, is}) is adopted in the toolkit. Its structural defects are listed in Appendix~\ref{app:legacy}.
+
+\section{How the specimens were transcribed}
+Three of the specimens are the author's own writing. The handwritten page was photographed and typed out letter by letter with every mark, so that the transcript preserves the author's vowel marks and sukoon. The typed passage and the glossary passage were already in digital form. The generated texts, which the author produced with language-model help in earlier sessions, were taken as found.
+
+Transcription from the photograph has two hazards. Fatha, damma and kasra are small and can be confused with dots and with each other, and a sukoon above a letter can look like a damma. Wherever the photograph was ambiguous the typed transcript supplied by the author was treated as authoritative. The transcript is stored in \texttt{specimens/page\_handwritten\_transcript.txt} and its four lines are aligned with the English by \texttt{scripts/build\_attested.py}, which stops with an error if the token counts disagree.
+
+\section{Alignment of Arabic tokens to English words}
+Every comparison in this book depends on knowing which Arabic token stands for which English word. For the page and the typed passage the author supplied the English text, and tokens were paired in order. The script asserts that the number of Arabic tokens equals the number of English words in each paragraph, so an insertion or omission anywhere in the text is caught instead of silently shifting every later pair. The result is the list of \NAttested{} word forms in Appendix~\ref{app:attested}.
+
+\section{Strengths and weaknesses of each specimen}
+\begin{description}
+\item[Handwritten page.] Closest to the author's practice and fully marked, but only four short lines.
+\item[Typed passage.] About one thousand letters of fully marked text in the author's conventions. It is the main source of attested forms. It was produced partly by typing and partly with assistance, so it carries some noise, which Chapter~\ref{ch:vowels} notes where it matters.
+\item[Glossary passage.] Marks and consonants are consistent, but its own commentary contradicts its letters for the choice of \emph{v}. Its letters were weighted above its commentary.
+\item[Micromegas and Atlas.] Early generated texts. They show the system at an earlier stage and with Persian letters in the Atlas text. They are used for the inventory counts and the linter, and not for attested forms.
+\end{description}
+
+\section{What the specimens cannot show}
+No specimen was written under controlled conditions. The author knew the conventions while writing, and the specimens were not produced from dictated or unseen text. They therefore show how the author writes words the author already has in mind, and give little information about how the author would write a word met for the first time. This limitation returns in Chapter~\ref{ch:eval}, where agreement figures are discussed, and in Chapter~\ref{ch:open}, where held-out specimens are the first request.

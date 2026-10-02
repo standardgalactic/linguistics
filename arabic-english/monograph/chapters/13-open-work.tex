@@ -1,0 +1,40 @@
+\chapter{Open Work}\label{ch:open}
+
+\section{Pronunciation source}
+The forward transliterator reads pronunciations from the CMU Pronouncing Dictionary, a General American dictionary with about 126\,000 entries, and falls back to a small spelling-based guesser for words it lacks. An earlier version of the system used a different pronunciation source, described as a kind of radio English, and the dictionary behind that version has not been identified. Which accent the notation should encode is an author decision. Candidates include another machine-readable dictionary (for example a British one with received pronunciation), or a table of per-word overrides for words where the author's own reading differs. The toolkit isolates the pronunciation source in one function, so changing it does not touch the sound key.
+
+\section{The decisions still open}
+Table~\ref{tab:decisions} lists the switches. The most consequential is the hard $g$ (\ar{غ} or \ar{ج}); $v$ is now \ar{ف} by the author's decision, with \ar{ب} available. The hard $g$ can be settled by a statement from the author or by a larger sample of attested forms.
+
+\section{More specimens}
+All fitted rules come from one typed passage and one handwritten page. Held-out hand-written pages, written without reference to the tool, would allow a real test of the rules in Chapter~\ref{ch:vowels}.
+
+\section{Disambiguation}
+Chapter~\ref{ch:reader} showed that the notation merges some words. Optional disambiguation marks, or a language model that ranks reader candidates in context, would reduce this. Whether the notation should carry such marks at all is a design choice that the author has not yet made.
+
+\section{Further questions}
+Whether English doubling should ever be marked with shadda, how to write stress, how to treat names from other languages, and whether the system should have dialect profiles are all left open. None is needed for the present tools.
+
+\section{Priorities}
+The open questions differ in cost and in value. The list below is in a suggested order.
+\begin{enumerate}
+\item A held-out specimen: fifty unseen words written by hand without the tool. This tests every rule and costs an hour.
+\item A decision on the colour of unstressed vowels, with \emph{written} and \emph{words} as test cases (\ar{رِتَنْ} against \ar{رِتِنْ}, \ar{وَرْدْزْ} against \ar{وُرْدْزْ}). The present rules follow a few attested forms and disagree with these approved ones.
+\item A decision on the open-syllable yeh in words such as \emph{familiar} and \emph{recognise}, where the stressed syllable is closed in speech but open in spelling.
+\item A decision on whether to write the stress of English words.
+\item A choice of pronunciation source, including regional dictionaries.
+\item A context model for the reverse reader.
+\item A keyboard layout generated from the tables.
+\end{enumerate}
+
+\section{Homographs}
+Words such as \emph{read}, \emph{lead} and \emph{live} have more than one pronunciation. The forward transliterator takes the first dictionary entry. A part-of-speech tagger or a word-sense list could choose among them, and the author could instead mark the intended reading by hand. For now, a per-word override handles the cases the author cares about.
+
+\section{Proper names and coinages}
+Names the dictionary does not contain are handled by the fallback, whose weak spots appear whenever it logs a word. The override file is the place to record the author's reading of a name. A list of the first hundred such words from the author's own writing would improve the notation on the texts the author actually produces.
+
+\section{Dialects and accents}
+The dictionary reflects General American speech. The notation could carry an accent profile, as it already carries profiles for $v$ and hard $g$, and a profile for a British, Canadian or other accent would change the phoneme source and perhaps a few rules. Nothing in the present design prevents this, but no specimen distinguishes them.
+
+\section{Concluding reflection}
+The project has a theoretical side that this book has kept apart from its tools. The author connects it to Deacon's account of symbolic reference and to the reading of film in the \emph{Psychocinema} discussion, and neither is needed to use or evaluate the notation. The strongest version of the connection rests on the reader's experience. Reading English in an unfamiliar script makes the normally automatic work of recognition temporarily conspicuous. The reader sees that a word is being identified from a pattern of marks, that the pattern is a convention, and that the convention can be learned and then forgotten again as it becomes fluent. That observation stands on its own and gives the project a philosophical interest. Nothing in the readability of the notation depends on accepting a larger theory of language or of cinema.

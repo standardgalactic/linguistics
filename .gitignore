@@ -1,0 +1,14 @@
+TeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+archive/
